@@ -1,0 +1,95 @@
+2023-03-09 14:55:34,960 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-03-09 14:58:38,535 [Worker-12: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:luna:0.0.1-SNAPSHOT @ C:\Revalida - Curriculum and Attendance Management System\luna\pom.xml.
+2023-03-09 14:58:39,899 [Worker-12: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /luna/src/main/java
+2023-03-09 14:58:39,899 [Worker-12: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /luna/src/main/resources
+2023-03-09 14:58:39,904 [Worker-12: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /luna/src/main/resources
+2023-03-09 14:58:39,908 [Worker-12: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /luna/src/test/java
+2023-03-09 14:58:40,747 [Worker-12: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 3 sec
+2023-03-09 14:58:40,755 [Worker-12: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-03-09 14:58:41,254 [Worker-12: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:luna:0.0.1-SNAPSHOT @ C:\Revalida - Curriculum and Attendance Management System\luna\pom.xml.
+2023-03-09 14:58:42,335 [Worker-12: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /luna/src/main/java
+2023-03-09 14:58:42,336 [Worker-12: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /luna/src/main/resources
+2023-03-09 14:58:42,336 [Worker-12: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /luna/src/main/resources
+2023-03-09 14:58:42,337 [Worker-12: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /luna/src/test/java
+2023-03-09 14:58:43,321 [Worker-12: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 2 sec
+2023-03-09 14:58:44,612 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-09 14:58:44,634 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-09 14:58:44,638 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Revalida - Curriculum and Attendance Management System\luna\src\test\resources
+2023-03-09 14:59:38,634 [Worker-13: Building Project luna] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-09 14:59:38,638 [Worker-13: Building Project luna] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-09 14:59:38,644 [Worker-13: Building Project luna] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Revalida - Curriculum and Attendance Management System\luna\src\test\resources
+2023-03-09 15:00:13,230 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-09 15:00:13,233 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-09 15:00:13,239 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Revalida - Curriculum and Attendance Management System\luna\src\test\resources
+2023-03-09 15:01:52,888 [Worker-13: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:luna:0.0.1-SNAPSHOT @ C:\Revalida - Curriculum and Attendance Management System\luna\pom.xml.
+2023-03-09 15:01:53,590 [Worker-13: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /luna/src/main/java
+2023-03-09 15:01:53,590 [Worker-13: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /luna/src/main/resources
+2023-03-09 15:01:53,594 [Worker-13: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /luna/src/main/resources
+2023-03-09 15:01:53,597 [Worker-13: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /luna/src/test/java
+2023-03-09 15:01:53,827 [Worker-13: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 1 sec
+2023-03-09 15:01:53,828 [Worker-13: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-03-09 15:01:54,047 [Worker-13: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:luna:0.0.1-SNAPSHOT @ C:\Revalida - Curriculum and Attendance Management System\luna\pom.xml.
+2023-03-09 15:01:54,677 [Worker-13: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /luna/src/main/java
+2023-03-09 15:01:54,677 [Worker-13: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /luna/src/main/resources
+2023-03-09 15:01:54,677 [Worker-13: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /luna/src/main/resources
+2023-03-09 15:01:54,678 [Worker-13: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /luna/src/test/java
+2023-03-09 15:01:55,042 [Worker-13: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2023-03-09 15:01:55,305 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-09 15:01:55,332 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-09 15:01:55,336 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Revalida - Curriculum and Attendance Management System\luna\src\test\resources
+2023-03-09 15:02:14,981 [Worker-13: Building Project luna] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-09 15:02:14,984 [Worker-13: Building Project luna] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-09 15:02:14,989 [Worker-13: Building Project luna] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Revalida - Curriculum and Attendance Management System\luna\src\test\resources
+2023-03-09 15:02:19,374 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-09 15:02:19,377 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-09 15:02:19,380 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Revalida - Curriculum and Attendance Management System\luna\src\test\resources
+2023-03-09 15:02:43,781 [Worker-2: https://download.eclipse.org/egit/github/updates-nightly/content.xml.xz] INFO  o.a.h.c.h.i.c.HttpRequestRetryExec - Recoverable I/O exception (java.net.SocketException) caught when processing request to {s}->https://download.eclipse.org:443
+2023-03-09 15:02:58,170 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-03-09 15:03:37,403 [Worker-3: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:luna:0.0.1-SNAPSHOT @ C:\Revalida - Curriculum and Attendance Management System\luna\pom.xml.
+2023-03-09 15:03:38,688 [Worker-3: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /luna/src/main/java
+2023-03-09 15:03:38,689 [Worker-3: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /luna/src/main/resources
+2023-03-09 15:03:38,693 [Worker-3: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /luna/src/main/resources
+2023-03-09 15:03:38,698 [Worker-3: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /luna/src/test/java
+2023-03-09 15:03:39,461 [Worker-3: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 3 sec
+2023-03-09 15:03:39,466 [Worker-3: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-03-09 15:03:40,049 [Worker-3: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:luna:0.0.1-SNAPSHOT @ C:\Revalida - Curriculum and Attendance Management System\luna\pom.xml.
+2023-03-09 15:03:41,298 [Worker-3: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /luna/src/main/java
+2023-03-09 15:03:41,299 [Worker-3: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /luna/src/main/resources
+2023-03-09 15:03:41,300 [Worker-3: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /luna/src/main/resources
+2023-03-09 15:03:41,301 [Worker-3: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /luna/src/test/java
+2023-03-09 15:03:42,403 [Worker-3: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 2 sec
+2023-03-09 15:03:43,836 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-09 15:03:43,859 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-09 15:03:43,864 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Revalida - Curriculum and Attendance Management System\luna\src\test\resources
+2023-03-09 15:04:15,477 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-09 15:04:15,482 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-09 15:04:15,485 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Revalida - Curriculum and Attendance Management System\luna\src\test\resources
+2023-03-09 15:04:49,712 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-09 15:04:49,712 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-09 15:04:49,717 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Revalida - Curriculum and Attendance Management System\luna\src\test\resources
+2023-03-09 15:04:50,303 [Worker-5: Building Project luna] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-09 15:04:50,306 [Worker-5: Building Project luna] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-09 15:04:50,310 [Worker-5: Building Project luna] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Revalida - Curriculum and Attendance Management System\luna\src\test\resources
+2023-03-09 15:06:41,560 [Worker-14: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:luna:0.0.1-SNAPSHOT @ C:\Revalida - Curriculum and Attendance Management System\luna\pom.xml.
+2023-03-09 15:06:42,127 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-09 15:06:42,128 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-09 15:06:42,132 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Revalida - Curriculum and Attendance Management System\luna\src\test\resources
+2023-03-09 15:07:12,730 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-09 15:07:12,754 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-09 15:07:12,758 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Revalida - Curriculum and Attendance Management System\luna\src\test\resources
+2023-03-09 15:09:09,366 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-09 15:09:09,387 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-09 15:09:09,393 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Revalida - Curriculum and Attendance Management System\luna\src\test\resources
+2023-03-09 15:09:44,637 [Worker-3: Launching Executing clean in C__Revalida - Curriculum and Attendance Management System_luna] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Revalida - Curriculum and Attendance Management System\luna
+2023-03-09 15:09:44,639 [Worker-3: Launching Executing clean in C__Revalida - Curriculum and Attendance Management System_luna] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -Ppom.xml -B -Dstyle.color=always clean
+2023-03-09 15:09:44,656 [Worker-7: Launching Executing clean in C__Revalida - Curriculum and Attendance Management System_luna] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Revalida - Curriculum and Attendance Management System\luna
+2023-03-09 15:09:44,656 [Worker-7: Launching Executing clean in C__Revalida - Curriculum and Attendance Management System_luna] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -Ppom.xml -B -Dstyle.color=always clean
+2023-03-09 15:09:51,578 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-09 15:09:51,592 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-09 15:09:51,597 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Revalida - Curriculum and Attendance Management System\luna\src\test\resources
+2023-03-09 15:13:14,812 [Worker-8: Launching Executing install in C__Revalida - Curriculum and Attendance Management System_luna] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Revalida - Curriculum and Attendance Management System\luna
+2023-03-09 15:13:14,812 [Worker-8: Launching Executing install in C__Revalida - Curriculum and Attendance Management System_luna] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -Ppom.xml -B -Dstyle.color=always install
+2023-03-09 15:13:48,047 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-09 15:13:48,051 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-09 15:13:48,058 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Revalida - Curriculum and Attendance Management System\luna\src\test\resources
+2023-03-09 15:14:55,553 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
