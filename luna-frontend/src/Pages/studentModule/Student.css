@@ -1,0 +1,10 @@
+.bDateContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.bDateLabel,
+.bDateInput {
+  display: inline-block;
+  margin-right: 10px;
+}

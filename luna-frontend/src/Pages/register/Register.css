@@ -1,0 +1,34 @@
+.reg-video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.hero-reg {
+  /* background: url("/public/images/img-home.jpg") center center/cover no-repeat; */
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+}
+
+.form-input {
+  background-color: #fff;
+}
+
+.bDateContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.bDateLabel,
+.bDateInput {
+  display: inline-block;
+  margin-right: 10px;
+}
