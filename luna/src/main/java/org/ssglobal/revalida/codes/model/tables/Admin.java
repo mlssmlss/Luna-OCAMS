@@ -4,15 +4,17 @@
 package org.ssglobal.revalida.codes.model.tables;
 
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.function.Function;
 
 import org.jooq.Field;
 import org.jooq.ForeignKey;
-import org.jooq.Function6;
+import org.jooq.Function9;
 import org.jooq.Name;
 import org.jooq.Record;
 import org.jooq.Records;
-import org.jooq.Row6;
+import org.jooq.Row9;
 import org.jooq.Schema;
 import org.jooq.SelectField;
 import org.jooq.Table;
@@ -78,6 +80,21 @@ public class Admin extends TableImpl<AdminRecord> {
      */
     public final TableField<AdminRecord, String> TYPE = createField(DSL.name("type"), SQLDataType.VARCHAR(20).nullable(false), this, "");
 
+    /**
+     * The column <code>public.admin.student_id</code>.
+     */
+    public final TableField<AdminRecord, Integer> STUDENT_ID = createField(DSL.name("student_id"), SQLDataType.INTEGER, this, "");
+
+    /**
+     * The column <code>public.admin.parent_id</code>.
+     */
+    public final TableField<AdminRecord, Integer> PARENT_ID = createField(DSL.name("parent_id"), SQLDataType.INTEGER, this, "");
+
+    /**
+     * The column <code>public.admin.professor_id</code>.
+     */
+    public final TableField<AdminRecord, Integer> PROFESSOR_ID = createField(DSL.name("professor_id"), SQLDataType.INTEGER, this, "");
+
     private Admin(Name alias, Table<AdminRecord> aliased) {
         this(alias, aliased, null);
     }
@@ -122,6 +139,45 @@ public class Admin extends TableImpl<AdminRecord> {
     }
 
     @Override
+    public List<ForeignKey<AdminRecord, ?>> getReferences() {
+        return Arrays.asList(Keys.ADMIN__ADMIN_STUDENT_ID_FKEY, Keys.ADMIN__ADMIN_PARENT_ID_FKEY, Keys.ADMIN__ADMIN_PROFESSOR_ID_FKEY);
+    }
+
+    private transient Student _student;
+    private transient Parent _parent;
+    private transient Professor _professor;
+
+    /**
+     * Get the implicit join path to the <code>public.student</code> table.
+     */
+    public Student student() {
+        if (_student == null)
+            _student = new Student(this, Keys.ADMIN__ADMIN_STUDENT_ID_FKEY);
+
+        return _student;
+    }
+
+    /**
+     * Get the implicit join path to the <code>public.parent</code> table.
+     */
+    public Parent parent() {
+        if (_parent == null)
+            _parent = new Parent(this, Keys.ADMIN__ADMIN_PARENT_ID_FKEY);
+
+        return _parent;
+    }
+
+    /**
+     * Get the implicit join path to the <code>public.professor</code> table.
+     */
+    public Professor professor() {
+        if (_professor == null)
+            _professor = new Professor(this, Keys.ADMIN__ADMIN_PROFESSOR_ID_FKEY);
+
+        return _professor;
+    }
+
+    @Override
     public Admin as(String alias) {
         return new Admin(DSL.name(alias), this);
     }
@@ -161,18 +217,18 @@ public class Admin extends TableImpl<AdminRecord> {
     }
 
     // -------------------------------------------------------------------------
-    // Row6 type methods
+    // Row9 type methods
     // -------------------------------------------------------------------------
 
     @Override
-    public Row6<Integer, String, String, String, String, String> fieldsRow() {
-        return (Row6) super.fieldsRow();
+    public Row9<Integer, String, String, String, String, String, Integer, Integer, Integer> fieldsRow() {
+        return (Row9) super.fieldsRow();
     }
 
     /**
      * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
      */
-    public <U> SelectField<U> mapping(Function6<? super Integer, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
+    public <U> SelectField<U> mapping(Function9<? super Integer, ? super String, ? super String, ? super String, ? super String, ? super String, ? super Integer, ? super Integer, ? super Integer, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
@@ -180,7 +236,7 @@ public class Admin extends TableImpl<AdminRecord> {
      * Convenience mapping calling {@link SelectField#convertFrom(Class,
      * Function)}.
      */
-    public <U> SelectField<U> mapping(Class<U> toType, Function6<? super Integer, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
+    public <U> SelectField<U> mapping(Class<U> toType, Function9<? super Integer, ? super String, ? super String, ? super String, ? super String, ? super String, ? super Integer, ? super Integer, ? super Integer, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }
 }

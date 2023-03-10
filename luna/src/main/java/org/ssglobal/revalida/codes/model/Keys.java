@@ -51,6 +51,9 @@ public class Keys {
     // FOREIGN KEY definitions
     // -------------------------------------------------------------------------
 
+    public static final ForeignKey<AdminRecord, ParentRecord> ADMIN__ADMIN_PARENT_ID_FKEY = Internal.createForeignKey(Admin.ADMIN, DSL.name("admin_parent_id_fkey"), new TableField[] { Admin.ADMIN.PARENT_ID }, Keys.PARENT_PKEY, new TableField[] { Parent.PARENT.PARENT_ID }, true);
+    public static final ForeignKey<AdminRecord, ProfessorRecord> ADMIN__ADMIN_PROFESSOR_ID_FKEY = Internal.createForeignKey(Admin.ADMIN, DSL.name("admin_professor_id_fkey"), new TableField[] { Admin.ADMIN.PROFESSOR_ID }, Keys.PROFESSOR_PKEY, new TableField[] { Professor.PROFESSOR.PROFESSOR_ID }, true);
+    public static final ForeignKey<AdminRecord, StudentRecord> ADMIN__ADMIN_STUDENT_ID_FKEY = Internal.createForeignKey(Admin.ADMIN, DSL.name("admin_student_id_fkey"), new TableField[] { Admin.ADMIN.STUDENT_ID }, Keys.STUDENT_PKEY, new TableField[] { Student.STUDENT.STUDENT_ID }, true);
     public static final ForeignKey<ParentRecord, StudentRecord> PARENT__PARENT_STUDENT_ID_FKEY = Internal.createForeignKey(Parent.PARENT, DSL.name("parent_student_id_fkey"), new TableField[] { Parent.PARENT.STUDENT_ID }, Keys.STUDENT_PKEY, new TableField[] { Student.STUDENT.STUDENT_ID }, true);
     public static final ForeignKey<ProfessorRecord, GradesRecord> PROFESSOR__PROFESSOR_GRADE_ID_FKEY = Internal.createForeignKey(Professor.PROFESSOR, DSL.name("professor_grade_id_fkey"), new TableField[] { Professor.PROFESSOR.GRADE_ID }, Keys.GRADES_PKEY, new TableField[] { Grades.GRADES.GRADE_ID }, true);
     public static final ForeignKey<ProfessorRecord, StudentRecord> PROFESSOR__PROFESSOR_STUDENT_ID_FKEY = Internal.createForeignKey(Professor.PROFESSOR, DSL.name("professor_student_id_fkey"), new TableField[] { Professor.PROFESSOR.STUDENT_ID }, Keys.STUDENT_PKEY, new TableField[] { Student.STUDENT.STUDENT_ID }, true);

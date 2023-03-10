@@ -21,6 +21,9 @@ public class Admin implements Serializable {
     private String firstname;
     private String lastname;
     private String type;
+    private Integer studentId;
+    private Integer parentId;
+    private Integer professorId;
 
     public Admin() {}
 
@@ -31,6 +34,9 @@ public class Admin implements Serializable {
         this.firstname = value.firstname;
         this.lastname = value.lastname;
         this.type = value.type;
+        this.studentId = value.studentId;
+        this.parentId = value.parentId;
+        this.professorId = value.professorId;
     }
 
     public Admin(
@@ -39,7 +45,10 @@ public class Admin implements Serializable {
         String password,
         String firstname,
         String lastname,
-        String type
+        String type,
+        Integer studentId,
+        Integer parentId,
+        Integer professorId
     ) {
         this.adminId = adminId;
         this.username = username;
@@ -47,6 +56,9 @@ public class Admin implements Serializable {
         this.firstname = firstname;
         this.lastname = lastname;
         this.type = type;
+        this.studentId = studentId;
+        this.parentId = parentId;
+        this.professorId = professorId;
     }
 
     /**
@@ -139,6 +151,51 @@ public class Admin implements Serializable {
         return this;
     }
 
+    /**
+     * Getter for <code>public.admin.student_id</code>.
+     */
+    public Integer getStudentId() {
+        return this.studentId;
+    }
+
+    /**
+     * Setter for <code>public.admin.student_id</code>.
+     */
+    public Admin setStudentId(Integer studentId) {
+        this.studentId = studentId;
+        return this;
+    }
+
+    /**
+     * Getter for <code>public.admin.parent_id</code>.
+     */
+    public Integer getParentId() {
+        return this.parentId;
+    }
+
+    /**
+     * Setter for <code>public.admin.parent_id</code>.
+     */
+    public Admin setParentId(Integer parentId) {
+        this.parentId = parentId;
+        return this;
+    }
+
+    /**
+     * Getter for <code>public.admin.professor_id</code>.
+     */
+    public Integer getProfessorId() {
+        return this.professorId;
+    }
+
+    /**
+     * Setter for <code>public.admin.professor_id</code>.
+     */
+    public Admin setProfessorId(Integer professorId) {
+        this.professorId = professorId;
+        return this;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -184,6 +241,24 @@ public class Admin implements Serializable {
         }
         else if (!this.type.equals(other.type))
             return false;
+        if (this.studentId == null) {
+            if (other.studentId != null)
+                return false;
+        }
+        else if (!this.studentId.equals(other.studentId))
+            return false;
+        if (this.parentId == null) {
+            if (other.parentId != null)
+                return false;
+        }
+        else if (!this.parentId.equals(other.parentId))
+            return false;
+        if (this.professorId == null) {
+            if (other.professorId != null)
+                return false;
+        }
+        else if (!this.professorId.equals(other.professorId))
+            return false;
         return true;
     }
 
@@ -197,6 +272,9 @@ public class Admin implements Serializable {
         result = prime * result + ((this.firstname == null) ? 0 : this.firstname.hashCode());
         result = prime * result + ((this.lastname == null) ? 0 : this.lastname.hashCode());
         result = prime * result + ((this.type == null) ? 0 : this.type.hashCode());
+        result = prime * result + ((this.studentId == null) ? 0 : this.studentId.hashCode());
+        result = prime * result + ((this.parentId == null) ? 0 : this.parentId.hashCode());
+        result = prime * result + ((this.professorId == null) ? 0 : this.professorId.hashCode());
         return result;
     }
 
@@ -210,6 +288,9 @@ public class Admin implements Serializable {
         sb.append(", ").append(firstname);
         sb.append(", ").append(lastname);
         sb.append(", ").append(type);
+        sb.append(", ").append(studentId);
+        sb.append(", ").append(parentId);
+        sb.append(", ").append(professorId);
 
         sb.append(")");
         return sb.toString();
