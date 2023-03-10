@@ -93,3 +93,339 @@
 2023-03-09 15:13:48,051 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
 2023-03-09 15:13:48,058 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Revalida - Curriculum and Attendance Management System\luna\src\test\resources
 2023-03-09 15:14:55,553 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-09 15:26:39,199 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-03-09 15:28:45,811 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-03-09 15:30:00,800 [Worker-20: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:luna:0.0.1-SNAPSHOT @ C:\Users\AROXAS\Documents\GitHub\Luna-OCAMS\luna\pom.xml.
+2023-03-09 15:30:03,478 [Worker-20: Importing Maven projects] INFO  org.jooq.Constants - 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.17.8
+                                      
+2023-03-09 15:30:03,478 [Worker-20: Importing Maven projects] INFO  org.jooq.Constants - 
+
+jOOQ tip of the day: A Field<Boolean> can be turned into a Condition using DSL.condition(Field<Boolean>) for use in WHERE, HAVING, etc.: https://www.jooq.org/doc/latest/manual/sql-building/conditional-expressions/boolean-column/
+
+2023-03-09 15:30:03,888 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.GenerationTool - No <inputCatalog/> was provided. Generating ALL available catalogs instead.
+2023-03-09 15:30:03,898 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.AbstractGenerator - License parameters       
+2023-03-09 15:30:03,899 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.AbstractGenerator - ----------------------------------------------------------
+2023-03-09 15:30:03,899 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.AbstractGenerator -   Thank you for using jOOQ and jOOQ's code generator
+2023-03-09 15:30:03,899 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.AbstractGenerator -                          
+2023-03-09 15:30:03,899 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.AbstractGenerator - Database parameters      
+2023-03-09 15:30:03,899 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.AbstractGenerator - ----------------------------------------------------------
+2023-03-09 15:30:03,900 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.AbstractGenerator -   dialect                : POSTGRES
+2023-03-09 15:30:03,900 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.AbstractGenerator -   URL                    : jdbc:postgresql://localhost:5432/luna
+2023-03-09 15:30:03,900 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.AbstractGenerator -   target dir             : C:\Users\AROXAS\Documents\GitHub\Luna-OCAMS\luna\src\main\java
+2023-03-09 15:30:03,900 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.AbstractGenerator -   target package         : org.ssglobal.revalida.codes.model
+2023-03-09 15:30:03,900 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.AbstractGenerator -   includes               : [.*]
+2023-03-09 15:30:03,900 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.AbstractGenerator -   excludes               : []
+2023-03-09 15:30:03,900 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.AbstractGenerator -   includeExcludeColumns  : false
+2023-03-09 15:30:03,900 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.AbstractGenerator - ----------------------------------------------------------
+2023-03-09 15:30:03,900 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -                          
+2023-03-09 15:30:03,900 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - JavaGenerator parameters 
+2023-03-09 15:30:03,900 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - ----------------------------------------------------------
+2023-03-09 15:30:03,900 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - annotations              
+2023-03-09 15:30:03,907 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   generated              : false
+2023-03-09 15:30:03,907 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   JPA                    : false
+2023-03-09 15:30:03,907 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   JPA version            : 
+2023-03-09 15:30:03,907 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   validation             : false
+2023-03-09 15:30:03,907 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   spring                 : false
+2023-03-09 15:30:03,908 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - comments                 
+2023-03-09 15:30:03,908 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   comments               : true
+2023-03-09 15:30:03,908 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   on attributes          : true
+2023-03-09 15:30:03,908 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   on catalogs            : true
+2023-03-09 15:30:03,908 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   on columns             : true
+2023-03-09 15:30:03,908 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   on embeddables         : true
+2023-03-09 15:30:03,908 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   on keys                : true
+2023-03-09 15:30:03,908 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   on links               : true
+2023-03-09 15:30:03,908 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   on packages            : true
+2023-03-09 15:30:03,908 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   on parameters          : true
+2023-03-09 15:30:03,908 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   on queues              : true
+2023-03-09 15:30:03,908 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   on routines            : true
+2023-03-09 15:30:03,908 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   on schemas             : true
+2023-03-09 15:30:03,908 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   on sequences           : true
+2023-03-09 15:30:03,909 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   on tables              : true
+2023-03-09 15:30:03,909 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   on udts                : true
+2023-03-09 15:30:03,909 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - sources                  
+2023-03-09 15:30:03,909 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   sources                : true
+2023-03-09 15:30:03,909 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   sources on views       : true
+2023-03-09 15:30:03,909 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - global references        
+2023-03-09 15:30:03,909 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   global references      : true
+2023-03-09 15:30:03,909 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   catalogs               : true
+2023-03-09 15:30:03,909 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   domains                : true
+2023-03-09 15:30:03,909 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   indexes                : true
+2023-03-09 15:30:03,909 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   keys                   : true
+2023-03-09 15:30:03,909 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   links                  : true
+2023-03-09 15:30:03,909 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   queues                 : true
+2023-03-09 15:30:03,909 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   routines               : true
+2023-03-09 15:30:03,909 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   schemas                : true
+2023-03-09 15:30:03,909 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   sequences              : true
+2023-03-09 15:30:03,909 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   tables                 : true
+2023-03-09 15:30:03,909 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   udts                   : true
+2023-03-09 15:30:03,910 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - object types             
+2023-03-09 15:30:03,910 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   daos                   : false
+2023-03-09 15:30:03,910 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   indexes                : true
+2023-03-09 15:30:03,910 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   instance fields        : true
+2023-03-09 15:30:03,910 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   interfaces             : false
+2023-03-09 15:30:03,910 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   interfaces (immutable) : false
+2023-03-09 15:30:03,910 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   javadoc                : true
+2023-03-09 15:30:03,910 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   keys                   : true
+2023-03-09 15:30:03,910 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   links                  : true
+2023-03-09 15:30:03,910 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   pojos                  : true
+2023-03-09 15:30:03,910 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   pojos (immutable)      : false
+2023-03-09 15:30:03,910 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   queues                 : true
+2023-03-09 15:30:03,910 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   records                : true
+2023-03-09 15:30:03,910 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   routines               : true
+2023-03-09 15:30:03,911 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   sequences              : true
+2023-03-09 15:30:03,911 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   sequenceFlags          : true
+2023-03-09 15:30:03,911 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   table-valued functions : true
+2023-03-09 15:30:03,911 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   tables                 : true
+2023-03-09 15:30:03,911 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   udts                   : true
+2023-03-09 15:30:03,911 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   relations              : true
+2023-03-09 15:30:03,911 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - other                    
+2023-03-09 15:30:03,911 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -   deprecated code        : true
+2023-03-09 15:30:03,911 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - ----------------------------------------------------------
+2023-03-09 15:30:03,911 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -                          
+2023-03-09 15:30:03,911 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.AbstractGenerator - Generation remarks       
+2023-03-09 15:30:03,911 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.AbstractGenerator - ----------------------------------------------------------
+2023-03-09 15:30:03,913 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -                          
+2023-03-09 15:30:03,913 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - ----------------------------------------------------------
+2023-03-09 15:30:03,915 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating catalogs      : Total: 1
+2023-03-09 15:30:04,058 [Worker-20: Importing Maven projects] INFO  org.jooq.meta.AbstractDatabase - ARRAYs fetched           : 0 (0 included, 0 excluded)
+2023-03-09 15:30:04,201 [Worker-20: Importing Maven projects] INFO  org.jooq.meta.AbstractDatabase - Domains fetched          : 0 (0 included, 0 excluded)
+2023-03-09 15:30:04,301 [Worker-20: Importing Maven projects] INFO  org.jooq.meta.AbstractDatabase - Tables fetched           : 7 (7 included, 0 excluded)
+2023-03-09 15:30:04,302 [Worker-20: Importing Maven projects] INFO  org.jooq.meta.AbstractDatabase - Embeddables fetched      : 0 (0 included, 0 excluded)
+2023-03-09 15:30:04,327 [Worker-20: Importing Maven projects] INFO  org.jooq.meta.AbstractDatabase - Enums fetched            : 0 (0 included, 0 excluded)
+2023-03-09 15:30:04,327 [Worker-20: Importing Maven projects] INFO  org.jooq.meta.AbstractDatabase - Packages fetched         : 0 (0 included, 0 excluded)
+2023-03-09 15:30:04,369 [Worker-20: Importing Maven projects] INFO  org.jooq.meta.AbstractDatabase - Routines fetched         : 0 (0 included, 0 excluded)
+2023-03-09 15:30:04,424 [Worker-20: Importing Maven projects] INFO  org.jooq.meta.AbstractDatabase - Sequences fetched        : 0 (0 included, 0 excluded)
+2023-03-09 15:30:04,424 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - No schema version is applied for catalog . Regenerating.
+2023-03-09 15:30:04,427 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -                          
+2023-03-09 15:30:04,427 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating catalog       : DefaultCatalog.java
+2023-03-09 15:30:04,428 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - ==========================================================
+2023-03-09 15:30:04,434 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating schemata      : Total: 1
+2023-03-09 15:30:04,434 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - No schema version is applied for schema public. Regenerating.
+2023-03-09 15:30:04,434 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating schema        : Public.java
+2023-03-09 15:30:04,434 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - ----------------------------------------------------------
+2023-03-09 15:30:04,444 [Worker-20: Importing Maven projects] INFO  org.jooq.meta.AbstractDatabase - UDTs fetched             : 0 (0 included, 0 excluded)
+2023-03-09 15:30:04,446 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating tables        
+2023-03-09 15:30:04,645 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating table         : AdminUser.java [input=admin_user, pk=admin_user_pkey]
+2023-03-09 15:30:04,666 [Worker-20: Importing Maven projects] INFO  org.jooq.meta.AbstractDatabase - Indexes fetched          : 0 (0 included, 0 excluded)
+2023-03-09 15:30:04,674 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating table         : Grades.java [input=grades, pk=grades_pkey]
+2023-03-09 15:30:04,680 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating table         : Professor.java [input=professor, pk=professor_pkey]
+2023-03-09 15:30:04,687 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating table         : ProfessorLoad.java [input=professor_load, pk=professor_load_pkey]
+2023-03-09 15:30:04,693 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating table         : Student.java [input=student, pk=student_pkey]
+2023-03-09 15:30:04,702 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating table         : Subject.java [input=subject, pk=subject_pkey]
+2023-03-09 15:30:04,709 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating table         : SubjectDetailHistory.java [input=subject_detail_history, pk=subject_detail_history_pkey]
+2023-03-09 15:30:04,715 [Worker-20: Importing Maven projects] INFO  org.jooq.tools.StopWatch - Tables generated         : Total: 849.455ms
+2023-03-09 15:30:04,716 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating table POJOs   
+2023-03-09 15:30:04,716 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating POJO          : AdminUser.java
+2023-03-09 15:30:04,771 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating POJO          : Grades.java
+2023-03-09 15:30:04,777 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating POJO          : Professor.java
+2023-03-09 15:30:04,788 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating POJO          : ProfessorLoad.java
+2023-03-09 15:30:04,794 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating POJO          : Student.java
+2023-03-09 15:30:04,808 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating POJO          : Subject.java
+2023-03-09 15:30:04,811 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating POJO          : SubjectDetailHistory.java
+2023-03-09 15:30:04,818 [Worker-20: Importing Maven projects] INFO  org.jooq.tools.StopWatch - Table POJOs generated    : Total: 952.239ms, +102.784ms
+2023-03-09 15:30:04,818 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating table references
+2023-03-09 15:30:04,821 [Worker-20: Importing Maven projects] INFO  org.jooq.tools.StopWatch - Table refs generated     : Total: 955.153ms, +2.913ms
+2023-03-09 15:30:04,821 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating Keys          
+2023-03-09 15:30:04,825 [Worker-20: Importing Maven projects] INFO  org.jooq.tools.StopWatch - Keys generated           : Total: 960.238ms, +5.084ms
+2023-03-09 15:30:04,825 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating Indexes       
+2023-03-09 15:30:04,825 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Skipping empty indexes   
+2023-03-09 15:30:04,825 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating table records 
+2023-03-09 15:30:04,826 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating record        : AdminUserRecord.java
+2023-03-09 15:30:04,843 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating record        : GradesRecord.java
+2023-03-09 15:30:04,848 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating record        : ProfessorRecord.java
+2023-03-09 15:30:04,859 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating record        : ProfessorLoadRecord.java
+2023-03-09 15:30:04,864 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating record        : StudentRecord.java
+2023-03-09 15:30:04,876 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating record        : SubjectRecord.java
+2023-03-09 15:30:04,880 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Generating record        : SubjectDetailHistoryRecord.java
+2023-03-09 15:30:04,888 [Worker-20: Importing Maven projects] INFO  org.jooq.tools.StopWatch - Table records generated  : Total: 1.021s, +61.672ms
+2023-03-09 15:30:04,889 [Worker-20: Importing Maven projects] INFO  org.jooq.tools.StopWatch - Generation finished: public: Total: 1.023s, +1.153ms
+2023-03-09 15:30:04,889 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator -                          
+2023-03-09 15:30:04,889 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Affected files: 25       
+2023-03-09 15:30:04,889 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Modified files: 25       
+2023-03-09 15:30:04,889 [Worker-20: Importing Maven projects] INFO  org.jooq.codegen.JavaGenerator - Removing excess files    
+2023-03-09 15:30:05,007 [Worker-20: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /luna/src/main/java
+2023-03-09 15:30:05,008 [Worker-20: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /luna/src/main/resources
+2023-03-09 15:30:05,017 [Worker-20: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /luna/src/main/resources
+2023-03-09 15:30:05,025 [Worker-20: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /luna/src/test/java
+2023-03-09 15:30:06,193 [Worker-20: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 6 sec
+2023-03-09 15:30:13,250 [Worker-8: Building] INFO  org.jooq.codegen.GenerationTool - No <inputCatalog/> was provided. Generating ALL available catalogs instead.
+2023-03-09 15:30:13,252 [Worker-8: Building] INFO  org.jooq.codegen.AbstractGenerator - License parameters       
+2023-03-09 15:30:13,252 [Worker-8: Building] INFO  org.jooq.codegen.AbstractGenerator - ----------------------------------------------------------
+2023-03-09 15:30:13,252 [Worker-8: Building] INFO  org.jooq.codegen.AbstractGenerator -   Thank you for using jOOQ and jOOQ's code generator
+2023-03-09 15:30:13,252 [Worker-8: Building] INFO  org.jooq.codegen.AbstractGenerator -                          
+2023-03-09 15:30:13,252 [Worker-8: Building] INFO  org.jooq.codegen.AbstractGenerator - Database parameters      
+2023-03-09 15:30:13,252 [Worker-8: Building] INFO  org.jooq.codegen.AbstractGenerator - ----------------------------------------------------------
+2023-03-09 15:30:13,252 [Worker-8: Building] INFO  org.jooq.codegen.AbstractGenerator -   dialect                : POSTGRES
+2023-03-09 15:30:13,252 [Worker-8: Building] INFO  org.jooq.codegen.AbstractGenerator -   URL                    : jdbc:postgresql://localhost:5432/luna
+2023-03-09 15:30:13,253 [Worker-8: Building] INFO  org.jooq.codegen.AbstractGenerator -   target dir             : C:\Users\AROXAS\Documents\GitHub\Luna-OCAMS\luna\src\main\java
+2023-03-09 15:30:13,253 [Worker-8: Building] INFO  org.jooq.codegen.AbstractGenerator -   target package         : org.ssglobal.revalida.codes.model
+2023-03-09 15:30:13,253 [Worker-8: Building] INFO  org.jooq.codegen.AbstractGenerator -   includes               : [.*]
+2023-03-09 15:30:13,253 [Worker-8: Building] INFO  org.jooq.codegen.AbstractGenerator -   excludes               : []
+2023-03-09 15:30:13,253 [Worker-8: Building] INFO  org.jooq.codegen.AbstractGenerator -   includeExcludeColumns  : false
+2023-03-09 15:30:13,253 [Worker-8: Building] INFO  org.jooq.codegen.AbstractGenerator - ----------------------------------------------------------
+2023-03-09 15:30:13,253 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -                          
+2023-03-09 15:30:13,253 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - JavaGenerator parameters 
+2023-03-09 15:30:13,253 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - ----------------------------------------------------------
+2023-03-09 15:30:13,253 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - annotations              
+2023-03-09 15:30:13,253 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   generated              : false
+2023-03-09 15:30:13,253 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   JPA                    : false
+2023-03-09 15:30:13,253 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   JPA version            : 
+2023-03-09 15:30:13,253 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   validation             : false
+2023-03-09 15:30:13,253 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   spring                 : false
+2023-03-09 15:30:13,253 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - comments                 
+2023-03-09 15:30:13,253 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   comments               : true
+2023-03-09 15:30:13,253 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   on attributes          : true
+2023-03-09 15:30:13,253 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   on catalogs            : true
+2023-03-09 15:30:13,253 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   on columns             : true
+2023-03-09 15:30:13,253 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   on embeddables         : true
+2023-03-09 15:30:13,253 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   on keys                : true
+2023-03-09 15:30:13,253 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   on links               : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   on packages            : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   on parameters          : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   on queues              : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   on routines            : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   on schemas             : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   on sequences           : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   on tables              : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   on udts                : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - sources                  
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   sources                : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   sources on views       : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - global references        
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   global references      : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   catalogs               : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   domains                : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   indexes                : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   keys                   : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   links                  : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   queues                 : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   routines               : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   schemas                : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   sequences              : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   tables                 : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   udts                   : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - object types             
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   daos                   : false
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   indexes                : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   instance fields        : true
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   interfaces             : false
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   interfaces (immutable) : false
+2023-03-09 15:30:13,254 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   javadoc                : true
+2023-03-09 15:30:13,255 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   keys                   : true
+2023-03-09 15:30:13,255 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   links                  : true
+2023-03-09 15:30:13,255 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   pojos                  : true
+2023-03-09 15:30:13,255 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   pojos (immutable)      : false
+2023-03-09 15:30:13,255 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   queues                 : true
+2023-03-09 15:30:13,255 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   records                : true
+2023-03-09 15:30:13,255 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   routines               : true
+2023-03-09 15:30:13,255 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   sequences              : true
+2023-03-09 15:30:13,255 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   sequenceFlags          : true
+2023-03-09 15:30:13,255 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   table-valued functions : true
+2023-03-09 15:30:13,255 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   tables                 : true
+2023-03-09 15:30:13,255 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   udts                   : true
+2023-03-09 15:30:13,255 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   relations              : true
+2023-03-09 15:30:13,255 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - other                    
+2023-03-09 15:30:13,255 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -   deprecated code        : true
+2023-03-09 15:30:13,255 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - ----------------------------------------------------------
+2023-03-09 15:30:13,255 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -                          
+2023-03-09 15:30:13,255 [Worker-8: Building] INFO  org.jooq.codegen.AbstractGenerator - Generation remarks       
+2023-03-09 15:30:13,255 [Worker-8: Building] INFO  org.jooq.codegen.AbstractGenerator - ----------------------------------------------------------
+2023-03-09 15:30:13,255 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -                          
+2023-03-09 15:30:13,255 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - ----------------------------------------------------------
+2023-03-09 15:30:13,255 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating catalogs      : Total: 1
+2023-03-09 15:30:13,296 [Worker-8: Building] INFO  org.jooq.meta.AbstractDatabase - ARRAYs fetched           : 0 (0 included, 0 excluded)
+2023-03-09 15:30:13,324 [Worker-8: Building] INFO  org.jooq.meta.AbstractDatabase - Domains fetched          : 0 (0 included, 0 excluded)
+2023-03-09 15:30:13,374 [Worker-8: Building] INFO  org.jooq.meta.AbstractDatabase - Tables fetched           : 7 (7 included, 0 excluded)
+2023-03-09 15:30:13,374 [Worker-8: Building] INFO  org.jooq.meta.AbstractDatabase - Embeddables fetched      : 0 (0 included, 0 excluded)
+2023-03-09 15:30:13,382 [Worker-8: Building] INFO  org.jooq.meta.AbstractDatabase - Enums fetched            : 0 (0 included, 0 excluded)
+2023-03-09 15:30:13,383 [Worker-8: Building] INFO  org.jooq.meta.AbstractDatabase - Packages fetched         : 0 (0 included, 0 excluded)
+2023-03-09 15:30:13,419 [Worker-8: Building] INFO  org.jooq.meta.AbstractDatabase - Routines fetched         : 0 (0 included, 0 excluded)
+2023-03-09 15:30:13,450 [Worker-8: Building] INFO  org.jooq.meta.AbstractDatabase - Sequences fetched        : 0 (0 included, 0 excluded)
+2023-03-09 15:30:13,450 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - No schema version is applied for catalog . Regenerating.
+2023-03-09 15:30:13,451 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -                          
+2023-03-09 15:30:13,451 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating catalog       : DefaultCatalog.java
+2023-03-09 15:30:13,451 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - ==========================================================
+2023-03-09 15:30:13,453 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating schemata      : Total: 1
+2023-03-09 15:30:13,453 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - No schema version is applied for schema public. Regenerating.
+2023-03-09 15:30:13,454 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating schema        : Public.java
+2023-03-09 15:30:13,454 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - ----------------------------------------------------------
+2023-03-09 15:30:13,468 [Worker-8: Building] INFO  org.jooq.meta.AbstractDatabase - UDTs fetched             : 0 (0 included, 0 excluded)
+2023-03-09 15:30:13,469 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating tables        
+2023-03-09 15:30:13,723 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating table         : AdminUser.java [input=admin_user, pk=admin_user_pkey]
+2023-03-09 15:30:13,736 [Worker-8: Building] INFO  org.jooq.meta.AbstractDatabase - Indexes fetched          : 0 (0 included, 0 excluded)
+2023-03-09 15:30:13,739 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating table         : Grades.java [input=grades, pk=grades_pkey]
+2023-03-09 15:30:13,744 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating table         : Professor.java [input=professor, pk=professor_pkey]
+2023-03-09 15:30:13,750 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating table         : ProfessorLoad.java [input=professor_load, pk=professor_load_pkey]
+2023-03-09 15:30:13,754 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating table         : Student.java [input=student, pk=student_pkey]
+2023-03-09 15:30:13,761 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating table         : Subject.java [input=subject, pk=subject_pkey]
+2023-03-09 15:30:13,765 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating table         : SubjectDetailHistory.java [input=subject_detail_history, pk=subject_detail_history_pkey]
+2023-03-09 15:30:13,771 [Worker-8: Building] INFO  org.jooq.tools.StopWatch - Tables generated         : Total: 520.398ms
+2023-03-09 15:30:13,771 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating table POJOs   
+2023-03-09 15:30:13,771 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating POJO          : AdminUser.java
+2023-03-09 15:30:13,776 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating POJO          : Grades.java
+2023-03-09 15:30:13,781 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating POJO          : Professor.java
+2023-03-09 15:30:13,787 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating POJO          : ProfessorLoad.java
+2023-03-09 15:30:13,793 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating POJO          : Student.java
+2023-03-09 15:30:13,801 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating POJO          : Subject.java
+2023-03-09 15:30:13,805 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating POJO          : SubjectDetailHistory.java
+2023-03-09 15:30:13,811 [Worker-8: Building] INFO  org.jooq.tools.StopWatch - Table POJOs generated    : Total: 561.025ms, +40.627ms
+2023-03-09 15:30:13,811 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating table references
+2023-03-09 15:30:13,813 [Worker-8: Building] INFO  org.jooq.tools.StopWatch - Table refs generated     : Total: 562.737ms, +1.711ms
+2023-03-09 15:30:13,813 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating Keys          
+2023-03-09 15:30:13,815 [Worker-8: Building] INFO  org.jooq.tools.StopWatch - Keys generated           : Total: 565.768ms, +3.03ms
+2023-03-09 15:30:13,815 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating Indexes       
+2023-03-09 15:30:13,815 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Skipping empty indexes   
+2023-03-09 15:30:13,815 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating table records 
+2023-03-09 15:30:13,816 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating record        : AdminUserRecord.java
+2023-03-09 15:30:13,821 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating record        : GradesRecord.java
+2023-03-09 15:30:13,829 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating record        : ProfessorRecord.java
+2023-03-09 15:30:13,836 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating record        : ProfessorLoadRecord.java
+2023-03-09 15:30:13,842 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating record        : StudentRecord.java
+2023-03-09 15:30:13,854 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating record        : SubjectRecord.java
+2023-03-09 15:30:13,860 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Generating record        : SubjectDetailHistoryRecord.java
+2023-03-09 15:30:13,867 [Worker-8: Building] INFO  org.jooq.tools.StopWatch - Table records generated  : Total: 617.164ms, +51.396ms
+2023-03-09 15:30:13,867 [Worker-8: Building] INFO  org.jooq.tools.StopWatch - Generation finished: public: Total: 617.636ms, +0.471ms
+2023-03-09 15:30:13,868 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator -                          
+2023-03-09 15:30:13,868 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Affected files: 25       
+2023-03-09 15:30:13,868 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Modified files: 0        
+2023-03-09 15:30:13,868 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - No modified files        : This code generation run has not produced any file modifications.
+This means, the schema has not changed, and no other parameters (jOOQ version, driver version, database version,
+and any configuration elements) have changed either.
+
+In automated builds, it is recommended to prevent unnecessary code generation runs. This run took: 611.744ms
+Possible means to prevent this:
+- Use manual code generation and check in generated sources: https://www.jooq.org/doc/latest/manual/code-generation/codegen-version-control/
+- Use schema version providers: https://www.jooq.org/doc/latest/manual/code-generation/codegen-advanced/codegen-config-database/codegen-database-version-providers/
+- Use gradle tasks and inputs: https://github.com/etiennestuder/gradle-jooq-plugin/blob/master/README.md
+2023-03-09 15:30:13,868 [Worker-8: Building] INFO  org.jooq.codegen.JavaGenerator - Removing excess files    
+2023-03-09 15:30:13,918 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-09 15:30:13,951 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-09 15:30:13,957 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\AROXAS\Documents\GitHub\Luna-OCAMS\luna\src\test\resources
+2023-03-10 14:15:30,783 [Worker-29: Launching Executing clean in C__Users_AROXAS_Documents_GitHub_Luna-OCAMS_luna] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\AROXAS\Documents\GitHub\Luna-OCAMS\luna
+2023-03-10 14:15:30,793 [Worker-29: Launching Executing clean in C__Users_AROXAS_Documents_GitHub_Luna-OCAMS_luna] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -Dstyle.color=always clean
+2023-03-10 14:15:35,239 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-10 14:15:35,245 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-10 14:15:35,252 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\AROXAS\Documents\GitHub\Luna-OCAMS\luna\src\test\resources
+2023-03-10 14:15:44,780 [Worker-33: Launching Executing install in C__Users_AROXAS_Documents_GitHub_Luna-OCAMS_luna] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\AROXAS\Documents\GitHub\Luna-OCAMS\luna
+2023-03-10 14:15:44,781 [Worker-33: Launching Executing install in C__Users_AROXAS_Documents_GitHub_Luna-OCAMS_luna] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -Dstyle.color=always install
+2023-03-10 14:16:18,660 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-10 14:16:18,738 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-10 14:16:18,745 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\AROXAS\Documents\GitHub\Luna-OCAMS\luna\src\test\resources

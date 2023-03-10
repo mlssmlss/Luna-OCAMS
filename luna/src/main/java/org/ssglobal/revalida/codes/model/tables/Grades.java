@@ -9,11 +9,11 @@ import java.util.function.Function;
 
 import org.jooq.Field;
 import org.jooq.ForeignKey;
-import org.jooq.Function7;
+import org.jooq.Function6;
 import org.jooq.Name;
 import org.jooq.Record;
 import org.jooq.Records;
-import org.jooq.Row7;
+import org.jooq.Row6;
 import org.jooq.Schema;
 import org.jooq.SelectField;
 import org.jooq.Table;
@@ -55,14 +55,9 @@ public class Grades extends TableImpl<GradesRecord> {
     public final TableField<GradesRecord, Integer> GRADE_ID = createField(DSL.name("grade_id"), SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>public.grades.session_id</code>.
-     */
-    public final TableField<GradesRecord, Integer> SESSION_ID = createField(DSL.name("session_id"), SQLDataType.INTEGER.nullable(false), this, "");
-
-    /**
      * The column <code>public.grades.grade</code>.
      */
-    public final TableField<GradesRecord, Integer> GRADE = createField(DSL.name("grade"), SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<GradesRecord, Integer> GRADE = createField(DSL.name("grade"), SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>public.grades.comment</code>.
@@ -77,12 +72,12 @@ public class Grades extends TableImpl<GradesRecord> {
     /**
      * The column <code>public.grades.remarks</code>.
      */
-    public final TableField<GradesRecord, Boolean> REMARKS = createField(DSL.name("remarks"), SQLDataType.BOOLEAN.nullable(false), this, "");
+    public final TableField<GradesRecord, String> REMARKS = createField(DSL.name("remarks"), SQLDataType.VARCHAR(20), this, "");
 
     /**
      * The column <code>public.grades.status</code>.
      */
-    public final TableField<GradesRecord, String> STATUS = createField(DSL.name("status"), SQLDataType.VARCHAR.nullable(false), this, "");
+    public final TableField<GradesRecord, String> STATUS = createField(DSL.name("status"), SQLDataType.VARCHAR(20), this, "");
 
     private Grades(Name alias, Table<GradesRecord> aliased) {
         this(alias, aliased, null);
@@ -167,18 +162,18 @@ public class Grades extends TableImpl<GradesRecord> {
     }
 
     // -------------------------------------------------------------------------
-    // Row7 type methods
+    // Row6 type methods
     // -------------------------------------------------------------------------
 
     @Override
-    public Row7<Integer, Integer, Integer, String, LocalDate, Boolean, String> fieldsRow() {
-        return (Row7) super.fieldsRow();
+    public Row6<Integer, Integer, String, LocalDate, String, String> fieldsRow() {
+        return (Row6) super.fieldsRow();
     }
 
     /**
      * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
      */
-    public <U> SelectField<U> mapping(Function7<? super Integer, ? super Integer, ? super Integer, ? super String, ? super LocalDate, ? super Boolean, ? super String, ? extends U> from) {
+    public <U> SelectField<U> mapping(Function6<? super Integer, ? super Integer, ? super String, ? super LocalDate, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
@@ -186,7 +181,7 @@ public class Grades extends TableImpl<GradesRecord> {
      * Convenience mapping calling {@link SelectField#convertFrom(Class,
      * Function)}.
      */
-    public <U> SelectField<U> mapping(Class<U> toType, Function7<? super Integer, ? super Integer, ? super Integer, ? super String, ? super LocalDate, ? super Boolean, ? super String, ? extends U> from) {
+    public <U> SelectField<U> mapping(Class<U> toType, Function6<? super Integer, ? super Integer, ? super String, ? super LocalDate, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }
 }

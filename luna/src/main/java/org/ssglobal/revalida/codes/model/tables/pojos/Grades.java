@@ -17,18 +17,16 @@ public class Grades implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private Integer gradeId;
-    private Integer sessionId;
     private Integer grade;
     private String comment;
     private LocalDate dateModified;
-    private Boolean remarks;
+    private String remarks;
     private String status;
 
     public Grades() {}
 
     public Grades(Grades value) {
         this.gradeId = value.gradeId;
-        this.sessionId = value.sessionId;
         this.grade = value.grade;
         this.comment = value.comment;
         this.dateModified = value.dateModified;
@@ -38,15 +36,13 @@ public class Grades implements Serializable {
 
     public Grades(
         Integer gradeId,
-        Integer sessionId,
         Integer grade,
         String comment,
         LocalDate dateModified,
-        Boolean remarks,
+        String remarks,
         String status
     ) {
         this.gradeId = gradeId;
-        this.sessionId = sessionId;
         this.grade = grade;
         this.comment = comment;
         this.dateModified = dateModified;
@@ -66,21 +62,6 @@ public class Grades implements Serializable {
      */
     public Grades setGradeId(Integer gradeId) {
         this.gradeId = gradeId;
-        return this;
-    }
-
-    /**
-     * Getter for <code>public.grades.session_id</code>.
-     */
-    public Integer getSessionId() {
-        return this.sessionId;
-    }
-
-    /**
-     * Setter for <code>public.grades.session_id</code>.
-     */
-    public Grades setSessionId(Integer sessionId) {
-        this.sessionId = sessionId;
         return this;
     }
 
@@ -132,14 +113,14 @@ public class Grades implements Serializable {
     /**
      * Getter for <code>public.grades.remarks</code>.
      */
-    public Boolean getRemarks() {
+    public String getRemarks() {
         return this.remarks;
     }
 
     /**
      * Setter for <code>public.grades.remarks</code>.
      */
-    public Grades setRemarks(Boolean remarks) {
+    public Grades setRemarks(String remarks) {
         this.remarks = remarks;
         return this;
     }
@@ -173,12 +154,6 @@ public class Grades implements Serializable {
                 return false;
         }
         else if (!this.gradeId.equals(other.gradeId))
-            return false;
-        if (this.sessionId == null) {
-            if (other.sessionId != null)
-                return false;
-        }
-        else if (!this.sessionId.equals(other.sessionId))
             return false;
         if (this.grade == null) {
             if (other.grade != null)
@@ -218,7 +193,6 @@ public class Grades implements Serializable {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((this.gradeId == null) ? 0 : this.gradeId.hashCode());
-        result = prime * result + ((this.sessionId == null) ? 0 : this.sessionId.hashCode());
         result = prime * result + ((this.grade == null) ? 0 : this.grade.hashCode());
         result = prime * result + ((this.comment == null) ? 0 : this.comment.hashCode());
         result = prime * result + ((this.dateModified == null) ? 0 : this.dateModified.hashCode());
@@ -232,7 +206,6 @@ public class Grades implements Serializable {
         StringBuilder sb = new StringBuilder("Grades (");
 
         sb.append(gradeId);
-        sb.append(", ").append(sessionId);
         sb.append(", ").append(grade);
         sb.append(", ").append(comment);
         sb.append(", ").append(dateModified);

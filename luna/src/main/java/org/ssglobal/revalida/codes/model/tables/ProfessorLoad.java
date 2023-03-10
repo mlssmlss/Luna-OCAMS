@@ -4,6 +4,8 @@
 package org.ssglobal.revalida.codes.model.tables;
 
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.function.Function;
 
 import org.jooq.Field;
@@ -56,22 +58,22 @@ public class ProfessorLoad extends TableImpl<ProfessorLoadRecord> {
     /**
      * The column <code>public.professor_load.professor_id</code>.
      */
-    public final TableField<ProfessorLoadRecord, Integer> PROFESSOR_ID = createField(DSL.name("professor_id"), SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<ProfessorLoadRecord, Integer> PROFESSOR_ID = createField(DSL.name("professor_id"), SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>public.professor_load.course_title</code>.
      */
-    public final TableField<ProfessorLoadRecord, String> COURSE_TITLE = createField(DSL.name("course_title"), SQLDataType.VARCHAR(20).nullable(false), this, "");
+    public final TableField<ProfessorLoadRecord, String> COURSE_TITLE = createField(DSL.name("course_title"), SQLDataType.VARCHAR(20), this, "");
 
     /**
      * The column <code>public.professor_load.section</code>.
      */
-    public final TableField<ProfessorLoadRecord, String> SECTION = createField(DSL.name("section"), SQLDataType.VARCHAR(20).nullable(false), this, "");
+    public final TableField<ProfessorLoadRecord, Integer> SECTION = createField(DSL.name("section"), SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>public.professor_load.year_level</code>.
      */
-    public final TableField<ProfessorLoadRecord, Integer> YEAR_LEVEL = createField(DSL.name("year_level"), SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<ProfessorLoadRecord, Integer> YEAR_LEVEL = createField(DSL.name("year_level"), SQLDataType.INTEGER, this, "");
 
     private ProfessorLoad(Name alias, Table<ProfessorLoadRecord> aliased) {
         this(alias, aliased, null);
@@ -114,6 +116,23 @@ public class ProfessorLoad extends TableImpl<ProfessorLoadRecord> {
     @Override
     public UniqueKey<ProfessorLoadRecord> getPrimaryKey() {
         return Keys.PROFESSOR_LOAD_PKEY;
+    }
+
+    @Override
+    public List<ForeignKey<ProfessorLoadRecord, ?>> getReferences() {
+        return Arrays.asList(Keys.PROFESSOR_LOAD__PROFESSOR_LOAD_PROFESSOR_ID_FKEY);
+    }
+
+    private transient Professor _professor;
+
+    /**
+     * Get the implicit join path to the <code>public.professor</code> table.
+     */
+    public Professor professor() {
+        if (_professor == null)
+            _professor = new Professor(this, Keys.PROFESSOR_LOAD__PROFESSOR_LOAD_PROFESSOR_ID_FKEY);
+
+        return _professor;
     }
 
     @Override
@@ -160,14 +179,14 @@ public class ProfessorLoad extends TableImpl<ProfessorLoadRecord> {
     // -------------------------------------------------------------------------
 
     @Override
-    public Row5<Integer, Integer, String, String, Integer> fieldsRow() {
+    public Row5<Integer, Integer, String, Integer, Integer> fieldsRow() {
         return (Row5) super.fieldsRow();
     }
 
     /**
      * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
      */
-    public <U> SelectField<U> mapping(Function5<? super Integer, ? super Integer, ? super String, ? super String, ? super Integer, ? extends U> from) {
+    public <U> SelectField<U> mapping(Function5<? super Integer, ? super Integer, ? super String, ? super Integer, ? super Integer, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
@@ -175,7 +194,7 @@ public class ProfessorLoad extends TableImpl<ProfessorLoadRecord> {
      * Convenience mapping calling {@link SelectField#convertFrom(Class,
      * Function)}.
      */
-    public <U> SelectField<U> mapping(Class<U> toType, Function5<? super Integer, ? super Integer, ? super String, ? super String, ? super Integer, ? extends U> from) {
+    public <U> SelectField<U> mapping(Class<U> toType, Function5<? super Integer, ? super Integer, ? super String, ? super Integer, ? super Integer, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }
 }

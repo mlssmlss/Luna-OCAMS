@@ -4,23 +4,26 @@
 package org.ssglobal.revalida.codes.model;
 
 
+import org.jooq.ForeignKey;
 import org.jooq.TableField;
 import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.Internal;
-import org.ssglobal.revalida.codes.model.tables.AdminUser;
+import org.ssglobal.revalida.codes.model.tables.Admin;
 import org.ssglobal.revalida.codes.model.tables.Grades;
+import org.ssglobal.revalida.codes.model.tables.Parent;
 import org.ssglobal.revalida.codes.model.tables.Professor;
 import org.ssglobal.revalida.codes.model.tables.ProfessorLoad;
+import org.ssglobal.revalida.codes.model.tables.Program;
 import org.ssglobal.revalida.codes.model.tables.Student;
 import org.ssglobal.revalida.codes.model.tables.Subject;
-import org.ssglobal.revalida.codes.model.tables.SubjectDetailHistory;
-import org.ssglobal.revalida.codes.model.tables.records.AdminUserRecord;
+import org.ssglobal.revalida.codes.model.tables.records.AdminRecord;
 import org.ssglobal.revalida.codes.model.tables.records.GradesRecord;
+import org.ssglobal.revalida.codes.model.tables.records.ParentRecord;
 import org.ssglobal.revalida.codes.model.tables.records.ProfessorLoadRecord;
 import org.ssglobal.revalida.codes.model.tables.records.ProfessorRecord;
+import org.ssglobal.revalida.codes.model.tables.records.ProgramRecord;
 import org.ssglobal.revalida.codes.model.tables.records.StudentRecord;
-import org.ssglobal.revalida.codes.model.tables.records.SubjectDetailHistoryRecord;
 import org.ssglobal.revalida.codes.model.tables.records.SubjectRecord;
 
 
@@ -35,11 +38,24 @@ public class Keys {
     // UNIQUE and PRIMARY KEY definitions
     // -------------------------------------------------------------------------
 
-    public static final UniqueKey<AdminUserRecord> ADMIN_USER_PKEY = Internal.createUniqueKey(AdminUser.ADMIN_USER, DSL.name("admin_user_pkey"), new TableField[] { AdminUser.ADMIN_USER.ADMIN_ID }, true);
+    public static final UniqueKey<AdminRecord> ADMIN_PKEY = Internal.createUniqueKey(Admin.ADMIN, DSL.name("admin_pkey"), new TableField[] { Admin.ADMIN.ADMIN_ID }, true);
     public static final UniqueKey<GradesRecord> GRADES_PKEY = Internal.createUniqueKey(Grades.GRADES, DSL.name("grades_pkey"), new TableField[] { Grades.GRADES.GRADE_ID }, true);
+    public static final UniqueKey<ParentRecord> PARENT_PKEY = Internal.createUniqueKey(Parent.PARENT, DSL.name("parent_pkey"), new TableField[] { Parent.PARENT.PARENT_ID }, true);
     public static final UniqueKey<ProfessorRecord> PROFESSOR_PKEY = Internal.createUniqueKey(Professor.PROFESSOR, DSL.name("professor_pkey"), new TableField[] { Professor.PROFESSOR.PROFESSOR_ID }, true);
     public static final UniqueKey<ProfessorLoadRecord> PROFESSOR_LOAD_PKEY = Internal.createUniqueKey(ProfessorLoad.PROFESSOR_LOAD, DSL.name("professor_load_pkey"), new TableField[] { ProfessorLoad.PROFESSOR_LOAD.LOAD_ID }, true);
+    public static final UniqueKey<ProgramRecord> PROGRAM_PKEY = Internal.createUniqueKey(Program.PROGRAM, DSL.name("program_pkey"), new TableField[] { Program.PROGRAM.PROGRAM_ID }, true);
     public static final UniqueKey<StudentRecord> STUDENT_PKEY = Internal.createUniqueKey(Student.STUDENT, DSL.name("student_pkey"), new TableField[] { Student.STUDENT.STUDENT_ID }, true);
     public static final UniqueKey<SubjectRecord> SUBJECT_PKEY = Internal.createUniqueKey(Subject.SUBJECT, DSL.name("subject_pkey"), new TableField[] { Subject.SUBJECT.SUBJECT_ID }, true);
-    public static final UniqueKey<SubjectDetailHistoryRecord> SUBJECT_DETAIL_HISTORY_PKEY = Internal.createUniqueKey(SubjectDetailHistory.SUBJECT_DETAIL_HISTORY, DSL.name("subject_detail_history_pkey"), new TableField[] { SubjectDetailHistory.SUBJECT_DETAIL_HISTORY.SESSION_ID }, true);
+
+    // -------------------------------------------------------------------------
+    // FOREIGN KEY definitions
+    // -------------------------------------------------------------------------
+
+    public static final ForeignKey<ParentRecord, StudentRecord> PARENT__PARENT_STUDENT_ID_FKEY = Internal.createForeignKey(Parent.PARENT, DSL.name("parent_student_id_fkey"), new TableField[] { Parent.PARENT.STUDENT_ID }, Keys.STUDENT_PKEY, new TableField[] { Student.STUDENT.STUDENT_ID }, true);
+    public static final ForeignKey<ProfessorRecord, GradesRecord> PROFESSOR__PROFESSOR_GRADE_ID_FKEY = Internal.createForeignKey(Professor.PROFESSOR, DSL.name("professor_grade_id_fkey"), new TableField[] { Professor.PROFESSOR.GRADE_ID }, Keys.GRADES_PKEY, new TableField[] { Grades.GRADES.GRADE_ID }, true);
+    public static final ForeignKey<ProfessorRecord, StudentRecord> PROFESSOR__PROFESSOR_STUDENT_ID_FKEY = Internal.createForeignKey(Professor.PROFESSOR, DSL.name("professor_student_id_fkey"), new TableField[] { Professor.PROFESSOR.STUDENT_ID }, Keys.STUDENT_PKEY, new TableField[] { Student.STUDENT.STUDENT_ID }, true);
+    public static final ForeignKey<ProfessorLoadRecord, ProfessorRecord> PROFESSOR_LOAD__PROFESSOR_LOAD_PROFESSOR_ID_FKEY = Internal.createForeignKey(ProfessorLoad.PROFESSOR_LOAD, DSL.name("professor_load_professor_id_fkey"), new TableField[] { ProfessorLoad.PROFESSOR_LOAD.PROFESSOR_ID }, Keys.PROFESSOR_PKEY, new TableField[] { Professor.PROFESSOR.PROFESSOR_ID }, true);
+    public static final ForeignKey<StudentRecord, GradesRecord> STUDENT__STUDENT_GRADE_ID_FKEY = Internal.createForeignKey(Student.STUDENT, DSL.name("student_grade_id_fkey"), new TableField[] { Student.STUDENT.GRADE_ID }, Keys.GRADES_PKEY, new TableField[] { Grades.GRADES.GRADE_ID }, true);
+    public static final ForeignKey<StudentRecord, ProgramRecord> STUDENT__STUDENT_PROGRAM_ID_FKEY = Internal.createForeignKey(Student.STUDENT, DSL.name("student_program_id_fkey"), new TableField[] { Student.STUDENT.PROGRAM_ID }, Keys.PROGRAM_PKEY, new TableField[] { Program.PROGRAM.PROGRAM_ID }, true);
+    public static final ForeignKey<StudentRecord, SubjectRecord> STUDENT__STUDENT_SUBJECT_ID_FKEY = Internal.createForeignKey(Student.STUDENT, DSL.name("student_subject_id_fkey"), new TableField[] { Student.STUDENT.SUBJECT_ID }, Keys.SUBJECT_PKEY, new TableField[] { Subject.SUBJECT.SUBJECT_ID }, true);
 }

@@ -71,7 +71,7 @@ public class Subject extends TableImpl<SubjectRecord> {
     /**
      * The column <code>public.subject.active_deactive</code>.
      */
-    public final TableField<SubjectRecord, Boolean> ACTIVE_DEACTIVE = createField(DSL.name("active_deactive"), SQLDataType.BOOLEAN.nullable(false), this, "");
+    public final TableField<SubjectRecord, Boolean> ACTIVE_DEACTIVE = createField(DSL.name("active_deactive"), SQLDataType.BOOLEAN, this, "");
 
     private Subject(Name alias, Table<SubjectRecord> aliased) {
         this(alias, aliased, null);

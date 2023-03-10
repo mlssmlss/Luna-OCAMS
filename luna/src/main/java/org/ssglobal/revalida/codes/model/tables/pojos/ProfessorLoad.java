@@ -18,7 +18,7 @@ public class ProfessorLoad implements Serializable {
     private Integer loadId;
     private Integer professorId;
     private String courseTitle;
-    private String section;
+    private Integer section;
     private Integer yearLevel;
 
     public ProfessorLoad() {}
@@ -35,7 +35,7 @@ public class ProfessorLoad implements Serializable {
         Integer loadId,
         Integer professorId,
         String courseTitle,
-        String section,
+        Integer section,
         Integer yearLevel
     ) {
         this.loadId = loadId;
@@ -93,14 +93,14 @@ public class ProfessorLoad implements Serializable {
     /**
      * Getter for <code>public.professor_load.section</code>.
      */
-    public String getSection() {
+    public Integer getSection() {
         return this.section;
     }
 
     /**
      * Setter for <code>public.professor_load.section</code>.
      */
-    public ProfessorLoad setSection(String section) {
+    public ProfessorLoad setSection(Integer section) {
         this.section = section;
         return this;
     }

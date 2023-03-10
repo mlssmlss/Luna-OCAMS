@@ -17,53 +17,57 @@ public class Professor implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private Integer professorId;
+    private Integer studentId;
+    private Integer gradeId;
+    private String professorNumber;
     private String professorName;
-    private Integer professorNumber;
-    private String work;
     private String gender;
     private String status;
     private LocalDate birthdate;
-    private String professorLoad;
-    private Integer grades;
-    private String subjectDetails;
+    private String password;
+    private Boolean activeDeactive;
+    private String type;
 
     public Professor() {}
 
     public Professor(Professor value) {
         this.professorId = value.professorId;
-        this.professorName = value.professorName;
+        this.studentId = value.studentId;
+        this.gradeId = value.gradeId;
         this.professorNumber = value.professorNumber;
-        this.work = value.work;
+        this.professorName = value.professorName;
         this.gender = value.gender;
         this.status = value.status;
         this.birthdate = value.birthdate;
-        this.professorLoad = value.professorLoad;
-        this.grades = value.grades;
-        this.subjectDetails = value.subjectDetails;
+        this.password = value.password;
+        this.activeDeactive = value.activeDeactive;
+        this.type = value.type;
     }
 
     public Professor(
         Integer professorId,
+        Integer studentId,
+        Integer gradeId,
+        String professorNumber,
         String professorName,
-        Integer professorNumber,
-        String work,
         String gender,
         String status,
         LocalDate birthdate,
-        String professorLoad,
-        Integer grades,
-        String subjectDetails
+        String password,
+        Boolean activeDeactive,
+        String type
     ) {
         this.professorId = professorId;
-        this.professorName = professorName;
+        this.studentId = studentId;
+        this.gradeId = gradeId;
         this.professorNumber = professorNumber;
-        this.work = work;
+        this.professorName = professorName;
         this.gender = gender;
         this.status = status;
         this.birthdate = birthdate;
-        this.professorLoad = professorLoad;
-        this.grades = grades;
-        this.subjectDetails = subjectDetails;
+        this.password = password;
+        this.activeDeactive = activeDeactive;
+        this.type = type;
     }
 
     /**
@@ -82,6 +86,51 @@ public class Professor implements Serializable {
     }
 
     /**
+     * Getter for <code>public.professor.student_id</code>.
+     */
+    public Integer getStudentId() {
+        return this.studentId;
+    }
+
+    /**
+     * Setter for <code>public.professor.student_id</code>.
+     */
+    public Professor setStudentId(Integer studentId) {
+        this.studentId = studentId;
+        return this;
+    }
+
+    /**
+     * Getter for <code>public.professor.grade_id</code>.
+     */
+    public Integer getGradeId() {
+        return this.gradeId;
+    }
+
+    /**
+     * Setter for <code>public.professor.grade_id</code>.
+     */
+    public Professor setGradeId(Integer gradeId) {
+        this.gradeId = gradeId;
+        return this;
+    }
+
+    /**
+     * Getter for <code>public.professor.professor_number</code>.
+     */
+    public String getProfessorNumber() {
+        return this.professorNumber;
+    }
+
+    /**
+     * Setter for <code>public.professor.professor_number</code>.
+     */
+    public Professor setProfessorNumber(String professorNumber) {
+        this.professorNumber = professorNumber;
+        return this;
+    }
+
+    /**
      * Getter for <code>public.professor.professor_name</code>.
      */
     public String getProfessorName() {
@@ -93,36 +142,6 @@ public class Professor implements Serializable {
      */
     public Professor setProfessorName(String professorName) {
         this.professorName = professorName;
-        return this;
-    }
-
-    /**
-     * Getter for <code>public.professor.professor_number</code>.
-     */
-    public Integer getProfessorNumber() {
-        return this.professorNumber;
-    }
-
-    /**
-     * Setter for <code>public.professor.professor_number</code>.
-     */
-    public Professor setProfessorNumber(Integer professorNumber) {
-        this.professorNumber = professorNumber;
-        return this;
-    }
-
-    /**
-     * Getter for <code>public.professor.work</code>.
-     */
-    public String getWork() {
-        return this.work;
-    }
-
-    /**
-     * Setter for <code>public.professor.work</code>.
-     */
-    public Professor setWork(String work) {
-        this.work = work;
         return this;
     }
 
@@ -172,47 +191,47 @@ public class Professor implements Serializable {
     }
 
     /**
-     * Getter for <code>public.professor.professor_load</code>.
+     * Getter for <code>public.professor.password</code>.
      */
-    public String getProfessorLoad() {
-        return this.professorLoad;
+    public String getPassword() {
+        return this.password;
     }
 
     /**
-     * Setter for <code>public.professor.professor_load</code>.
+     * Setter for <code>public.professor.password</code>.
      */
-    public Professor setProfessorLoad(String professorLoad) {
-        this.professorLoad = professorLoad;
+    public Professor setPassword(String password) {
+        this.password = password;
         return this;
     }
 
     /**
-     * Getter for <code>public.professor.grades</code>.
+     * Getter for <code>public.professor.active_deactive</code>.
      */
-    public Integer getGrades() {
-        return this.grades;
+    public Boolean getActiveDeactive() {
+        return this.activeDeactive;
     }
 
     /**
-     * Setter for <code>public.professor.grades</code>.
+     * Setter for <code>public.professor.active_deactive</code>.
      */
-    public Professor setGrades(Integer grades) {
-        this.grades = grades;
+    public Professor setActiveDeactive(Boolean activeDeactive) {
+        this.activeDeactive = activeDeactive;
         return this;
     }
 
     /**
-     * Getter for <code>public.professor.subject_details</code>.
+     * Getter for <code>public.professor.type</code>.
      */
-    public String getSubjectDetails() {
-        return this.subjectDetails;
+    public String getType() {
+        return this.type;
     }
 
     /**
-     * Setter for <code>public.professor.subject_details</code>.
+     * Setter for <code>public.professor.type</code>.
      */
-    public Professor setSubjectDetails(String subjectDetails) {
-        this.subjectDetails = subjectDetails;
+    public Professor setType(String type) {
+        this.type = type;
         return this;
     }
 
@@ -231,11 +250,17 @@ public class Professor implements Serializable {
         }
         else if (!this.professorId.equals(other.professorId))
             return false;
-        if (this.professorName == null) {
-            if (other.professorName != null)
+        if (this.studentId == null) {
+            if (other.studentId != null)
                 return false;
         }
-        else if (!this.professorName.equals(other.professorName))
+        else if (!this.studentId.equals(other.studentId))
+            return false;
+        if (this.gradeId == null) {
+            if (other.gradeId != null)
+                return false;
+        }
+        else if (!this.gradeId.equals(other.gradeId))
             return false;
         if (this.professorNumber == null) {
             if (other.professorNumber != null)
@@ -243,11 +268,11 @@ public class Professor implements Serializable {
         }
         else if (!this.professorNumber.equals(other.professorNumber))
             return false;
-        if (this.work == null) {
-            if (other.work != null)
+        if (this.professorName == null) {
+            if (other.professorName != null)
                 return false;
         }
-        else if (!this.work.equals(other.work))
+        else if (!this.professorName.equals(other.professorName))
             return false;
         if (this.gender == null) {
             if (other.gender != null)
@@ -267,23 +292,23 @@ public class Professor implements Serializable {
         }
         else if (!this.birthdate.equals(other.birthdate))
             return false;
-        if (this.professorLoad == null) {
-            if (other.professorLoad != null)
+        if (this.password == null) {
+            if (other.password != null)
                 return false;
         }
-        else if (!this.professorLoad.equals(other.professorLoad))
+        else if (!this.password.equals(other.password))
             return false;
-        if (this.grades == null) {
-            if (other.grades != null)
+        if (this.activeDeactive == null) {
+            if (other.activeDeactive != null)
                 return false;
         }
-        else if (!this.grades.equals(other.grades))
+        else if (!this.activeDeactive.equals(other.activeDeactive))
             return false;
-        if (this.subjectDetails == null) {
-            if (other.subjectDetails != null)
+        if (this.type == null) {
+            if (other.type != null)
                 return false;
         }
-        else if (!this.subjectDetails.equals(other.subjectDetails))
+        else if (!this.type.equals(other.type))
             return false;
         return true;
     }
@@ -293,15 +318,16 @@ public class Professor implements Serializable {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((this.professorId == null) ? 0 : this.professorId.hashCode());
-        result = prime * result + ((this.professorName == null) ? 0 : this.professorName.hashCode());
+        result = prime * result + ((this.studentId == null) ? 0 : this.studentId.hashCode());
+        result = prime * result + ((this.gradeId == null) ? 0 : this.gradeId.hashCode());
         result = prime * result + ((this.professorNumber == null) ? 0 : this.professorNumber.hashCode());
-        result = prime * result + ((this.work == null) ? 0 : this.work.hashCode());
+        result = prime * result + ((this.professorName == null) ? 0 : this.professorName.hashCode());
         result = prime * result + ((this.gender == null) ? 0 : this.gender.hashCode());
         result = prime * result + ((this.status == null) ? 0 : this.status.hashCode());
         result = prime * result + ((this.birthdate == null) ? 0 : this.birthdate.hashCode());
-        result = prime * result + ((this.professorLoad == null) ? 0 : this.professorLoad.hashCode());
-        result = prime * result + ((this.grades == null) ? 0 : this.grades.hashCode());
-        result = prime * result + ((this.subjectDetails == null) ? 0 : this.subjectDetails.hashCode());
+        result = prime * result + ((this.password == null) ? 0 : this.password.hashCode());
+        result = prime * result + ((this.activeDeactive == null) ? 0 : this.activeDeactive.hashCode());
+        result = prime * result + ((this.type == null) ? 0 : this.type.hashCode());
         return result;
     }
 
@@ -310,15 +336,16 @@ public class Professor implements Serializable {
         StringBuilder sb = new StringBuilder("Professor (");
 
         sb.append(professorId);
-        sb.append(", ").append(professorName);
+        sb.append(", ").append(studentId);
+        sb.append(", ").append(gradeId);
         sb.append(", ").append(professorNumber);
-        sb.append(", ").append(work);
+        sb.append(", ").append(professorName);
         sb.append(", ").append(gender);
         sb.append(", ").append(status);
         sb.append(", ").append(birthdate);
-        sb.append(", ").append(professorLoad);
-        sb.append(", ").append(grades);
-        sb.append(", ").append(subjectDetails);
+        sb.append(", ").append(password);
+        sb.append(", ").append(activeDeactive);
+        sb.append(", ").append(type);
 
         sb.append(")");
         return sb.toString();

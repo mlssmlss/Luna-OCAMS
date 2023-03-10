@@ -10,13 +10,14 @@ import java.util.List;
 import org.jooq.Catalog;
 import org.jooq.Table;
 import org.jooq.impl.SchemaImpl;
-import org.ssglobal.revalida.codes.model.tables.AdminUser;
+import org.ssglobal.revalida.codes.model.tables.Admin;
 import org.ssglobal.revalida.codes.model.tables.Grades;
+import org.ssglobal.revalida.codes.model.tables.Parent;
 import org.ssglobal.revalida.codes.model.tables.Professor;
 import org.ssglobal.revalida.codes.model.tables.ProfessorLoad;
+import org.ssglobal.revalida.codes.model.tables.Program;
 import org.ssglobal.revalida.codes.model.tables.Student;
 import org.ssglobal.revalida.codes.model.tables.Subject;
-import org.ssglobal.revalida.codes.model.tables.SubjectDetailHistory;
 
 
 /**
@@ -33,14 +34,19 @@ public class Public extends SchemaImpl {
     public static final Public PUBLIC = new Public();
 
     /**
-     * The table <code>public.admin_user</code>.
+     * The table <code>public.admin</code>.
      */
-    public final AdminUser ADMIN_USER = AdminUser.ADMIN_USER;
+    public final Admin ADMIN = Admin.ADMIN;
 
     /**
      * The table <code>public.grades</code>.
      */
     public final Grades GRADES = Grades.GRADES;
+
+    /**
+     * The table <code>public.parent</code>.
+     */
+    public final Parent PARENT = Parent.PARENT;
 
     /**
      * The table <code>public.professor</code>.
@@ -53,6 +59,11 @@ public class Public extends SchemaImpl {
     public final ProfessorLoad PROFESSOR_LOAD = ProfessorLoad.PROFESSOR_LOAD;
 
     /**
+     * The table <code>public.program</code>.
+     */
+    public final Program PROGRAM = Program.PROGRAM;
+
+    /**
      * The table <code>public.student</code>.
      */
     public final Student STUDENT = Student.STUDENT;
@@ -61,11 +72,6 @@ public class Public extends SchemaImpl {
      * The table <code>public.subject</code>.
      */
     public final Subject SUBJECT = Subject.SUBJECT;
-
-    /**
-     * The table <code>public.subject_detail_history</code>.
-     */
-    public final SubjectDetailHistory SUBJECT_DETAIL_HISTORY = SubjectDetailHistory.SUBJECT_DETAIL_HISTORY;
 
     /**
      * No further instances allowed
@@ -83,13 +89,14 @@ public class Public extends SchemaImpl {
     @Override
     public final List<Table<?>> getTables() {
         return Arrays.asList(
-            AdminUser.ADMIN_USER,
+            Admin.ADMIN,
             Grades.GRADES,
+            Parent.PARENT,
             Professor.PROFESSOR,
             ProfessorLoad.PROFESSOR_LOAD,
+            Program.PROGRAM,
             Student.STUDENT,
-            Subject.SUBJECT,
-            SubjectDetailHistory.SUBJECT_DETAIL_HISTORY
+            Subject.SUBJECT
         );
     }
 }

@@ -17,8 +17,9 @@ public class Student implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private Integer studentId;
-    private Integer studentNumber;
-    private String program;
+    private Integer programId;
+    private Integer subjectId;
+    private Integer gradeId;
     private String password;
     private String firstname;
     private String middlename;
@@ -26,18 +27,20 @@ public class Student implements Serializable {
     private LocalDate birthdate;
     private String semester;
     private Integer yearLevel;
-    private Integer academicLevel;
+    private String academicYear;
     private String status;
     private Boolean activeDeactive;
-    private String subject;
-    private Integer grades;
+    private String course;
+    private String type;
+    private String studentNumber;
 
     public Student() {}
 
     public Student(Student value) {
         this.studentId = value.studentId;
-        this.studentNumber = value.studentNumber;
-        this.program = value.program;
+        this.programId = value.programId;
+        this.subjectId = value.subjectId;
+        this.gradeId = value.gradeId;
         this.password = value.password;
         this.firstname = value.firstname;
         this.middlename = value.middlename;
@@ -45,17 +48,19 @@ public class Student implements Serializable {
         this.birthdate = value.birthdate;
         this.semester = value.semester;
         this.yearLevel = value.yearLevel;
-        this.academicLevel = value.academicLevel;
+        this.academicYear = value.academicYear;
         this.status = value.status;
         this.activeDeactive = value.activeDeactive;
-        this.subject = value.subject;
-        this.grades = value.grades;
+        this.course = value.course;
+        this.type = value.type;
+        this.studentNumber = value.studentNumber;
     }
 
     public Student(
         Integer studentId,
-        Integer studentNumber,
-        String program,
+        Integer programId,
+        Integer subjectId,
+        Integer gradeId,
         String password,
         String firstname,
         String middlename,
@@ -63,15 +68,17 @@ public class Student implements Serializable {
         LocalDate birthdate,
         String semester,
         Integer yearLevel,
-        Integer academicLevel,
+        String academicYear,
         String status,
         Boolean activeDeactive,
-        String subject,
-        Integer grades
+        String course,
+        String type,
+        String studentNumber
     ) {
         this.studentId = studentId;
-        this.studentNumber = studentNumber;
-        this.program = program;
+        this.programId = programId;
+        this.subjectId = subjectId;
+        this.gradeId = gradeId;
         this.password = password;
         this.firstname = firstname;
         this.middlename = middlename;
@@ -79,11 +86,12 @@ public class Student implements Serializable {
         this.birthdate = birthdate;
         this.semester = semester;
         this.yearLevel = yearLevel;
-        this.academicLevel = academicLevel;
+        this.academicYear = academicYear;
         this.status = status;
         this.activeDeactive = activeDeactive;
-        this.subject = subject;
-        this.grades = grades;
+        this.course = course;
+        this.type = type;
+        this.studentNumber = studentNumber;
     }
 
     /**
@@ -102,32 +110,47 @@ public class Student implements Serializable {
     }
 
     /**
-     * Getter for <code>public.student.student_number</code>.
+     * Getter for <code>public.student.program_id</code>.
      */
-    public Integer getStudentNumber() {
-        return this.studentNumber;
+    public Integer getProgramId() {
+        return this.programId;
     }
 
     /**
-     * Setter for <code>public.student.student_number</code>.
+     * Setter for <code>public.student.program_id</code>.
      */
-    public Student setStudentNumber(Integer studentNumber) {
-        this.studentNumber = studentNumber;
+    public Student setProgramId(Integer programId) {
+        this.programId = programId;
         return this;
     }
 
     /**
-     * Getter for <code>public.student.program</code>.
+     * Getter for <code>public.student.subject_id</code>.
      */
-    public String getProgram() {
-        return this.program;
+    public Integer getSubjectId() {
+        return this.subjectId;
     }
 
     /**
-     * Setter for <code>public.student.program</code>.
+     * Setter for <code>public.student.subject_id</code>.
      */
-    public Student setProgram(String program) {
-        this.program = program;
+    public Student setSubjectId(Integer subjectId) {
+        this.subjectId = subjectId;
+        return this;
+    }
+
+    /**
+     * Getter for <code>public.student.grade_id</code>.
+     */
+    public Integer getGradeId() {
+        return this.gradeId;
+    }
+
+    /**
+     * Setter for <code>public.student.grade_id</code>.
+     */
+    public Student setGradeId(Integer gradeId) {
+        this.gradeId = gradeId;
         return this;
     }
 
@@ -237,17 +260,17 @@ public class Student implements Serializable {
     }
 
     /**
-     * Getter for <code>public.student.academic_level</code>.
+     * Getter for <code>public.student.academic_year</code>.
      */
-    public Integer getAcademicLevel() {
-        return this.academicLevel;
+    public String getAcademicYear() {
+        return this.academicYear;
     }
 
     /**
-     * Setter for <code>public.student.academic_level</code>.
+     * Setter for <code>public.student.academic_year</code>.
      */
-    public Student setAcademicLevel(Integer academicLevel) {
-        this.academicLevel = academicLevel;
+    public Student setAcademicYear(String academicYear) {
+        this.academicYear = academicYear;
         return this;
     }
 
@@ -282,32 +305,47 @@ public class Student implements Serializable {
     }
 
     /**
-     * Getter for <code>public.student.subject</code>.
+     * Getter for <code>public.student.course</code>.
      */
-    public String getSubject() {
-        return this.subject;
+    public String getCourse() {
+        return this.course;
     }
 
     /**
-     * Setter for <code>public.student.subject</code>.
+     * Setter for <code>public.student.course</code>.
      */
-    public Student setSubject(String subject) {
-        this.subject = subject;
+    public Student setCourse(String course) {
+        this.course = course;
         return this;
     }
 
     /**
-     * Getter for <code>public.student.grades</code>.
+     * Getter for <code>public.student.type</code>.
      */
-    public Integer getGrades() {
-        return this.grades;
+    public String getType() {
+        return this.type;
     }
 
     /**
-     * Setter for <code>public.student.grades</code>.
+     * Setter for <code>public.student.type</code>.
      */
-    public Student setGrades(Integer grades) {
-        this.grades = grades;
+    public Student setType(String type) {
+        this.type = type;
+        return this;
+    }
+
+    /**
+     * Getter for <code>public.student.student_number</code>.
+     */
+    public String getStudentNumber() {
+        return this.studentNumber;
+    }
+
+    /**
+     * Setter for <code>public.student.student_number</code>.
+     */
+    public Student setStudentNumber(String studentNumber) {
+        this.studentNumber = studentNumber;
         return this;
     }
 
@@ -326,17 +364,23 @@ public class Student implements Serializable {
         }
         else if (!this.studentId.equals(other.studentId))
             return false;
-        if (this.studentNumber == null) {
-            if (other.studentNumber != null)
+        if (this.programId == null) {
+            if (other.programId != null)
                 return false;
         }
-        else if (!this.studentNumber.equals(other.studentNumber))
+        else if (!this.programId.equals(other.programId))
             return false;
-        if (this.program == null) {
-            if (other.program != null)
+        if (this.subjectId == null) {
+            if (other.subjectId != null)
                 return false;
         }
-        else if (!this.program.equals(other.program))
+        else if (!this.subjectId.equals(other.subjectId))
+            return false;
+        if (this.gradeId == null) {
+            if (other.gradeId != null)
+                return false;
+        }
+        else if (!this.gradeId.equals(other.gradeId))
             return false;
         if (this.password == null) {
             if (other.password != null)
@@ -380,11 +424,11 @@ public class Student implements Serializable {
         }
         else if (!this.yearLevel.equals(other.yearLevel))
             return false;
-        if (this.academicLevel == null) {
-            if (other.academicLevel != null)
+        if (this.academicYear == null) {
+            if (other.academicYear != null)
                 return false;
         }
-        else if (!this.academicLevel.equals(other.academicLevel))
+        else if (!this.academicYear.equals(other.academicYear))
             return false;
         if (this.status == null) {
             if (other.status != null)
@@ -398,17 +442,23 @@ public class Student implements Serializable {
         }
         else if (!this.activeDeactive.equals(other.activeDeactive))
             return false;
-        if (this.subject == null) {
-            if (other.subject != null)
+        if (this.course == null) {
+            if (other.course != null)
                 return false;
         }
-        else if (!this.subject.equals(other.subject))
+        else if (!this.course.equals(other.course))
             return false;
-        if (this.grades == null) {
-            if (other.grades != null)
+        if (this.type == null) {
+            if (other.type != null)
                 return false;
         }
-        else if (!this.grades.equals(other.grades))
+        else if (!this.type.equals(other.type))
+            return false;
+        if (this.studentNumber == null) {
+            if (other.studentNumber != null)
+                return false;
+        }
+        else if (!this.studentNumber.equals(other.studentNumber))
             return false;
         return true;
     }
@@ -418,8 +468,9 @@ public class Student implements Serializable {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((this.studentId == null) ? 0 : this.studentId.hashCode());
-        result = prime * result + ((this.studentNumber == null) ? 0 : this.studentNumber.hashCode());
-        result = prime * result + ((this.program == null) ? 0 : this.program.hashCode());
+        result = prime * result + ((this.programId == null) ? 0 : this.programId.hashCode());
+        result = prime * result + ((this.subjectId == null) ? 0 : this.subjectId.hashCode());
+        result = prime * result + ((this.gradeId == null) ? 0 : this.gradeId.hashCode());
         result = prime * result + ((this.password == null) ? 0 : this.password.hashCode());
         result = prime * result + ((this.firstname == null) ? 0 : this.firstname.hashCode());
         result = prime * result + ((this.middlename == null) ? 0 : this.middlename.hashCode());
@@ -427,11 +478,12 @@ public class Student implements Serializable {
         result = prime * result + ((this.birthdate == null) ? 0 : this.birthdate.hashCode());
         result = prime * result + ((this.semester == null) ? 0 : this.semester.hashCode());
         result = prime * result + ((this.yearLevel == null) ? 0 : this.yearLevel.hashCode());
-        result = prime * result + ((this.academicLevel == null) ? 0 : this.academicLevel.hashCode());
+        result = prime * result + ((this.academicYear == null) ? 0 : this.academicYear.hashCode());
         result = prime * result + ((this.status == null) ? 0 : this.status.hashCode());
         result = prime * result + ((this.activeDeactive == null) ? 0 : this.activeDeactive.hashCode());
-        result = prime * result + ((this.subject == null) ? 0 : this.subject.hashCode());
-        result = prime * result + ((this.grades == null) ? 0 : this.grades.hashCode());
+        result = prime * result + ((this.course == null) ? 0 : this.course.hashCode());
+        result = prime * result + ((this.type == null) ? 0 : this.type.hashCode());
+        result = prime * result + ((this.studentNumber == null) ? 0 : this.studentNumber.hashCode());
         return result;
     }
 
@@ -440,8 +492,9 @@ public class Student implements Serializable {
         StringBuilder sb = new StringBuilder("Student (");
 
         sb.append(studentId);
-        sb.append(", ").append(studentNumber);
-        sb.append(", ").append(program);
+        sb.append(", ").append(programId);
+        sb.append(", ").append(subjectId);
+        sb.append(", ").append(gradeId);
         sb.append(", ").append(password);
         sb.append(", ").append(firstname);
         sb.append(", ").append(middlename);
@@ -449,11 +502,12 @@ public class Student implements Serializable {
         sb.append(", ").append(birthdate);
         sb.append(", ").append(semester);
         sb.append(", ").append(yearLevel);
-        sb.append(", ").append(academicLevel);
+        sb.append(", ").append(academicYear);
         sb.append(", ").append(status);
         sb.append(", ").append(activeDeactive);
-        sb.append(", ").append(subject);
-        sb.append(", ").append(grades);
+        sb.append(", ").append(course);
+        sb.append(", ").append(type);
+        sb.append(", ").append(studentNumber);
 
         sb.append(")");
         return sb.toString();

@@ -4,13 +4,14 @@
 package org.ssglobal.revalida.codes.model;
 
 
-import org.ssglobal.revalida.codes.model.tables.AdminUser;
+import org.ssglobal.revalida.codes.model.tables.Admin;
 import org.ssglobal.revalida.codes.model.tables.Grades;
+import org.ssglobal.revalida.codes.model.tables.Parent;
 import org.ssglobal.revalida.codes.model.tables.Professor;
 import org.ssglobal.revalida.codes.model.tables.ProfessorLoad;
+import org.ssglobal.revalida.codes.model.tables.Program;
 import org.ssglobal.revalida.codes.model.tables.Student;
 import org.ssglobal.revalida.codes.model.tables.Subject;
-import org.ssglobal.revalida.codes.model.tables.SubjectDetailHistory;
 
 
 /**
@@ -20,14 +21,19 @@ import org.ssglobal.revalida.codes.model.tables.SubjectDetailHistory;
 public class Tables {
 
     /**
-     * The table <code>public.admin_user</code>.
+     * The table <code>public.admin</code>.
      */
-    public static final AdminUser ADMIN_USER = AdminUser.ADMIN_USER;
+    public static final Admin ADMIN = Admin.ADMIN;
 
     /**
      * The table <code>public.grades</code>.
      */
     public static final Grades GRADES = Grades.GRADES;
+
+    /**
+     * The table <code>public.parent</code>.
+     */
+    public static final Parent PARENT = Parent.PARENT;
 
     /**
      * The table <code>public.professor</code>.
@@ -40,6 +46,11 @@ public class Tables {
     public static final ProfessorLoad PROFESSOR_LOAD = ProfessorLoad.PROFESSOR_LOAD;
 
     /**
+     * The table <code>public.program</code>.
+     */
+    public static final Program PROGRAM = Program.PROGRAM;
+
+    /**
      * The table <code>public.student</code>.
      */
     public static final Student STUDENT = Student.STUDENT;
@@ -48,9 +59,4 @@ public class Tables {
      * The table <code>public.subject</code>.
      */
     public static final Subject SUBJECT = Subject.SUBJECT;
-
-    /**
-     * The table <code>public.subject_detail_history</code>.
-     */
-    public static final SubjectDetailHistory SUBJECT_DETAIL_HISTORY = SubjectDetailHistory.SUBJECT_DETAIL_HISTORY;
 }
