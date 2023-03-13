@@ -1,4 +1,50 @@
-.bDateContainer {
+.reg-video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.hero-reg {
+  /* background: url("/public/images/img-home.jpg") center center/cover no-repeat; */
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+}
+
+.form-input {
+  padding: 30px;
+}
+
+.student-info {
+  width: 100%; /* change this value to adjust the width of the div */
+  margin: auto; /* set the left and right margins to auto */
+  border: 1px solid black;
+  border-radius: 0.5em;
+  padding: 10px;
+}
+
+.student-input {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+/* .stdNo,
+.fName,
+.mName,
+.lName {
+  vertical-align: top;
+} */
+
+/* .bDateContainer {
   display: flex;
   flex-direction: row;
 }
@@ -7,4 +53,4 @@
 .bDateInput {
   display: inline-block;
   margin-right: 10px;
-}
+} */
