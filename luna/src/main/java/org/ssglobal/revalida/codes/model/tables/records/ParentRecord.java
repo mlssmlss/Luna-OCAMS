@@ -18,7 +18,7 @@ import org.ssglobal.revalida.codes.model.tables.Parent;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ParentRecord extends UpdatableRecordImpl<ParentRecord> implements Record7<Integer, Integer, String, String, String, String, String> {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1440732267;
 
     /**
      * Setter for <code>public.parent.parent_id</code>.
@@ -324,29 +324,12 @@ public class ParentRecord extends UpdatableRecordImpl<ParentRecord> implements R
     public ParentRecord(Integer parentId, Integer studentId, String username, String password, String firstname, String lastname, String type) {
         super(Parent.PARENT);
 
-        setParentId(parentId);
-        setStudentId(studentId);
-        setUsername(username);
-        setPassword(password);
-        setFirstname(firstname);
-        setLastname(lastname);
-        setType(type);
-    }
-
-    /**
-     * Create a detached, initialised ParentRecord
-     */
-    public ParentRecord(org.ssglobal.revalida.codes.model.tables.pojos.Parent value) {
-        super(Parent.PARENT);
-
-        if (value != null) {
-            setParentId(value.getParentId());
-            setStudentId(value.getStudentId());
-            setUsername(value.getUsername());
-            setPassword(value.getPassword());
-            setFirstname(value.getFirstname());
-            setLastname(value.getLastname());
-            setType(value.getType());
-        }
+        set(0, parentId);
+        set(1, studentId);
+        set(2, username);
+        set(3, password);
+        set(4, firstname);
+        set(5, lastname);
+        set(6, type);
     }
 }

@@ -13,11 +13,11 @@ import java.io.Serializable;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ProfessorLoad implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -327440234;
 
     private Integer loadId;
     private Integer professorId;
-    private String courseTitle;
+    private String  courseTitle;
     private Integer section;
     private Integer yearLevel;
 
@@ -34,7 +34,7 @@ public class ProfessorLoad implements Serializable {
     public ProfessorLoad(
         Integer loadId,
         Integer professorId,
-        String courseTitle,
+        String  courseTitle,
         Integer section,
         Integer yearLevel
     ) {
@@ -45,76 +45,46 @@ public class ProfessorLoad implements Serializable {
         this.yearLevel = yearLevel;
     }
 
-    /**
-     * Getter for <code>public.professor_load.load_id</code>.
-     */
     public Integer getLoadId() {
         return this.loadId;
     }
 
-    /**
-     * Setter for <code>public.professor_load.load_id</code>.
-     */
     public ProfessorLoad setLoadId(Integer loadId) {
         this.loadId = loadId;
         return this;
     }
 
-    /**
-     * Getter for <code>public.professor_load.professor_id</code>.
-     */
     public Integer getProfessorId() {
         return this.professorId;
     }
 
-    /**
-     * Setter for <code>public.professor_load.professor_id</code>.
-     */
     public ProfessorLoad setProfessorId(Integer professorId) {
         this.professorId = professorId;
         return this;
     }
 
-    /**
-     * Getter for <code>public.professor_load.course_title</code>.
-     */
     public String getCourseTitle() {
         return this.courseTitle;
     }
 
-    /**
-     * Setter for <code>public.professor_load.course_title</code>.
-     */
     public ProfessorLoad setCourseTitle(String courseTitle) {
         this.courseTitle = courseTitle;
         return this;
     }
 
-    /**
-     * Getter for <code>public.professor_load.section</code>.
-     */
     public Integer getSection() {
         return this.section;
     }
 
-    /**
-     * Setter for <code>public.professor_load.section</code>.
-     */
     public ProfessorLoad setSection(Integer section) {
         this.section = section;
         return this;
     }
 
-    /**
-     * Getter for <code>public.professor_load.year_level</code>.
-     */
     public Integer getYearLevel() {
         return this.yearLevel;
     }
 
-    /**
-     * Setter for <code>public.professor_load.year_level</code>.
-     */
     public ProfessorLoad setYearLevel(Integer yearLevel) {
         this.yearLevel = yearLevel;
         return this;
@@ -129,35 +99,35 @@ public class ProfessorLoad implements Serializable {
         if (getClass() != obj.getClass())
             return false;
         final ProfessorLoad other = (ProfessorLoad) obj;
-        if (this.loadId == null) {
+        if (loadId == null) {
             if (other.loadId != null)
                 return false;
         }
-        else if (!this.loadId.equals(other.loadId))
+        else if (!loadId.equals(other.loadId))
             return false;
-        if (this.professorId == null) {
+        if (professorId == null) {
             if (other.professorId != null)
                 return false;
         }
-        else if (!this.professorId.equals(other.professorId))
+        else if (!professorId.equals(other.professorId))
             return false;
-        if (this.courseTitle == null) {
+        if (courseTitle == null) {
             if (other.courseTitle != null)
                 return false;
         }
-        else if (!this.courseTitle.equals(other.courseTitle))
+        else if (!courseTitle.equals(other.courseTitle))
             return false;
-        if (this.section == null) {
+        if (section == null) {
             if (other.section != null)
                 return false;
         }
-        else if (!this.section.equals(other.section))
+        else if (!section.equals(other.section))
             return false;
-        if (this.yearLevel == null) {
+        if (yearLevel == null) {
             if (other.yearLevel != null)
                 return false;
         }
-        else if (!this.yearLevel.equals(other.yearLevel))
+        else if (!yearLevel.equals(other.yearLevel))
             return false;
         return true;
     }

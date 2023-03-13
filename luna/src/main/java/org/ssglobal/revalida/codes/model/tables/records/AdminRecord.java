@@ -18,7 +18,7 @@ import org.ssglobal.revalida.codes.model.tables.Admin;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class AdminRecord extends UpdatableRecordImpl<AdminRecord> implements Record9<Integer, String, String, String, String, String, Integer, Integer, Integer> {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 382930071;
 
     /**
      * Setter for <code>public.admin.admin_id</code>.
@@ -398,33 +398,14 @@ public class AdminRecord extends UpdatableRecordImpl<AdminRecord> implements Rec
     public AdminRecord(Integer adminId, String username, String password, String firstname, String lastname, String type, Integer studentId, Integer parentId, Integer professorId) {
         super(Admin.ADMIN);
 
-        setAdminId(adminId);
-        setUsername(username);
-        setPassword(password);
-        setFirstname(firstname);
-        setLastname(lastname);
-        setType(type);
-        setStudentId(studentId);
-        setParentId(parentId);
-        setProfessorId(professorId);
-    }
-
-    /**
-     * Create a detached, initialised AdminRecord
-     */
-    public AdminRecord(org.ssglobal.revalida.codes.model.tables.pojos.Admin value) {
-        super(Admin.ADMIN);
-
-        if (value != null) {
-            setAdminId(value.getAdminId());
-            setUsername(value.getUsername());
-            setPassword(value.getPassword());
-            setFirstname(value.getFirstname());
-            setLastname(value.getLastname());
-            setType(value.getType());
-            setStudentId(value.getStudentId());
-            setParentId(value.getParentId());
-            setProfessorId(value.getProfessorId());
-        }
+        set(0, adminId);
+        set(1, username);
+        set(2, password);
+        set(3, firstname);
+        set(4, lastname);
+        set(5, type);
+        set(6, studentId);
+        set(7, parentId);
+        set(8, professorId);
     }
 }

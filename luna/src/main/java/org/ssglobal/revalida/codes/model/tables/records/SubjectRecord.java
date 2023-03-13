@@ -18,7 +18,7 @@ import org.ssglobal.revalida.codes.model.tables.Subject;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class SubjectRecord extends UpdatableRecordImpl<SubjectRecord> implements Record5<Integer, String, String, Integer, Boolean> {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -774382285;
 
     /**
      * Setter for <code>public.subject.subject_id</code>.
@@ -250,25 +250,10 @@ public class SubjectRecord extends UpdatableRecordImpl<SubjectRecord> implements
     public SubjectRecord(Integer subjectId, String subjectCode, String subjectTitle, Integer unit, Boolean activeDeactive) {
         super(Subject.SUBJECT);
 
-        setSubjectId(subjectId);
-        setSubjectCode(subjectCode);
-        setSubjectTitle(subjectTitle);
-        setUnit(unit);
-        setActiveDeactive(activeDeactive);
-    }
-
-    /**
-     * Create a detached, initialised SubjectRecord
-     */
-    public SubjectRecord(org.ssglobal.revalida.codes.model.tables.pojos.Subject value) {
-        super(Subject.SUBJECT);
-
-        if (value != null) {
-            setSubjectId(value.getSubjectId());
-            setSubjectCode(value.getSubjectCode());
-            setSubjectTitle(value.getSubjectTitle());
-            setUnit(value.getUnit());
-            setActiveDeactive(value.getActiveDeactive());
-        }
+        set(0, subjectId);
+        set(1, subjectCode);
+        set(2, subjectTitle);
+        set(3, unit);
+        set(4, activeDeactive);
     }
 }

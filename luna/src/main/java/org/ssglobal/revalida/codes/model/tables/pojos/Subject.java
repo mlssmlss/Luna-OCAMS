@@ -13,11 +13,11 @@ import java.io.Serializable;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Subject implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -110072396;
 
     private Integer subjectId;
-    private String subjectCode;
-    private String subjectTitle;
+    private String  subjectCode;
+    private String  subjectTitle;
     private Integer unit;
     private Boolean activeDeactive;
 
@@ -33,8 +33,8 @@ public class Subject implements Serializable {
 
     public Subject(
         Integer subjectId,
-        String subjectCode,
-        String subjectTitle,
+        String  subjectCode,
+        String  subjectTitle,
         Integer unit,
         Boolean activeDeactive
     ) {
@@ -45,76 +45,46 @@ public class Subject implements Serializable {
         this.activeDeactive = activeDeactive;
     }
 
-    /**
-     * Getter for <code>public.subject.subject_id</code>.
-     */
     public Integer getSubjectId() {
         return this.subjectId;
     }
 
-    /**
-     * Setter for <code>public.subject.subject_id</code>.
-     */
     public Subject setSubjectId(Integer subjectId) {
         this.subjectId = subjectId;
         return this;
     }
 
-    /**
-     * Getter for <code>public.subject.subject_code</code>.
-     */
     public String getSubjectCode() {
         return this.subjectCode;
     }
 
-    /**
-     * Setter for <code>public.subject.subject_code</code>.
-     */
     public Subject setSubjectCode(String subjectCode) {
         this.subjectCode = subjectCode;
         return this;
     }
 
-    /**
-     * Getter for <code>public.subject.subject_title</code>.
-     */
     public String getSubjectTitle() {
         return this.subjectTitle;
     }
 
-    /**
-     * Setter for <code>public.subject.subject_title</code>.
-     */
     public Subject setSubjectTitle(String subjectTitle) {
         this.subjectTitle = subjectTitle;
         return this;
     }
 
-    /**
-     * Getter for <code>public.subject.unit</code>.
-     */
     public Integer getUnit() {
         return this.unit;
     }
 
-    /**
-     * Setter for <code>public.subject.unit</code>.
-     */
     public Subject setUnit(Integer unit) {
         this.unit = unit;
         return this;
     }
 
-    /**
-     * Getter for <code>public.subject.active_deactive</code>.
-     */
     public Boolean getActiveDeactive() {
         return this.activeDeactive;
     }
 
-    /**
-     * Setter for <code>public.subject.active_deactive</code>.
-     */
     public Subject setActiveDeactive(Boolean activeDeactive) {
         this.activeDeactive = activeDeactive;
         return this;
@@ -129,35 +99,35 @@ public class Subject implements Serializable {
         if (getClass() != obj.getClass())
             return false;
         final Subject other = (Subject) obj;
-        if (this.subjectId == null) {
+        if (subjectId == null) {
             if (other.subjectId != null)
                 return false;
         }
-        else if (!this.subjectId.equals(other.subjectId))
+        else if (!subjectId.equals(other.subjectId))
             return false;
-        if (this.subjectCode == null) {
+        if (subjectCode == null) {
             if (other.subjectCode != null)
                 return false;
         }
-        else if (!this.subjectCode.equals(other.subjectCode))
+        else if (!subjectCode.equals(other.subjectCode))
             return false;
-        if (this.subjectTitle == null) {
+        if (subjectTitle == null) {
             if (other.subjectTitle != null)
                 return false;
         }
-        else if (!this.subjectTitle.equals(other.subjectTitle))
+        else if (!subjectTitle.equals(other.subjectTitle))
             return false;
-        if (this.unit == null) {
+        if (unit == null) {
             if (other.unit != null)
                 return false;
         }
-        else if (!this.unit.equals(other.unit))
+        else if (!unit.equals(other.unit))
             return false;
-        if (this.activeDeactive == null) {
+        if (activeDeactive == null) {
             if (other.activeDeactive != null)
                 return false;
         }
-        else if (!this.activeDeactive.equals(other.activeDeactive))
+        else if (!activeDeactive.equals(other.activeDeactive))
             return false;
         return true;
     }

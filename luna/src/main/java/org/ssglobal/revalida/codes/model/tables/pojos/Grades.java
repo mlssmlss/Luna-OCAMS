@@ -14,14 +14,14 @@ import java.time.LocalDate;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Grades implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 531824740;
 
-    private Integer gradeId;
-    private Integer grade;
-    private String comment;
+    private Integer   gradeId;
+    private Integer   grade;
+    private String    comment;
     private LocalDate dateModified;
-    private String remarks;
-    private String status;
+    private String    remarks;
+    private String    status;
 
     public Grades() {}
 
@@ -35,12 +35,12 @@ public class Grades implements Serializable {
     }
 
     public Grades(
-        Integer gradeId,
-        Integer grade,
-        String comment,
+        Integer   gradeId,
+        Integer   grade,
+        String    comment,
         LocalDate dateModified,
-        String remarks,
-        String status
+        String    remarks,
+        String    status
     ) {
         this.gradeId = gradeId;
         this.grade = grade;
@@ -50,91 +50,55 @@ public class Grades implements Serializable {
         this.status = status;
     }
 
-    /**
-     * Getter for <code>public.grades.grade_id</code>.
-     */
     public Integer getGradeId() {
         return this.gradeId;
     }
 
-    /**
-     * Setter for <code>public.grades.grade_id</code>.
-     */
     public Grades setGradeId(Integer gradeId) {
         this.gradeId = gradeId;
         return this;
     }
 
-    /**
-     * Getter for <code>public.grades.grade</code>.
-     */
     public Integer getGrade() {
         return this.grade;
     }
 
-    /**
-     * Setter for <code>public.grades.grade</code>.
-     */
     public Grades setGrade(Integer grade) {
         this.grade = grade;
         return this;
     }
 
-    /**
-     * Getter for <code>public.grades.comment</code>.
-     */
     public String getComment() {
         return this.comment;
     }
 
-    /**
-     * Setter for <code>public.grades.comment</code>.
-     */
     public Grades setComment(String comment) {
         this.comment = comment;
         return this;
     }
 
-    /**
-     * Getter for <code>public.grades.date_modified</code>.
-     */
     public LocalDate getDateModified() {
         return this.dateModified;
     }
 
-    /**
-     * Setter for <code>public.grades.date_modified</code>.
-     */
     public Grades setDateModified(LocalDate dateModified) {
         this.dateModified = dateModified;
         return this;
     }
 
-    /**
-     * Getter for <code>public.grades.remarks</code>.
-     */
     public String getRemarks() {
         return this.remarks;
     }
 
-    /**
-     * Setter for <code>public.grades.remarks</code>.
-     */
     public Grades setRemarks(String remarks) {
         this.remarks = remarks;
         return this;
     }
 
-    /**
-     * Getter for <code>public.grades.status</code>.
-     */
     public String getStatus() {
         return this.status;
     }
 
-    /**
-     * Setter for <code>public.grades.status</code>.
-     */
     public Grades setStatus(String status) {
         this.status = status;
         return this;
@@ -149,41 +113,41 @@ public class Grades implements Serializable {
         if (getClass() != obj.getClass())
             return false;
         final Grades other = (Grades) obj;
-        if (this.gradeId == null) {
+        if (gradeId == null) {
             if (other.gradeId != null)
                 return false;
         }
-        else if (!this.gradeId.equals(other.gradeId))
+        else if (!gradeId.equals(other.gradeId))
             return false;
-        if (this.grade == null) {
+        if (grade == null) {
             if (other.grade != null)
                 return false;
         }
-        else if (!this.grade.equals(other.grade))
+        else if (!grade.equals(other.grade))
             return false;
-        if (this.comment == null) {
+        if (comment == null) {
             if (other.comment != null)
                 return false;
         }
-        else if (!this.comment.equals(other.comment))
+        else if (!comment.equals(other.comment))
             return false;
-        if (this.dateModified == null) {
+        if (dateModified == null) {
             if (other.dateModified != null)
                 return false;
         }
-        else if (!this.dateModified.equals(other.dateModified))
+        else if (!dateModified.equals(other.dateModified))
             return false;
-        if (this.remarks == null) {
+        if (remarks == null) {
             if (other.remarks != null)
                 return false;
         }
-        else if (!this.remarks.equals(other.remarks))
+        else if (!remarks.equals(other.remarks))
             return false;
-        if (this.status == null) {
+        if (status == null) {
             if (other.status != null)
                 return false;
         }
-        else if (!this.status.equals(other.status))
+        else if (!status.equals(other.status))
             return false;
         return true;
     }

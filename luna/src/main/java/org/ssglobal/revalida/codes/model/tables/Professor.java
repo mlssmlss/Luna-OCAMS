@@ -7,23 +7,18 @@ package org.ssglobal.revalida.codes.model.tables;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import org.jooq.Field;
 import org.jooq.ForeignKey;
-import org.jooq.Function11;
 import org.jooq.Name;
 import org.jooq.Record;
-import org.jooq.Records;
 import org.jooq.Row11;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
 import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
-import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 import org.ssglobal.revalida.codes.model.Keys;
 import org.ssglobal.revalida.codes.model.Public;
@@ -36,7 +31,7 @@ import org.ssglobal.revalida.codes.model.tables.records.ProfessorRecord;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Professor extends TableImpl<ProfessorRecord> {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -782811845;
 
     /**
      * The reference instance of <code>public.professor</code>
@@ -54,64 +49,63 @@ public class Professor extends TableImpl<ProfessorRecord> {
     /**
      * The column <code>public.professor.professor_id</code>.
      */
-    public final TableField<ProfessorRecord, Integer> PROFESSOR_ID = createField(DSL.name("professor_id"), SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<ProfessorRecord, Integer> PROFESSOR_ID = createField(DSL.name("professor_id"), org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
      * The column <code>public.professor.student_id</code>.
      */
-    public final TableField<ProfessorRecord, Integer> STUDENT_ID = createField(DSL.name("student_id"), SQLDataType.INTEGER, this, "");
+    public final TableField<ProfessorRecord, Integer> STUDENT_ID = createField(DSL.name("student_id"), org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>public.professor.grade_id</code>.
      */
-    public final TableField<ProfessorRecord, Integer> GRADE_ID = createField(DSL.name("grade_id"), SQLDataType.INTEGER, this, "");
+    public final TableField<ProfessorRecord, Integer> GRADE_ID = createField(DSL.name("grade_id"), org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>public.professor.professor_number</code>.
      */
-    public final TableField<ProfessorRecord, String> PROFESSOR_NUMBER = createField(DSL.name("professor_number"), SQLDataType.VARCHAR(20).nullable(false), this, "");
+    public final TableField<ProfessorRecord, String> PROFESSOR_NUMBER = createField(DSL.name("professor_number"), org.jooq.impl.SQLDataType.VARCHAR(20).nullable(false), this, "");
 
     /**
      * The column <code>public.professor.professor_name</code>.
      */
-    public final TableField<ProfessorRecord, String> PROFESSOR_NAME = createField(DSL.name("professor_name"), SQLDataType.VARCHAR(20).nullable(false), this, "");
+    public final TableField<ProfessorRecord, String> PROFESSOR_NAME = createField(DSL.name("professor_name"), org.jooq.impl.SQLDataType.VARCHAR(20).nullable(false), this, "");
 
     /**
      * The column <code>public.professor.gender</code>.
      */
-    public final TableField<ProfessorRecord, String> GENDER = createField(DSL.name("gender"), SQLDataType.VARCHAR(6).nullable(false), this, "");
+    public final TableField<ProfessorRecord, String> GENDER = createField(DSL.name("gender"), org.jooq.impl.SQLDataType.VARCHAR(6).nullable(false), this, "");
 
     /**
      * The column <code>public.professor.status</code>.
      */
-    public final TableField<ProfessorRecord, String> STATUS = createField(DSL.name("status"), SQLDataType.VARCHAR(20), this, "");
+    public final TableField<ProfessorRecord, String> STATUS = createField(DSL.name("status"), org.jooq.impl.SQLDataType.VARCHAR(20), this, "");
 
     /**
      * The column <code>public.professor.birthdate</code>.
      */
-    public final TableField<ProfessorRecord, LocalDate> BIRTHDATE = createField(DSL.name("birthdate"), SQLDataType.LOCALDATE, this, "");
+    public final TableField<ProfessorRecord, LocalDate> BIRTHDATE = createField(DSL.name("birthdate"), org.jooq.impl.SQLDataType.LOCALDATE, this, "");
 
     /**
      * The column <code>public.professor.password</code>.
      */
-    public final TableField<ProfessorRecord, String> PASSWORD = createField(DSL.name("password"), SQLDataType.VARCHAR(20).nullable(false), this, "");
+    public final TableField<ProfessorRecord, String> PASSWORD = createField(DSL.name("password"), org.jooq.impl.SQLDataType.VARCHAR(20).nullable(false), this, "");
 
     /**
      * The column <code>public.professor.active_deactive</code>.
      */
-    public final TableField<ProfessorRecord, Boolean> ACTIVE_DEACTIVE = createField(DSL.name("active_deactive"), SQLDataType.BOOLEAN, this, "");
+    public final TableField<ProfessorRecord, Boolean> ACTIVE_DEACTIVE = createField(DSL.name("active_deactive"), org.jooq.impl.SQLDataType.BOOLEAN, this, "");
 
     /**
      * The column <code>public.professor.type</code>.
      */
-    public final TableField<ProfessorRecord, String> TYPE = createField(DSL.name("type"), SQLDataType.VARCHAR(20).nullable(false), this, "");
+    public final TableField<ProfessorRecord, String> TYPE = createField(DSL.name("type"), org.jooq.impl.SQLDataType.VARCHAR(20).nullable(false), this, "");
 
-    private Professor(Name alias, Table<ProfessorRecord> aliased) {
-        this(alias, aliased, null);
-    }
-
-    private Professor(Name alias, Table<ProfessorRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
+    /**
+     * Create a <code>public.professor</code> table reference
+     */
+    public Professor() {
+        this(DSL.name("professor"), null);
     }
 
     /**
@@ -128,11 +122,12 @@ public class Professor extends TableImpl<ProfessorRecord> {
         this(alias, PROFESSOR);
     }
 
-    /**
-     * Create a <code>public.professor</code> table reference
-     */
-    public Professor() {
-        this(DSL.name("professor"), null);
+    private Professor(Name alias, Table<ProfessorRecord> aliased) {
+        this(alias, aliased, null);
+    }
+
+    private Professor(Name alias, Table<ProfessorRecord> aliased, Field<?>[] parameters) {
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
     public <O extends Record> Professor(Table<O> child, ForeignKey<O, ProfessorRecord> key) {
@@ -141,7 +136,7 @@ public class Professor extends TableImpl<ProfessorRecord> {
 
     @Override
     public Schema getSchema() {
-        return aliased() ? null : Public.PUBLIC;
+        return Public.PUBLIC;
     }
 
     @Override
@@ -150,31 +145,21 @@ public class Professor extends TableImpl<ProfessorRecord> {
     }
 
     @Override
+    public List<UniqueKey<ProfessorRecord>> getKeys() {
+        return Arrays.<UniqueKey<ProfessorRecord>>asList(Keys.PROFESSOR_PKEY);
+    }
+
+    @Override
     public List<ForeignKey<ProfessorRecord, ?>> getReferences() {
-        return Arrays.asList(Keys.PROFESSOR__PROFESSOR_STUDENT_ID_FKEY, Keys.PROFESSOR__PROFESSOR_GRADE_ID_FKEY);
+        return Arrays.<ForeignKey<ProfessorRecord, ?>>asList(Keys.PROFESSOR__PROFESSOR_STUDENT_ID_FKEY, Keys.PROFESSOR__PROFESSOR_GRADE_ID_FKEY);
     }
 
-    private transient Student _student;
-    private transient Grades _grades;
-
-    /**
-     * Get the implicit join path to the <code>public.student</code> table.
-     */
     public Student student() {
-        if (_student == null)
-            _student = new Student(this, Keys.PROFESSOR__PROFESSOR_STUDENT_ID_FKEY);
-
-        return _student;
+        return new Student(this, Keys.PROFESSOR__PROFESSOR_STUDENT_ID_FKEY);
     }
 
-    /**
-     * Get the implicit join path to the <code>public.grades</code> table.
-     */
     public Grades grades() {
-        if (_grades == null)
-            _grades = new Grades(this, Keys.PROFESSOR__PROFESSOR_GRADE_ID_FKEY);
-
-        return _grades;
+        return new Grades(this, Keys.PROFESSOR__PROFESSOR_GRADE_ID_FKEY);
     }
 
     @Override
@@ -185,11 +170,6 @@ public class Professor extends TableImpl<ProfessorRecord> {
     @Override
     public Professor as(Name alias) {
         return new Professor(alias, this);
-    }
-
-    @Override
-    public Professor as(Table<?> alias) {
-        return new Professor(alias.getQualifiedName(), this);
     }
 
     /**
@@ -208,14 +188,6 @@ public class Professor extends TableImpl<ProfessorRecord> {
         return new Professor(name, null);
     }
 
-    /**
-     * Rename this table
-     */
-    @Override
-    public Professor rename(Table<?> name) {
-        return new Professor(name.getQualifiedName(), null);
-    }
-
     // -------------------------------------------------------------------------
     // Row11 type methods
     // -------------------------------------------------------------------------
@@ -223,20 +195,5 @@ public class Professor extends TableImpl<ProfessorRecord> {
     @Override
     public Row11<Integer, Integer, Integer, String, String, String, String, LocalDate, String, Boolean, String> fieldsRow() {
         return (Row11) super.fieldsRow();
-    }
-
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
-    public <U> SelectField<U> mapping(Function11<? super Integer, ? super Integer, ? super Integer, ? super String, ? super String, ? super String, ? super String, ? super LocalDate, ? super String, ? super Boolean, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
-    public <U> SelectField<U> mapping(Class<U> toType, Function11<? super Integer, ? super Integer, ? super Integer, ? super String, ? super String, ? super String, ? super String, ? super LocalDate, ? super String, ? super Boolean, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

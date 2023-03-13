@@ -7,23 +7,18 @@ package org.ssglobal.revalida.codes.model.tables;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import org.jooq.Field;
 import org.jooq.ForeignKey;
-import org.jooq.Function17;
 import org.jooq.Name;
 import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row17;
+import org.jooq.Row18;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
 import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
-import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 import org.ssglobal.revalida.codes.model.Keys;
 import org.ssglobal.revalida.codes.model.Public;
@@ -36,7 +31,7 @@ import org.ssglobal.revalida.codes.model.tables.records.StudentRecord;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Student extends TableImpl<StudentRecord> {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -509950638;
 
     /**
      * The reference instance of <code>public.student</code>
@@ -54,94 +49,98 @@ public class Student extends TableImpl<StudentRecord> {
     /**
      * The column <code>public.student.student_id</code>.
      */
-    public final TableField<StudentRecord, Integer> STUDENT_ID = createField(DSL.name("student_id"), SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<StudentRecord, Integer> STUDENT_ID = createField(DSL.name("student_id"), org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
      * The column <code>public.student.program_id</code>.
      */
-    public final TableField<StudentRecord, Integer> PROGRAM_ID = createField(DSL.name("program_id"), SQLDataType.INTEGER, this, "");
+    public final TableField<StudentRecord, Integer> PROGRAM_ID = createField(DSL.name("program_id"), org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>public.student.subject_id</code>.
      */
-    public final TableField<StudentRecord, Integer> SUBJECT_ID = createField(DSL.name("subject_id"), SQLDataType.INTEGER, this, "");
+    public final TableField<StudentRecord, Integer> SUBJECT_ID = createField(DSL.name("subject_id"), org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>public.student.grade_id</code>.
      */
-    public final TableField<StudentRecord, Integer> GRADE_ID = createField(DSL.name("grade_id"), SQLDataType.INTEGER, this, "");
+    public final TableField<StudentRecord, Integer> GRADE_ID = createField(DSL.name("grade_id"), org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>public.student.password</code>.
      */
-    public final TableField<StudentRecord, String> PASSWORD = createField(DSL.name("password"), SQLDataType.VARCHAR(20).nullable(false), this, "");
+    public final TableField<StudentRecord, String> PASSWORD = createField(DSL.name("password"), org.jooq.impl.SQLDataType.VARCHAR(20).nullable(false), this, "");
 
     /**
      * The column <code>public.student.firstname</code>.
      */
-    public final TableField<StudentRecord, String> FIRSTNAME = createField(DSL.name("firstname"), SQLDataType.VARCHAR(20).nullable(false), this, "");
+    public final TableField<StudentRecord, String> FIRSTNAME = createField(DSL.name("firstname"), org.jooq.impl.SQLDataType.VARCHAR(20).nullable(false), this, "");
 
     /**
      * The column <code>public.student.middlename</code>.
      */
-    public final TableField<StudentRecord, String> MIDDLENAME = createField(DSL.name("middlename"), SQLDataType.VARCHAR(20).nullable(false), this, "");
+    public final TableField<StudentRecord, String> MIDDLENAME = createField(DSL.name("middlename"), org.jooq.impl.SQLDataType.VARCHAR(20).nullable(false), this, "");
 
     /**
      * The column <code>public.student.lastname</code>.
      */
-    public final TableField<StudentRecord, String> LASTNAME = createField(DSL.name("lastname"), SQLDataType.VARCHAR(20).nullable(false), this, "");
+    public final TableField<StudentRecord, String> LASTNAME = createField(DSL.name("lastname"), org.jooq.impl.SQLDataType.VARCHAR(20).nullable(false), this, "");
 
     /**
      * The column <code>public.student.birthdate</code>.
      */
-    public final TableField<StudentRecord, LocalDate> BIRTHDATE = createField(DSL.name("birthdate"), SQLDataType.LOCALDATE, this, "");
+    public final TableField<StudentRecord, LocalDate> BIRTHDATE = createField(DSL.name("birthdate"), org.jooq.impl.SQLDataType.LOCALDATE, this, "");
 
     /**
      * The column <code>public.student.semester</code>.
      */
-    public final TableField<StudentRecord, String> SEMESTER = createField(DSL.name("semester"), SQLDataType.VARCHAR(20), this, "");
+    public final TableField<StudentRecord, String> SEMESTER = createField(DSL.name("semester"), org.jooq.impl.SQLDataType.VARCHAR(20), this, "");
 
     /**
      * The column <code>public.student.year_level</code>.
      */
-    public final TableField<StudentRecord, Integer> YEAR_LEVEL = createField(DSL.name("year_level"), SQLDataType.INTEGER, this, "");
+    public final TableField<StudentRecord, Integer> YEAR_LEVEL = createField(DSL.name("year_level"), org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>public.student.academic_year</code>.
      */
-    public final TableField<StudentRecord, String> ACADEMIC_YEAR = createField(DSL.name("academic_year"), SQLDataType.VARCHAR(20), this, "");
+    public final TableField<StudentRecord, String> ACADEMIC_YEAR = createField(DSL.name("academic_year"), org.jooq.impl.SQLDataType.VARCHAR(20), this, "");
 
     /**
      * The column <code>public.student.status</code>.
      */
-    public final TableField<StudentRecord, String> STATUS = createField(DSL.name("status"), SQLDataType.VARCHAR(20), this, "");
+    public final TableField<StudentRecord, String> STATUS = createField(DSL.name("status"), org.jooq.impl.SQLDataType.VARCHAR(20), this, "");
 
     /**
      * The column <code>public.student.active_deactive</code>.
      */
-    public final TableField<StudentRecord, Boolean> ACTIVE_DEACTIVE = createField(DSL.name("active_deactive"), SQLDataType.BOOLEAN, this, "");
+    public final TableField<StudentRecord, Boolean> ACTIVE_DEACTIVE = createField(DSL.name("active_deactive"), org.jooq.impl.SQLDataType.BOOLEAN, this, "");
 
     /**
      * The column <code>public.student.course</code>.
      */
-    public final TableField<StudentRecord, String> COURSE = createField(DSL.name("course"), SQLDataType.VARCHAR(20), this, "");
+    public final TableField<StudentRecord, String> COURSE = createField(DSL.name("course"), org.jooq.impl.SQLDataType.VARCHAR(20), this, "");
 
     /**
      * The column <code>public.student.type</code>.
      */
-    public final TableField<StudentRecord, String> TYPE = createField(DSL.name("type"), SQLDataType.VARCHAR(20), this, "");
+    public final TableField<StudentRecord, String> TYPE = createField(DSL.name("type"), org.jooq.impl.SQLDataType.VARCHAR(20), this, "");
 
     /**
      * The column <code>public.student.student_number</code>.
      */
-    public final TableField<StudentRecord, String> STUDENT_NUMBER = createField(DSL.name("student_number"), SQLDataType.VARCHAR(20).nullable(false), this, "");
+    public final TableField<StudentRecord, String> STUDENT_NUMBER = createField(DSL.name("student_number"), org.jooq.impl.SQLDataType.VARCHAR(20).nullable(false), this, "");
 
-    private Student(Name alias, Table<StudentRecord> aliased) {
-        this(alias, aliased, null);
-    }
+    /**
+     * The column <code>public.student.gender</code>.
+     */
+    public final TableField<StudentRecord, String> GENDER = createField(DSL.name("gender"), org.jooq.impl.SQLDataType.VARCHAR(6), this, "");
 
-    private Student(Name alias, Table<StudentRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
+    /**
+     * Create a <code>public.student</code> table reference
+     */
+    public Student() {
+        this(DSL.name("student"), null);
     }
 
     /**
@@ -158,11 +157,12 @@ public class Student extends TableImpl<StudentRecord> {
         this(alias, STUDENT);
     }
 
-    /**
-     * Create a <code>public.student</code> table reference
-     */
-    public Student() {
-        this(DSL.name("student"), null);
+    private Student(Name alias, Table<StudentRecord> aliased) {
+        this(alias, aliased, null);
+    }
+
+    private Student(Name alias, Table<StudentRecord> aliased, Field<?>[] parameters) {
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
     public <O extends Record> Student(Table<O> child, ForeignKey<O, StudentRecord> key) {
@@ -171,7 +171,7 @@ public class Student extends TableImpl<StudentRecord> {
 
     @Override
     public Schema getSchema() {
-        return aliased() ? null : Public.PUBLIC;
+        return Public.PUBLIC;
     }
 
     @Override
@@ -180,42 +180,25 @@ public class Student extends TableImpl<StudentRecord> {
     }
 
     @Override
+    public List<UniqueKey<StudentRecord>> getKeys() {
+        return Arrays.<UniqueKey<StudentRecord>>asList(Keys.STUDENT_PKEY);
+    }
+
+    @Override
     public List<ForeignKey<StudentRecord, ?>> getReferences() {
-        return Arrays.asList(Keys.STUDENT__STUDENT_PROGRAM_ID_FKEY, Keys.STUDENT__STUDENT_SUBJECT_ID_FKEY, Keys.STUDENT__STUDENT_GRADE_ID_FKEY);
+        return Arrays.<ForeignKey<StudentRecord, ?>>asList(Keys.STUDENT__STUDENT_PROGRAM_ID_FKEY, Keys.STUDENT__STUDENT_SUBJECT_ID_FKEY, Keys.STUDENT__STUDENT_GRADE_ID_FKEY);
     }
 
-    private transient Program _program;
-    private transient Subject _subject;
-    private transient Grades _grades;
-
-    /**
-     * Get the implicit join path to the <code>public.program</code> table.
-     */
     public Program program() {
-        if (_program == null)
-            _program = new Program(this, Keys.STUDENT__STUDENT_PROGRAM_ID_FKEY);
-
-        return _program;
+        return new Program(this, Keys.STUDENT__STUDENT_PROGRAM_ID_FKEY);
     }
 
-    /**
-     * Get the implicit join path to the <code>public.subject</code> table.
-     */
     public Subject subject() {
-        if (_subject == null)
-            _subject = new Subject(this, Keys.STUDENT__STUDENT_SUBJECT_ID_FKEY);
-
-        return _subject;
+        return new Subject(this, Keys.STUDENT__STUDENT_SUBJECT_ID_FKEY);
     }
 
-    /**
-     * Get the implicit join path to the <code>public.grades</code> table.
-     */
     public Grades grades() {
-        if (_grades == null)
-            _grades = new Grades(this, Keys.STUDENT__STUDENT_GRADE_ID_FKEY);
-
-        return _grades;
+        return new Grades(this, Keys.STUDENT__STUDENT_GRADE_ID_FKEY);
     }
 
     @Override
@@ -226,11 +209,6 @@ public class Student extends TableImpl<StudentRecord> {
     @Override
     public Student as(Name alias) {
         return new Student(alias, this);
-    }
-
-    @Override
-    public Student as(Table<?> alias) {
-        return new Student(alias.getQualifiedName(), this);
     }
 
     /**
@@ -249,35 +227,12 @@ public class Student extends TableImpl<StudentRecord> {
         return new Student(name, null);
     }
 
-    /**
-     * Rename this table
-     */
-    @Override
-    public Student rename(Table<?> name) {
-        return new Student(name.getQualifiedName(), null);
-    }
-
     // -------------------------------------------------------------------------
-    // Row17 type methods
+    // Row18 type methods
     // -------------------------------------------------------------------------
 
     @Override
-    public Row17<Integer, Integer, Integer, Integer, String, String, String, String, LocalDate, String, Integer, String, String, Boolean, String, String, String> fieldsRow() {
-        return (Row17) super.fieldsRow();
-    }
-
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
-    public <U> SelectField<U> mapping(Function17<? super Integer, ? super Integer, ? super Integer, ? super Integer, ? super String, ? super String, ? super String, ? super String, ? super LocalDate, ? super String, ? super Integer, ? super String, ? super String, ? super Boolean, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
-    public <U> SelectField<U> mapping(Class<U> toType, Function17<? super Integer, ? super Integer, ? super Integer, ? super Integer, ? super String, ? super String, ? super String, ? super String, ? super LocalDate, ? super String, ? super Integer, ? super String, ? super String, ? super Boolean, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
+    public Row18<Integer, Integer, Integer, Integer, String, String, String, String, LocalDate, String, Integer, String, String, Boolean, String, String, String, String> fieldsRow() {
+        return (Row18) super.fieldsRow();
     }
 }

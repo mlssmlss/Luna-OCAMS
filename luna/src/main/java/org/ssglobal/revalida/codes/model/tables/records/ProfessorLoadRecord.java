@@ -18,7 +18,7 @@ import org.ssglobal.revalida.codes.model.tables.ProfessorLoad;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ProfessorLoadRecord extends UpdatableRecordImpl<ProfessorLoadRecord> implements Record5<Integer, Integer, String, Integer, Integer> {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -1588785648;
 
     /**
      * Setter for <code>public.professor_load.load_id</code>.
@@ -250,25 +250,10 @@ public class ProfessorLoadRecord extends UpdatableRecordImpl<ProfessorLoadRecord
     public ProfessorLoadRecord(Integer loadId, Integer professorId, String courseTitle, Integer section, Integer yearLevel) {
         super(ProfessorLoad.PROFESSOR_LOAD);
 
-        setLoadId(loadId);
-        setProfessorId(professorId);
-        setCourseTitle(courseTitle);
-        setSection(section);
-        setYearLevel(yearLevel);
-    }
-
-    /**
-     * Create a detached, initialised ProfessorLoadRecord
-     */
-    public ProfessorLoadRecord(org.ssglobal.revalida.codes.model.tables.pojos.ProfessorLoad value) {
-        super(ProfessorLoad.PROFESSOR_LOAD);
-
-        if (value != null) {
-            setLoadId(value.getLoadId());
-            setProfessorId(value.getProfessorId());
-            setCourseTitle(value.getCourseTitle());
-            setSection(value.getSection());
-            setYearLevel(value.getYearLevel());
-        }
+        set(0, loadId);
+        set(1, professorId);
+        set(2, courseTitle);
+        set(3, section);
+        set(4, yearLevel);
     }
 }

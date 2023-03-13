@@ -6,23 +6,18 @@ package org.ssglobal.revalida.codes.model.tables;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import org.jooq.Field;
 import org.jooq.ForeignKey;
-import org.jooq.Function5;
 import org.jooq.Name;
 import org.jooq.Record;
-import org.jooq.Records;
 import org.jooq.Row5;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
 import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
-import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 import org.ssglobal.revalida.codes.model.Keys;
 import org.ssglobal.revalida.codes.model.Public;
@@ -35,7 +30,7 @@ import org.ssglobal.revalida.codes.model.tables.records.ProfessorLoadRecord;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ProfessorLoad extends TableImpl<ProfessorLoadRecord> {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -912831155;
 
     /**
      * The reference instance of <code>public.professor_load</code>
@@ -53,34 +48,33 @@ public class ProfessorLoad extends TableImpl<ProfessorLoadRecord> {
     /**
      * The column <code>public.professor_load.load_id</code>.
      */
-    public final TableField<ProfessorLoadRecord, Integer> LOAD_ID = createField(DSL.name("load_id"), SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<ProfessorLoadRecord, Integer> LOAD_ID = createField(DSL.name("load_id"), org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
      * The column <code>public.professor_load.professor_id</code>.
      */
-    public final TableField<ProfessorLoadRecord, Integer> PROFESSOR_ID = createField(DSL.name("professor_id"), SQLDataType.INTEGER, this, "");
+    public final TableField<ProfessorLoadRecord, Integer> PROFESSOR_ID = createField(DSL.name("professor_id"), org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>public.professor_load.course_title</code>.
      */
-    public final TableField<ProfessorLoadRecord, String> COURSE_TITLE = createField(DSL.name("course_title"), SQLDataType.VARCHAR(20), this, "");
+    public final TableField<ProfessorLoadRecord, String> COURSE_TITLE = createField(DSL.name("course_title"), org.jooq.impl.SQLDataType.VARCHAR(20), this, "");
 
     /**
      * The column <code>public.professor_load.section</code>.
      */
-    public final TableField<ProfessorLoadRecord, Integer> SECTION = createField(DSL.name("section"), SQLDataType.INTEGER, this, "");
+    public final TableField<ProfessorLoadRecord, Integer> SECTION = createField(DSL.name("section"), org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>public.professor_load.year_level</code>.
      */
-    public final TableField<ProfessorLoadRecord, Integer> YEAR_LEVEL = createField(DSL.name("year_level"), SQLDataType.INTEGER, this, "");
+    public final TableField<ProfessorLoadRecord, Integer> YEAR_LEVEL = createField(DSL.name("year_level"), org.jooq.impl.SQLDataType.INTEGER, this, "");
 
-    private ProfessorLoad(Name alias, Table<ProfessorLoadRecord> aliased) {
-        this(alias, aliased, null);
-    }
-
-    private ProfessorLoad(Name alias, Table<ProfessorLoadRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
+    /**
+     * Create a <code>public.professor_load</code> table reference
+     */
+    public ProfessorLoad() {
+        this(DSL.name("professor_load"), null);
     }
 
     /**
@@ -97,11 +91,12 @@ public class ProfessorLoad extends TableImpl<ProfessorLoadRecord> {
         this(alias, PROFESSOR_LOAD);
     }
 
-    /**
-     * Create a <code>public.professor_load</code> table reference
-     */
-    public ProfessorLoad() {
-        this(DSL.name("professor_load"), null);
+    private ProfessorLoad(Name alias, Table<ProfessorLoadRecord> aliased) {
+        this(alias, aliased, null);
+    }
+
+    private ProfessorLoad(Name alias, Table<ProfessorLoadRecord> aliased, Field<?>[] parameters) {
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
     public <O extends Record> ProfessorLoad(Table<O> child, ForeignKey<O, ProfessorLoadRecord> key) {
@@ -110,7 +105,7 @@ public class ProfessorLoad extends TableImpl<ProfessorLoadRecord> {
 
     @Override
     public Schema getSchema() {
-        return aliased() ? null : Public.PUBLIC;
+        return Public.PUBLIC;
     }
 
     @Override
@@ -119,20 +114,17 @@ public class ProfessorLoad extends TableImpl<ProfessorLoadRecord> {
     }
 
     @Override
-    public List<ForeignKey<ProfessorLoadRecord, ?>> getReferences() {
-        return Arrays.asList(Keys.PROFESSOR_LOAD__PROFESSOR_LOAD_PROFESSOR_ID_FKEY);
+    public List<UniqueKey<ProfessorLoadRecord>> getKeys() {
+        return Arrays.<UniqueKey<ProfessorLoadRecord>>asList(Keys.PROFESSOR_LOAD_PKEY);
     }
 
-    private transient Professor _professor;
+    @Override
+    public List<ForeignKey<ProfessorLoadRecord, ?>> getReferences() {
+        return Arrays.<ForeignKey<ProfessorLoadRecord, ?>>asList(Keys.PROFESSOR_LOAD__PROFESSOR_LOAD_PROFESSOR_ID_FKEY);
+    }
 
-    /**
-     * Get the implicit join path to the <code>public.professor</code> table.
-     */
     public Professor professor() {
-        if (_professor == null)
-            _professor = new Professor(this, Keys.PROFESSOR_LOAD__PROFESSOR_LOAD_PROFESSOR_ID_FKEY);
-
-        return _professor;
+        return new Professor(this, Keys.PROFESSOR_LOAD__PROFESSOR_LOAD_PROFESSOR_ID_FKEY);
     }
 
     @Override
@@ -143,11 +135,6 @@ public class ProfessorLoad extends TableImpl<ProfessorLoadRecord> {
     @Override
     public ProfessorLoad as(Name alias) {
         return new ProfessorLoad(alias, this);
-    }
-
-    @Override
-    public ProfessorLoad as(Table<?> alias) {
-        return new ProfessorLoad(alias.getQualifiedName(), this);
     }
 
     /**
@@ -166,14 +153,6 @@ public class ProfessorLoad extends TableImpl<ProfessorLoadRecord> {
         return new ProfessorLoad(name, null);
     }
 
-    /**
-     * Rename this table
-     */
-    @Override
-    public ProfessorLoad rename(Table<?> name) {
-        return new ProfessorLoad(name.getQualifiedName(), null);
-    }
-
     // -------------------------------------------------------------------------
     // Row5 type methods
     // -------------------------------------------------------------------------
@@ -181,20 +160,5 @@ public class ProfessorLoad extends TableImpl<ProfessorLoadRecord> {
     @Override
     public Row5<Integer, Integer, String, Integer, Integer> fieldsRow() {
         return (Row5) super.fieldsRow();
-    }
-
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
-    public <U> SelectField<U> mapping(Function5<? super Integer, ? super Integer, ? super String, ? super Integer, ? super Integer, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
-    public <U> SelectField<U> mapping(Class<U> toType, Function5<? super Integer, ? super Integer, ? super String, ? super Integer, ? super Integer, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

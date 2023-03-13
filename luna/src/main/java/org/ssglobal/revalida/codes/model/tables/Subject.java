@@ -4,23 +4,20 @@
 package org.ssglobal.revalida.codes.model.tables;
 
 
-import java.util.function.Function;
+import java.util.Arrays;
+import java.util.List;
 
 import org.jooq.Field;
 import org.jooq.ForeignKey;
-import org.jooq.Function5;
 import org.jooq.Name;
 import org.jooq.Record;
-import org.jooq.Records;
 import org.jooq.Row5;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
 import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
-import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 import org.ssglobal.revalida.codes.model.Keys;
 import org.ssglobal.revalida.codes.model.Public;
@@ -33,7 +30,7 @@ import org.ssglobal.revalida.codes.model.tables.records.SubjectRecord;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Subject extends TableImpl<SubjectRecord> {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -220459294;
 
     /**
      * The reference instance of <code>public.subject</code>
@@ -51,34 +48,33 @@ public class Subject extends TableImpl<SubjectRecord> {
     /**
      * The column <code>public.subject.subject_id</code>.
      */
-    public final TableField<SubjectRecord, Integer> SUBJECT_ID = createField(DSL.name("subject_id"), SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<SubjectRecord, Integer> SUBJECT_ID = createField(DSL.name("subject_id"), org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
      * The column <code>public.subject.subject_code</code>.
      */
-    public final TableField<SubjectRecord, String> SUBJECT_CODE = createField(DSL.name("subject_code"), SQLDataType.VARCHAR.nullable(false), this, "");
+    public final TableField<SubjectRecord, String> SUBJECT_CODE = createField(DSL.name("subject_code"), org.jooq.impl.SQLDataType.VARCHAR.nullable(false), this, "");
 
     /**
      * The column <code>public.subject.subject_title</code>.
      */
-    public final TableField<SubjectRecord, String> SUBJECT_TITLE = createField(DSL.name("subject_title"), SQLDataType.VARCHAR.nullable(false), this, "");
+    public final TableField<SubjectRecord, String> SUBJECT_TITLE = createField(DSL.name("subject_title"), org.jooq.impl.SQLDataType.VARCHAR.nullable(false), this, "");
 
     /**
      * The column <code>public.subject.unit</code>.
      */
-    public final TableField<SubjectRecord, Integer> UNIT = createField(DSL.name("unit"), SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<SubjectRecord, Integer> UNIT = createField(DSL.name("unit"), org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
      * The column <code>public.subject.active_deactive</code>.
      */
-    public final TableField<SubjectRecord, Boolean> ACTIVE_DEACTIVE = createField(DSL.name("active_deactive"), SQLDataType.BOOLEAN, this, "");
+    public final TableField<SubjectRecord, Boolean> ACTIVE_DEACTIVE = createField(DSL.name("active_deactive"), org.jooq.impl.SQLDataType.BOOLEAN, this, "");
 
-    private Subject(Name alias, Table<SubjectRecord> aliased) {
-        this(alias, aliased, null);
-    }
-
-    private Subject(Name alias, Table<SubjectRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
+    /**
+     * Create a <code>public.subject</code> table reference
+     */
+    public Subject() {
+        this(DSL.name("subject"), null);
     }
 
     /**
@@ -95,11 +91,12 @@ public class Subject extends TableImpl<SubjectRecord> {
         this(alias, SUBJECT);
     }
 
-    /**
-     * Create a <code>public.subject</code> table reference
-     */
-    public Subject() {
-        this(DSL.name("subject"), null);
+    private Subject(Name alias, Table<SubjectRecord> aliased) {
+        this(alias, aliased, null);
+    }
+
+    private Subject(Name alias, Table<SubjectRecord> aliased, Field<?>[] parameters) {
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
     public <O extends Record> Subject(Table<O> child, ForeignKey<O, SubjectRecord> key) {
@@ -108,12 +105,17 @@ public class Subject extends TableImpl<SubjectRecord> {
 
     @Override
     public Schema getSchema() {
-        return aliased() ? null : Public.PUBLIC;
+        return Public.PUBLIC;
     }
 
     @Override
     public UniqueKey<SubjectRecord> getPrimaryKey() {
         return Keys.SUBJECT_PKEY;
+    }
+
+    @Override
+    public List<UniqueKey<SubjectRecord>> getKeys() {
+        return Arrays.<UniqueKey<SubjectRecord>>asList(Keys.SUBJECT_PKEY);
     }
 
     @Override
@@ -124,11 +126,6 @@ public class Subject extends TableImpl<SubjectRecord> {
     @Override
     public Subject as(Name alias) {
         return new Subject(alias, this);
-    }
-
-    @Override
-    public Subject as(Table<?> alias) {
-        return new Subject(alias.getQualifiedName(), this);
     }
 
     /**
@@ -147,14 +144,6 @@ public class Subject extends TableImpl<SubjectRecord> {
         return new Subject(name, null);
     }
 
-    /**
-     * Rename this table
-     */
-    @Override
-    public Subject rename(Table<?> name) {
-        return new Subject(name.getQualifiedName(), null);
-    }
-
     // -------------------------------------------------------------------------
     // Row5 type methods
     // -------------------------------------------------------------------------
@@ -162,20 +151,5 @@ public class Subject extends TableImpl<SubjectRecord> {
     @Override
     public Row5<Integer, String, String, Integer, Boolean> fieldsRow() {
         return (Row5) super.fieldsRow();
-    }
-
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
-    public <U> SelectField<U> mapping(Function5<? super Integer, ? super String, ? super String, ? super Integer, ? super Boolean, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
-    public <U> SelectField<U> mapping(Class<U> toType, Function5<? super Integer, ? super String, ? super String, ? super Integer, ? super Boolean, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

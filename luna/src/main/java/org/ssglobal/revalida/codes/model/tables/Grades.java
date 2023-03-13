@@ -5,23 +5,20 @@ package org.ssglobal.revalida.codes.model.tables;
 
 
 import java.time.LocalDate;
-import java.util.function.Function;
+import java.util.Arrays;
+import java.util.List;
 
 import org.jooq.Field;
 import org.jooq.ForeignKey;
-import org.jooq.Function6;
 import org.jooq.Name;
 import org.jooq.Record;
-import org.jooq.Records;
 import org.jooq.Row6;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
 import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
-import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 import org.ssglobal.revalida.codes.model.Keys;
 import org.ssglobal.revalida.codes.model.Public;
@@ -34,7 +31,7 @@ import org.ssglobal.revalida.codes.model.tables.records.GradesRecord;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Grades extends TableImpl<GradesRecord> {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -747647745;
 
     /**
      * The reference instance of <code>public.grades</code>
@@ -52,39 +49,38 @@ public class Grades extends TableImpl<GradesRecord> {
     /**
      * The column <code>public.grades.grade_id</code>.
      */
-    public final TableField<GradesRecord, Integer> GRADE_ID = createField(DSL.name("grade_id"), SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<GradesRecord, Integer> GRADE_ID = createField(DSL.name("grade_id"), org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
      * The column <code>public.grades.grade</code>.
      */
-    public final TableField<GradesRecord, Integer> GRADE = createField(DSL.name("grade"), SQLDataType.INTEGER, this, "");
+    public final TableField<GradesRecord, Integer> GRADE = createField(DSL.name("grade"), org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>public.grades.comment</code>.
      */
-    public final TableField<GradesRecord, String> COMMENT = createField(DSL.name("comment"), SQLDataType.VARCHAR(20), this, "");
+    public final TableField<GradesRecord, String> COMMENT = createField(DSL.name("comment"), org.jooq.impl.SQLDataType.VARCHAR(20), this, "");
 
     /**
      * The column <code>public.grades.date_modified</code>.
      */
-    public final TableField<GradesRecord, LocalDate> DATE_MODIFIED = createField(DSL.name("date_modified"), SQLDataType.LOCALDATE, this, "");
+    public final TableField<GradesRecord, LocalDate> DATE_MODIFIED = createField(DSL.name("date_modified"), org.jooq.impl.SQLDataType.LOCALDATE, this, "");
 
     /**
      * The column <code>public.grades.remarks</code>.
      */
-    public final TableField<GradesRecord, String> REMARKS = createField(DSL.name("remarks"), SQLDataType.VARCHAR(20), this, "");
+    public final TableField<GradesRecord, String> REMARKS = createField(DSL.name("remarks"), org.jooq.impl.SQLDataType.VARCHAR(20), this, "");
 
     /**
      * The column <code>public.grades.status</code>.
      */
-    public final TableField<GradesRecord, String> STATUS = createField(DSL.name("status"), SQLDataType.VARCHAR(20), this, "");
+    public final TableField<GradesRecord, String> STATUS = createField(DSL.name("status"), org.jooq.impl.SQLDataType.VARCHAR(20), this, "");
 
-    private Grades(Name alias, Table<GradesRecord> aliased) {
-        this(alias, aliased, null);
-    }
-
-    private Grades(Name alias, Table<GradesRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
+    /**
+     * Create a <code>public.grades</code> table reference
+     */
+    public Grades() {
+        this(DSL.name("grades"), null);
     }
 
     /**
@@ -101,11 +97,12 @@ public class Grades extends TableImpl<GradesRecord> {
         this(alias, GRADES);
     }
 
-    /**
-     * Create a <code>public.grades</code> table reference
-     */
-    public Grades() {
-        this(DSL.name("grades"), null);
+    private Grades(Name alias, Table<GradesRecord> aliased) {
+        this(alias, aliased, null);
+    }
+
+    private Grades(Name alias, Table<GradesRecord> aliased, Field<?>[] parameters) {
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
     public <O extends Record> Grades(Table<O> child, ForeignKey<O, GradesRecord> key) {
@@ -114,12 +111,17 @@ public class Grades extends TableImpl<GradesRecord> {
 
     @Override
     public Schema getSchema() {
-        return aliased() ? null : Public.PUBLIC;
+        return Public.PUBLIC;
     }
 
     @Override
     public UniqueKey<GradesRecord> getPrimaryKey() {
         return Keys.GRADES_PKEY;
+    }
+
+    @Override
+    public List<UniqueKey<GradesRecord>> getKeys() {
+        return Arrays.<UniqueKey<GradesRecord>>asList(Keys.GRADES_PKEY);
     }
 
     @Override
@@ -130,11 +132,6 @@ public class Grades extends TableImpl<GradesRecord> {
     @Override
     public Grades as(Name alias) {
         return new Grades(alias, this);
-    }
-
-    @Override
-    public Grades as(Table<?> alias) {
-        return new Grades(alias.getQualifiedName(), this);
     }
 
     /**
@@ -153,14 +150,6 @@ public class Grades extends TableImpl<GradesRecord> {
         return new Grades(name, null);
     }
 
-    /**
-     * Rename this table
-     */
-    @Override
-    public Grades rename(Table<?> name) {
-        return new Grades(name.getQualifiedName(), null);
-    }
-
     // -------------------------------------------------------------------------
     // Row6 type methods
     // -------------------------------------------------------------------------
@@ -168,20 +157,5 @@ public class Grades extends TableImpl<GradesRecord> {
     @Override
     public Row6<Integer, Integer, String, LocalDate, String, String> fieldsRow() {
         return (Row6) super.fieldsRow();
-    }
-
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
-    public <U> SelectField<U> mapping(Function6<? super Integer, ? super Integer, ? super String, ? super LocalDate, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
-    public <U> SelectField<U> mapping(Class<U> toType, Function6<? super Integer, ? super Integer, ? super String, ? super LocalDate, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

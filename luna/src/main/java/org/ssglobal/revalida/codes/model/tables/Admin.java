@@ -6,23 +6,18 @@ package org.ssglobal.revalida.codes.model.tables;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import org.jooq.Field;
 import org.jooq.ForeignKey;
-import org.jooq.Function9;
 import org.jooq.Name;
 import org.jooq.Record;
-import org.jooq.Records;
 import org.jooq.Row9;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
 import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
-import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 import org.ssglobal.revalida.codes.model.Keys;
 import org.ssglobal.revalida.codes.model.Public;
@@ -35,7 +30,7 @@ import org.ssglobal.revalida.codes.model.tables.records.AdminRecord;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Admin extends TableImpl<AdminRecord> {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 663955252;
 
     /**
      * The reference instance of <code>public.admin</code>
@@ -53,54 +48,53 @@ public class Admin extends TableImpl<AdminRecord> {
     /**
      * The column <code>public.admin.admin_id</code>.
      */
-    public final TableField<AdminRecord, Integer> ADMIN_ID = createField(DSL.name("admin_id"), SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<AdminRecord, Integer> ADMIN_ID = createField(DSL.name("admin_id"), org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
      * The column <code>public.admin.username</code>.
      */
-    public final TableField<AdminRecord, String> USERNAME = createField(DSL.name("username"), SQLDataType.VARCHAR(20).nullable(false), this, "");
+    public final TableField<AdminRecord, String> USERNAME = createField(DSL.name("username"), org.jooq.impl.SQLDataType.VARCHAR(20).nullable(false), this, "");
 
     /**
      * The column <code>public.admin.password</code>.
      */
-    public final TableField<AdminRecord, String> PASSWORD = createField(DSL.name("password"), SQLDataType.VARCHAR(20).nullable(false), this, "");
+    public final TableField<AdminRecord, String> PASSWORD = createField(DSL.name("password"), org.jooq.impl.SQLDataType.VARCHAR(250).nullable(false), this, "");
 
     /**
      * The column <code>public.admin.firstname</code>.
      */
-    public final TableField<AdminRecord, String> FIRSTNAME = createField(DSL.name("firstname"), SQLDataType.VARCHAR(20).nullable(false), this, "");
+    public final TableField<AdminRecord, String> FIRSTNAME = createField(DSL.name("firstname"), org.jooq.impl.SQLDataType.VARCHAR(20).nullable(false), this, "");
 
     /**
      * The column <code>public.admin.lastname</code>.
      */
-    public final TableField<AdminRecord, String> LASTNAME = createField(DSL.name("lastname"), SQLDataType.VARCHAR(20).nullable(false), this, "");
+    public final TableField<AdminRecord, String> LASTNAME = createField(DSL.name("lastname"), org.jooq.impl.SQLDataType.VARCHAR(20).nullable(false), this, "");
 
     /**
      * The column <code>public.admin.type</code>.
      */
-    public final TableField<AdminRecord, String> TYPE = createField(DSL.name("type"), SQLDataType.VARCHAR(20).nullable(false), this, "");
+    public final TableField<AdminRecord, String> TYPE = createField(DSL.name("type"), org.jooq.impl.SQLDataType.VARCHAR(20).nullable(false), this, "");
 
     /**
      * The column <code>public.admin.student_id</code>.
      */
-    public final TableField<AdminRecord, Integer> STUDENT_ID = createField(DSL.name("student_id"), SQLDataType.INTEGER, this, "");
+    public final TableField<AdminRecord, Integer> STUDENT_ID = createField(DSL.name("student_id"), org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>public.admin.parent_id</code>.
      */
-    public final TableField<AdminRecord, Integer> PARENT_ID = createField(DSL.name("parent_id"), SQLDataType.INTEGER, this, "");
+    public final TableField<AdminRecord, Integer> PARENT_ID = createField(DSL.name("parent_id"), org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>public.admin.professor_id</code>.
      */
-    public final TableField<AdminRecord, Integer> PROFESSOR_ID = createField(DSL.name("professor_id"), SQLDataType.INTEGER, this, "");
+    public final TableField<AdminRecord, Integer> PROFESSOR_ID = createField(DSL.name("professor_id"), org.jooq.impl.SQLDataType.INTEGER, this, "");
 
-    private Admin(Name alias, Table<AdminRecord> aliased) {
-        this(alias, aliased, null);
-    }
-
-    private Admin(Name alias, Table<AdminRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
+    /**
+     * Create a <code>public.admin</code> table reference
+     */
+    public Admin() {
+        this(DSL.name("admin"), null);
     }
 
     /**
@@ -117,11 +111,12 @@ public class Admin extends TableImpl<AdminRecord> {
         this(alias, ADMIN);
     }
 
-    /**
-     * Create a <code>public.admin</code> table reference
-     */
-    public Admin() {
-        this(DSL.name("admin"), null);
+    private Admin(Name alias, Table<AdminRecord> aliased) {
+        this(alias, aliased, null);
+    }
+
+    private Admin(Name alias, Table<AdminRecord> aliased, Field<?>[] parameters) {
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
     public <O extends Record> Admin(Table<O> child, ForeignKey<O, AdminRecord> key) {
@@ -130,7 +125,7 @@ public class Admin extends TableImpl<AdminRecord> {
 
     @Override
     public Schema getSchema() {
-        return aliased() ? null : Public.PUBLIC;
+        return Public.PUBLIC;
     }
 
     @Override
@@ -139,42 +134,25 @@ public class Admin extends TableImpl<AdminRecord> {
     }
 
     @Override
+    public List<UniqueKey<AdminRecord>> getKeys() {
+        return Arrays.<UniqueKey<AdminRecord>>asList(Keys.ADMIN_PKEY);
+    }
+
+    @Override
     public List<ForeignKey<AdminRecord, ?>> getReferences() {
-        return Arrays.asList(Keys.ADMIN__ADMIN_STUDENT_ID_FKEY, Keys.ADMIN__ADMIN_PARENT_ID_FKEY, Keys.ADMIN__ADMIN_PROFESSOR_ID_FKEY);
+        return Arrays.<ForeignKey<AdminRecord, ?>>asList(Keys.ADMIN__ADMIN_STUDENT_ID_FKEY, Keys.ADMIN__ADMIN_PARENT_ID_FKEY, Keys.ADMIN__ADMIN_PROFESSOR_ID_FKEY);
     }
 
-    private transient Student _student;
-    private transient Parent _parent;
-    private transient Professor _professor;
-
-    /**
-     * Get the implicit join path to the <code>public.student</code> table.
-     */
     public Student student() {
-        if (_student == null)
-            _student = new Student(this, Keys.ADMIN__ADMIN_STUDENT_ID_FKEY);
-
-        return _student;
+        return new Student(this, Keys.ADMIN__ADMIN_STUDENT_ID_FKEY);
     }
 
-    /**
-     * Get the implicit join path to the <code>public.parent</code> table.
-     */
     public Parent parent() {
-        if (_parent == null)
-            _parent = new Parent(this, Keys.ADMIN__ADMIN_PARENT_ID_FKEY);
-
-        return _parent;
+        return new Parent(this, Keys.ADMIN__ADMIN_PARENT_ID_FKEY);
     }
 
-    /**
-     * Get the implicit join path to the <code>public.professor</code> table.
-     */
     public Professor professor() {
-        if (_professor == null)
-            _professor = new Professor(this, Keys.ADMIN__ADMIN_PROFESSOR_ID_FKEY);
-
-        return _professor;
+        return new Professor(this, Keys.ADMIN__ADMIN_PROFESSOR_ID_FKEY);
     }
 
     @Override
@@ -185,11 +163,6 @@ public class Admin extends TableImpl<AdminRecord> {
     @Override
     public Admin as(Name alias) {
         return new Admin(alias, this);
-    }
-
-    @Override
-    public Admin as(Table<?> alias) {
-        return new Admin(alias.getQualifiedName(), this);
     }
 
     /**
@@ -208,14 +181,6 @@ public class Admin extends TableImpl<AdminRecord> {
         return new Admin(name, null);
     }
 
-    /**
-     * Rename this table
-     */
-    @Override
-    public Admin rename(Table<?> name) {
-        return new Admin(name.getQualifiedName(), null);
-    }
-
     // -------------------------------------------------------------------------
     // Row9 type methods
     // -------------------------------------------------------------------------
@@ -223,20 +188,5 @@ public class Admin extends TableImpl<AdminRecord> {
     @Override
     public Row9<Integer, String, String, String, String, String, Integer, Integer, Integer> fieldsRow() {
         return (Row9) super.fieldsRow();
-    }
-
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
-    public <U> SelectField<U> mapping(Function9<? super Integer, ? super String, ? super String, ? super String, ? super String, ? super String, ? super Integer, ? super Integer, ? super Integer, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
-    public <U> SelectField<U> mapping(Class<U> toType, Function9<? super Integer, ? super String, ? super String, ? super String, ? super String, ? super String, ? super Integer, ? super Integer, ? super Integer, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

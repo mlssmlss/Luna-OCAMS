@@ -18,7 +18,7 @@ import org.ssglobal.revalida.codes.model.tables.Program;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ProgramRecord extends UpdatableRecordImpl<ProgramRecord> implements Record4<Integer, Integer, String, String> {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -1656216055;
 
     /**
      * Setter for <code>public.program.program_id</code>.
@@ -213,23 +213,9 @@ public class ProgramRecord extends UpdatableRecordImpl<ProgramRecord> implements
     public ProgramRecord(Integer programId, Integer programCode, String programTitle, String major) {
         super(Program.PROGRAM);
 
-        setProgramId(programId);
-        setProgramCode(programCode);
-        setProgramTitle(programTitle);
-        setMajor(major);
-    }
-
-    /**
-     * Create a detached, initialised ProgramRecord
-     */
-    public ProgramRecord(org.ssglobal.revalida.codes.model.tables.pojos.Program value) {
-        super(Program.PROGRAM);
-
-        if (value != null) {
-            setProgramId(value.getProgramId());
-            setProgramCode(value.getProgramCode());
-            setProgramTitle(value.getProgramTitle());
-            setMajor(value.getMajor());
-        }
+        set(0, programId);
+        set(1, programCode);
+        set(2, programTitle);
+        set(3, major);
     }
 }

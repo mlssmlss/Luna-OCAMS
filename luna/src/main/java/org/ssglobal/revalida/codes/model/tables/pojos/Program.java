@@ -13,12 +13,12 @@ import java.io.Serializable;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Program implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1042934307;
 
     private Integer programId;
     private Integer programCode;
-    private String programTitle;
-    private String major;
+    private String  programTitle;
+    private String  major;
 
     public Program() {}
 
@@ -32,8 +32,8 @@ public class Program implements Serializable {
     public Program(
         Integer programId,
         Integer programCode,
-        String programTitle,
-        String major
+        String  programTitle,
+        String  major
     ) {
         this.programId = programId;
         this.programCode = programCode;
@@ -41,61 +41,37 @@ public class Program implements Serializable {
         this.major = major;
     }
 
-    /**
-     * Getter for <code>public.program.program_id</code>.
-     */
     public Integer getProgramId() {
         return this.programId;
     }
 
-    /**
-     * Setter for <code>public.program.program_id</code>.
-     */
     public Program setProgramId(Integer programId) {
         this.programId = programId;
         return this;
     }
 
-    /**
-     * Getter for <code>public.program.program_code</code>.
-     */
     public Integer getProgramCode() {
         return this.programCode;
     }
 
-    /**
-     * Setter for <code>public.program.program_code</code>.
-     */
     public Program setProgramCode(Integer programCode) {
         this.programCode = programCode;
         return this;
     }
 
-    /**
-     * Getter for <code>public.program.program_title</code>.
-     */
     public String getProgramTitle() {
         return this.programTitle;
     }
 
-    /**
-     * Setter for <code>public.program.program_title</code>.
-     */
     public Program setProgramTitle(String programTitle) {
         this.programTitle = programTitle;
         return this;
     }
 
-    /**
-     * Getter for <code>public.program.major</code>.
-     */
     public String getMajor() {
         return this.major;
     }
 
-    /**
-     * Setter for <code>public.program.major</code>.
-     */
     public Program setMajor(String major) {
         this.major = major;
         return this;
@@ -110,29 +86,29 @@ public class Program implements Serializable {
         if (getClass() != obj.getClass())
             return false;
         final Program other = (Program) obj;
-        if (this.programId == null) {
+        if (programId == null) {
             if (other.programId != null)
                 return false;
         }
-        else if (!this.programId.equals(other.programId))
+        else if (!programId.equals(other.programId))
             return false;
-        if (this.programCode == null) {
+        if (programCode == null) {
             if (other.programCode != null)
                 return false;
         }
-        else if (!this.programCode.equals(other.programCode))
+        else if (!programCode.equals(other.programCode))
             return false;
-        if (this.programTitle == null) {
+        if (programTitle == null) {
             if (other.programTitle != null)
                 return false;
         }
-        else if (!this.programTitle.equals(other.programTitle))
+        else if (!programTitle.equals(other.programTitle))
             return false;
-        if (this.major == null) {
+        if (major == null) {
             if (other.major != null)
                 return false;
         }
-        else if (!this.major.equals(other.major))
+        else if (!major.equals(other.major))
             return false;
         return true;
     }

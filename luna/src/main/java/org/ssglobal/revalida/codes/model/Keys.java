@@ -7,7 +7,6 @@ package org.ssglobal.revalida.codes.model;
 import org.jooq.ForeignKey;
 import org.jooq.TableField;
 import org.jooq.UniqueKey;
-import org.jooq.impl.DSL;
 import org.jooq.impl.Internal;
 import org.ssglobal.revalida.codes.model.tables.Admin;
 import org.ssglobal.revalida.codes.model.tables.Grades;
@@ -28,37 +27,70 @@ import org.ssglobal.revalida.codes.model.tables.records.SubjectRecord;
 
 
 /**
- * A class modelling foreign key relationships and constraints of tables in
- * public.
+ * A class modelling foreign key relationships and constraints of tables of 
+ * the <code>public</code> schema.
  */
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Keys {
 
     // -------------------------------------------------------------------------
+    // IDENTITY definitions
+    // -------------------------------------------------------------------------
+
+
+    // -------------------------------------------------------------------------
     // UNIQUE and PRIMARY KEY definitions
     // -------------------------------------------------------------------------
 
-    public static final UniqueKey<AdminRecord> ADMIN_PKEY = Internal.createUniqueKey(Admin.ADMIN, DSL.name("admin_pkey"), new TableField[] { Admin.ADMIN.ADMIN_ID }, true);
-    public static final UniqueKey<GradesRecord> GRADES_PKEY = Internal.createUniqueKey(Grades.GRADES, DSL.name("grades_pkey"), new TableField[] { Grades.GRADES.GRADE_ID }, true);
-    public static final UniqueKey<ParentRecord> PARENT_PKEY = Internal.createUniqueKey(Parent.PARENT, DSL.name("parent_pkey"), new TableField[] { Parent.PARENT.PARENT_ID }, true);
-    public static final UniqueKey<ProfessorRecord> PROFESSOR_PKEY = Internal.createUniqueKey(Professor.PROFESSOR, DSL.name("professor_pkey"), new TableField[] { Professor.PROFESSOR.PROFESSOR_ID }, true);
-    public static final UniqueKey<ProfessorLoadRecord> PROFESSOR_LOAD_PKEY = Internal.createUniqueKey(ProfessorLoad.PROFESSOR_LOAD, DSL.name("professor_load_pkey"), new TableField[] { ProfessorLoad.PROFESSOR_LOAD.LOAD_ID }, true);
-    public static final UniqueKey<ProgramRecord> PROGRAM_PKEY = Internal.createUniqueKey(Program.PROGRAM, DSL.name("program_pkey"), new TableField[] { Program.PROGRAM.PROGRAM_ID }, true);
-    public static final UniqueKey<StudentRecord> STUDENT_PKEY = Internal.createUniqueKey(Student.STUDENT, DSL.name("student_pkey"), new TableField[] { Student.STUDENT.STUDENT_ID }, true);
-    public static final UniqueKey<SubjectRecord> SUBJECT_PKEY = Internal.createUniqueKey(Subject.SUBJECT, DSL.name("subject_pkey"), new TableField[] { Subject.SUBJECT.SUBJECT_ID }, true);
+    public static final UniqueKey<AdminRecord> ADMIN_PKEY = UniqueKeys0.ADMIN_PKEY;
+    public static final UniqueKey<GradesRecord> GRADES_PKEY = UniqueKeys0.GRADES_PKEY;
+    public static final UniqueKey<ParentRecord> PARENT_PKEY = UniqueKeys0.PARENT_PKEY;
+    public static final UniqueKey<ProfessorRecord> PROFESSOR_PKEY = UniqueKeys0.PROFESSOR_PKEY;
+    public static final UniqueKey<ProfessorLoadRecord> PROFESSOR_LOAD_PKEY = UniqueKeys0.PROFESSOR_LOAD_PKEY;
+    public static final UniqueKey<ProgramRecord> PROGRAM_PKEY = UniqueKeys0.PROGRAM_PKEY;
+    public static final UniqueKey<StudentRecord> STUDENT_PKEY = UniqueKeys0.STUDENT_PKEY;
+    public static final UniqueKey<SubjectRecord> SUBJECT_PKEY = UniqueKeys0.SUBJECT_PKEY;
 
     // -------------------------------------------------------------------------
     // FOREIGN KEY definitions
     // -------------------------------------------------------------------------
 
-    public static final ForeignKey<AdminRecord, ParentRecord> ADMIN__ADMIN_PARENT_ID_FKEY = Internal.createForeignKey(Admin.ADMIN, DSL.name("admin_parent_id_fkey"), new TableField[] { Admin.ADMIN.PARENT_ID }, Keys.PARENT_PKEY, new TableField[] { Parent.PARENT.PARENT_ID }, true);
-    public static final ForeignKey<AdminRecord, ProfessorRecord> ADMIN__ADMIN_PROFESSOR_ID_FKEY = Internal.createForeignKey(Admin.ADMIN, DSL.name("admin_professor_id_fkey"), new TableField[] { Admin.ADMIN.PROFESSOR_ID }, Keys.PROFESSOR_PKEY, new TableField[] { Professor.PROFESSOR.PROFESSOR_ID }, true);
-    public static final ForeignKey<AdminRecord, StudentRecord> ADMIN__ADMIN_STUDENT_ID_FKEY = Internal.createForeignKey(Admin.ADMIN, DSL.name("admin_student_id_fkey"), new TableField[] { Admin.ADMIN.STUDENT_ID }, Keys.STUDENT_PKEY, new TableField[] { Student.STUDENT.STUDENT_ID }, true);
-    public static final ForeignKey<ParentRecord, StudentRecord> PARENT__PARENT_STUDENT_ID_FKEY = Internal.createForeignKey(Parent.PARENT, DSL.name("parent_student_id_fkey"), new TableField[] { Parent.PARENT.STUDENT_ID }, Keys.STUDENT_PKEY, new TableField[] { Student.STUDENT.STUDENT_ID }, true);
-    public static final ForeignKey<ProfessorRecord, GradesRecord> PROFESSOR__PROFESSOR_GRADE_ID_FKEY = Internal.createForeignKey(Professor.PROFESSOR, DSL.name("professor_grade_id_fkey"), new TableField[] { Professor.PROFESSOR.GRADE_ID }, Keys.GRADES_PKEY, new TableField[] { Grades.GRADES.GRADE_ID }, true);
-    public static final ForeignKey<ProfessorRecord, StudentRecord> PROFESSOR__PROFESSOR_STUDENT_ID_FKEY = Internal.createForeignKey(Professor.PROFESSOR, DSL.name("professor_student_id_fkey"), new TableField[] { Professor.PROFESSOR.STUDENT_ID }, Keys.STUDENT_PKEY, new TableField[] { Student.STUDENT.STUDENT_ID }, true);
-    public static final ForeignKey<ProfessorLoadRecord, ProfessorRecord> PROFESSOR_LOAD__PROFESSOR_LOAD_PROFESSOR_ID_FKEY = Internal.createForeignKey(ProfessorLoad.PROFESSOR_LOAD, DSL.name("professor_load_professor_id_fkey"), new TableField[] { ProfessorLoad.PROFESSOR_LOAD.PROFESSOR_ID }, Keys.PROFESSOR_PKEY, new TableField[] { Professor.PROFESSOR.PROFESSOR_ID }, true);
-    public static final ForeignKey<StudentRecord, GradesRecord> STUDENT__STUDENT_GRADE_ID_FKEY = Internal.createForeignKey(Student.STUDENT, DSL.name("student_grade_id_fkey"), new TableField[] { Student.STUDENT.GRADE_ID }, Keys.GRADES_PKEY, new TableField[] { Grades.GRADES.GRADE_ID }, true);
-    public static final ForeignKey<StudentRecord, ProgramRecord> STUDENT__STUDENT_PROGRAM_ID_FKEY = Internal.createForeignKey(Student.STUDENT, DSL.name("student_program_id_fkey"), new TableField[] { Student.STUDENT.PROGRAM_ID }, Keys.PROGRAM_PKEY, new TableField[] { Program.PROGRAM.PROGRAM_ID }, true);
-    public static final ForeignKey<StudentRecord, SubjectRecord> STUDENT__STUDENT_SUBJECT_ID_FKEY = Internal.createForeignKey(Student.STUDENT, DSL.name("student_subject_id_fkey"), new TableField[] { Student.STUDENT.SUBJECT_ID }, Keys.SUBJECT_PKEY, new TableField[] { Subject.SUBJECT.SUBJECT_ID }, true);
+    public static final ForeignKey<AdminRecord, StudentRecord> ADMIN__ADMIN_STUDENT_ID_FKEY = ForeignKeys0.ADMIN__ADMIN_STUDENT_ID_FKEY;
+    public static final ForeignKey<AdminRecord, ParentRecord> ADMIN__ADMIN_PARENT_ID_FKEY = ForeignKeys0.ADMIN__ADMIN_PARENT_ID_FKEY;
+    public static final ForeignKey<AdminRecord, ProfessorRecord> ADMIN__ADMIN_PROFESSOR_ID_FKEY = ForeignKeys0.ADMIN__ADMIN_PROFESSOR_ID_FKEY;
+    public static final ForeignKey<ParentRecord, StudentRecord> PARENT__PARENT_STUDENT_ID_FKEY = ForeignKeys0.PARENT__PARENT_STUDENT_ID_FKEY;
+    public static final ForeignKey<ProfessorRecord, StudentRecord> PROFESSOR__PROFESSOR_STUDENT_ID_FKEY = ForeignKeys0.PROFESSOR__PROFESSOR_STUDENT_ID_FKEY;
+    public static final ForeignKey<ProfessorRecord, GradesRecord> PROFESSOR__PROFESSOR_GRADE_ID_FKEY = ForeignKeys0.PROFESSOR__PROFESSOR_GRADE_ID_FKEY;
+    public static final ForeignKey<ProfessorLoadRecord, ProfessorRecord> PROFESSOR_LOAD__PROFESSOR_LOAD_PROFESSOR_ID_FKEY = ForeignKeys0.PROFESSOR_LOAD__PROFESSOR_LOAD_PROFESSOR_ID_FKEY;
+    public static final ForeignKey<StudentRecord, ProgramRecord> STUDENT__STUDENT_PROGRAM_ID_FKEY = ForeignKeys0.STUDENT__STUDENT_PROGRAM_ID_FKEY;
+    public static final ForeignKey<StudentRecord, SubjectRecord> STUDENT__STUDENT_SUBJECT_ID_FKEY = ForeignKeys0.STUDENT__STUDENT_SUBJECT_ID_FKEY;
+    public static final ForeignKey<StudentRecord, GradesRecord> STUDENT__STUDENT_GRADE_ID_FKEY = ForeignKeys0.STUDENT__STUDENT_GRADE_ID_FKEY;
+
+    // -------------------------------------------------------------------------
+    // [#1459] distribute members to avoid static initialisers > 64kb
+    // -------------------------------------------------------------------------
+
+    private static class UniqueKeys0 {
+        public static final UniqueKey<AdminRecord> ADMIN_PKEY = Internal.createUniqueKey(Admin.ADMIN, "admin_pkey", new TableField[] { Admin.ADMIN.ADMIN_ID }, true);
+        public static final UniqueKey<GradesRecord> GRADES_PKEY = Internal.createUniqueKey(Grades.GRADES, "grades_pkey", new TableField[] { Grades.GRADES.GRADE_ID }, true);
+        public static final UniqueKey<ParentRecord> PARENT_PKEY = Internal.createUniqueKey(Parent.PARENT, "parent_pkey", new TableField[] { Parent.PARENT.PARENT_ID }, true);
+        public static final UniqueKey<ProfessorRecord> PROFESSOR_PKEY = Internal.createUniqueKey(Professor.PROFESSOR, "professor_pkey", new TableField[] { Professor.PROFESSOR.PROFESSOR_ID }, true);
+        public static final UniqueKey<ProfessorLoadRecord> PROFESSOR_LOAD_PKEY = Internal.createUniqueKey(ProfessorLoad.PROFESSOR_LOAD, "professor_load_pkey", new TableField[] { ProfessorLoad.PROFESSOR_LOAD.LOAD_ID }, true);
+        public static final UniqueKey<ProgramRecord> PROGRAM_PKEY = Internal.createUniqueKey(Program.PROGRAM, "program_pkey", new TableField[] { Program.PROGRAM.PROGRAM_ID }, true);
+        public static final UniqueKey<StudentRecord> STUDENT_PKEY = Internal.createUniqueKey(Student.STUDENT, "student_pkey", new TableField[] { Student.STUDENT.STUDENT_ID }, true);
+        public static final UniqueKey<SubjectRecord> SUBJECT_PKEY = Internal.createUniqueKey(Subject.SUBJECT, "subject_pkey", new TableField[] { Subject.SUBJECT.SUBJECT_ID }, true);
+    }
+
+    private static class ForeignKeys0 {
+        public static final ForeignKey<AdminRecord, StudentRecord> ADMIN__ADMIN_STUDENT_ID_FKEY = Internal.createForeignKey(Keys.STUDENT_PKEY, Admin.ADMIN, "admin_student_id_fkey", new TableField[] { Admin.ADMIN.STUDENT_ID }, true);
+        public static final ForeignKey<AdminRecord, ParentRecord> ADMIN__ADMIN_PARENT_ID_FKEY = Internal.createForeignKey(Keys.PARENT_PKEY, Admin.ADMIN, "admin_parent_id_fkey", new TableField[] { Admin.ADMIN.PARENT_ID }, true);
+        public static final ForeignKey<AdminRecord, ProfessorRecord> ADMIN__ADMIN_PROFESSOR_ID_FKEY = Internal.createForeignKey(Keys.PROFESSOR_PKEY, Admin.ADMIN, "admin_professor_id_fkey", new TableField[] { Admin.ADMIN.PROFESSOR_ID }, true);
+        public static final ForeignKey<ParentRecord, StudentRecord> PARENT__PARENT_STUDENT_ID_FKEY = Internal.createForeignKey(Keys.STUDENT_PKEY, Parent.PARENT, "parent_student_id_fkey", new TableField[] { Parent.PARENT.STUDENT_ID }, true);
+        public static final ForeignKey<ProfessorRecord, StudentRecord> PROFESSOR__PROFESSOR_STUDENT_ID_FKEY = Internal.createForeignKey(Keys.STUDENT_PKEY, Professor.PROFESSOR, "professor_student_id_fkey", new TableField[] { Professor.PROFESSOR.STUDENT_ID }, true);
+        public static final ForeignKey<ProfessorRecord, GradesRecord> PROFESSOR__PROFESSOR_GRADE_ID_FKEY = Internal.createForeignKey(Keys.GRADES_PKEY, Professor.PROFESSOR, "professor_grade_id_fkey", new TableField[] { Professor.PROFESSOR.GRADE_ID }, true);
+        public static final ForeignKey<ProfessorLoadRecord, ProfessorRecord> PROFESSOR_LOAD__PROFESSOR_LOAD_PROFESSOR_ID_FKEY = Internal.createForeignKey(Keys.PROFESSOR_PKEY, ProfessorLoad.PROFESSOR_LOAD, "professor_load_professor_id_fkey", new TableField[] { ProfessorLoad.PROFESSOR_LOAD.PROFESSOR_ID }, true);
+        public static final ForeignKey<StudentRecord, ProgramRecord> STUDENT__STUDENT_PROGRAM_ID_FKEY = Internal.createForeignKey(Keys.PROGRAM_PKEY, Student.STUDENT, "student_program_id_fkey", new TableField[] { Student.STUDENT.PROGRAM_ID }, true);
+        public static final ForeignKey<StudentRecord, SubjectRecord> STUDENT__STUDENT_SUBJECT_ID_FKEY = Internal.createForeignKey(Keys.SUBJECT_PKEY, Student.STUDENT, "student_subject_id_fkey", new TableField[] { Student.STUDENT.SUBJECT_ID }, true);
+        public static final ForeignKey<StudentRecord, GradesRecord> STUDENT__STUDENT_GRADE_ID_FKEY = Internal.createForeignKey(Keys.GRADES_PKEY, Student.STUDENT, "student_grade_id_fkey", new TableField[] { Student.STUDENT.GRADE_ID }, true);
+    }
 }

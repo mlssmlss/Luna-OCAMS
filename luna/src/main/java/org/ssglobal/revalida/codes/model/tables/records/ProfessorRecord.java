@@ -20,7 +20,7 @@ import org.ssglobal.revalida.codes.model.tables.Professor;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ProfessorRecord extends UpdatableRecordImpl<ProfessorRecord> implements Record11<Integer, Integer, Integer, String, String, String, String, LocalDate, String, Boolean, String> {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -2089474464;
 
     /**
      * Setter for <code>public.professor.professor_id</code>.
@@ -474,37 +474,16 @@ public class ProfessorRecord extends UpdatableRecordImpl<ProfessorRecord> implem
     public ProfessorRecord(Integer professorId, Integer studentId, Integer gradeId, String professorNumber, String professorName, String gender, String status, LocalDate birthdate, String password, Boolean activeDeactive, String type) {
         super(Professor.PROFESSOR);
 
-        setProfessorId(professorId);
-        setStudentId(studentId);
-        setGradeId(gradeId);
-        setProfessorNumber(professorNumber);
-        setProfessorName(professorName);
-        setGender(gender);
-        setStatus(status);
-        setBirthdate(birthdate);
-        setPassword(password);
-        setActiveDeactive(activeDeactive);
-        setType(type);
-    }
-
-    /**
-     * Create a detached, initialised ProfessorRecord
-     */
-    public ProfessorRecord(org.ssglobal.revalida.codes.model.tables.pojos.Professor value) {
-        super(Professor.PROFESSOR);
-
-        if (value != null) {
-            setProfessorId(value.getProfessorId());
-            setStudentId(value.getStudentId());
-            setGradeId(value.getGradeId());
-            setProfessorNumber(value.getProfessorNumber());
-            setProfessorName(value.getProfessorName());
-            setGender(value.getGender());
-            setStatus(value.getStatus());
-            setBirthdate(value.getBirthdate());
-            setPassword(value.getPassword());
-            setActiveDeactive(value.getActiveDeactive());
-            setType(value.getType());
-        }
+        set(0, professorId);
+        set(1, studentId);
+        set(2, gradeId);
+        set(3, professorNumber);
+        set(4, professorName);
+        set(5, gender);
+        set(6, status);
+        set(7, birthdate);
+        set(8, password);
+        set(9, activeDeactive);
+        set(10, type);
     }
 }

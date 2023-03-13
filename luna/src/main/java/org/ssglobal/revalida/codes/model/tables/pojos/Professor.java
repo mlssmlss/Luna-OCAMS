@@ -14,19 +14,19 @@ import java.time.LocalDate;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Professor implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 746900356;
 
-    private Integer professorId;
-    private Integer studentId;
-    private Integer gradeId;
-    private String professorNumber;
-    private String professorName;
-    private String gender;
-    private String status;
+    private Integer   professorId;
+    private Integer   studentId;
+    private Integer   gradeId;
+    private String    professorNumber;
+    private String    professorName;
+    private String    gender;
+    private String    status;
     private LocalDate birthdate;
-    private String password;
-    private Boolean activeDeactive;
-    private String type;
+    private String    password;
+    private Boolean   activeDeactive;
+    private String    type;
 
     public Professor() {}
 
@@ -45,17 +45,17 @@ public class Professor implements Serializable {
     }
 
     public Professor(
-        Integer professorId,
-        Integer studentId,
-        Integer gradeId,
-        String professorNumber,
-        String professorName,
-        String gender,
-        String status,
+        Integer   professorId,
+        Integer   studentId,
+        Integer   gradeId,
+        String    professorNumber,
+        String    professorName,
+        String    gender,
+        String    status,
         LocalDate birthdate,
-        String password,
-        Boolean activeDeactive,
-        String type
+        String    password,
+        Boolean   activeDeactive,
+        String    type
     ) {
         this.professorId = professorId;
         this.studentId = studentId;
@@ -70,166 +70,100 @@ public class Professor implements Serializable {
         this.type = type;
     }
 
-    /**
-     * Getter for <code>public.professor.professor_id</code>.
-     */
     public Integer getProfessorId() {
         return this.professorId;
     }
 
-    /**
-     * Setter for <code>public.professor.professor_id</code>.
-     */
     public Professor setProfessorId(Integer professorId) {
         this.professorId = professorId;
         return this;
     }
 
-    /**
-     * Getter for <code>public.professor.student_id</code>.
-     */
     public Integer getStudentId() {
         return this.studentId;
     }
 
-    /**
-     * Setter for <code>public.professor.student_id</code>.
-     */
     public Professor setStudentId(Integer studentId) {
         this.studentId = studentId;
         return this;
     }
 
-    /**
-     * Getter for <code>public.professor.grade_id</code>.
-     */
     public Integer getGradeId() {
         return this.gradeId;
     }
 
-    /**
-     * Setter for <code>public.professor.grade_id</code>.
-     */
     public Professor setGradeId(Integer gradeId) {
         this.gradeId = gradeId;
         return this;
     }
 
-    /**
-     * Getter for <code>public.professor.professor_number</code>.
-     */
     public String getProfessorNumber() {
         return this.professorNumber;
     }
 
-    /**
-     * Setter for <code>public.professor.professor_number</code>.
-     */
     public Professor setProfessorNumber(String professorNumber) {
         this.professorNumber = professorNumber;
         return this;
     }
 
-    /**
-     * Getter for <code>public.professor.professor_name</code>.
-     */
     public String getProfessorName() {
         return this.professorName;
     }
 
-    /**
-     * Setter for <code>public.professor.professor_name</code>.
-     */
     public Professor setProfessorName(String professorName) {
         this.professorName = professorName;
         return this;
     }
 
-    /**
-     * Getter for <code>public.professor.gender</code>.
-     */
     public String getGender() {
         return this.gender;
     }
 
-    /**
-     * Setter for <code>public.professor.gender</code>.
-     */
     public Professor setGender(String gender) {
         this.gender = gender;
         return this;
     }
 
-    /**
-     * Getter for <code>public.professor.status</code>.
-     */
     public String getStatus() {
         return this.status;
     }
 
-    /**
-     * Setter for <code>public.professor.status</code>.
-     */
     public Professor setStatus(String status) {
         this.status = status;
         return this;
     }
 
-    /**
-     * Getter for <code>public.professor.birthdate</code>.
-     */
     public LocalDate getBirthdate() {
         return this.birthdate;
     }
 
-    /**
-     * Setter for <code>public.professor.birthdate</code>.
-     */
     public Professor setBirthdate(LocalDate birthdate) {
         this.birthdate = birthdate;
         return this;
     }
 
-    /**
-     * Getter for <code>public.professor.password</code>.
-     */
     public String getPassword() {
         return this.password;
     }
 
-    /**
-     * Setter for <code>public.professor.password</code>.
-     */
     public Professor setPassword(String password) {
         this.password = password;
         return this;
     }
 
-    /**
-     * Getter for <code>public.professor.active_deactive</code>.
-     */
     public Boolean getActiveDeactive() {
         return this.activeDeactive;
     }
 
-    /**
-     * Setter for <code>public.professor.active_deactive</code>.
-     */
     public Professor setActiveDeactive(Boolean activeDeactive) {
         this.activeDeactive = activeDeactive;
         return this;
     }
 
-    /**
-     * Getter for <code>public.professor.type</code>.
-     */
     public String getType() {
         return this.type;
     }
 
-    /**
-     * Setter for <code>public.professor.type</code>.
-     */
     public Professor setType(String type) {
         this.type = type;
         return this;
@@ -244,71 +178,71 @@ public class Professor implements Serializable {
         if (getClass() != obj.getClass())
             return false;
         final Professor other = (Professor) obj;
-        if (this.professorId == null) {
+        if (professorId == null) {
             if (other.professorId != null)
                 return false;
         }
-        else if (!this.professorId.equals(other.professorId))
+        else if (!professorId.equals(other.professorId))
             return false;
-        if (this.studentId == null) {
+        if (studentId == null) {
             if (other.studentId != null)
                 return false;
         }
-        else if (!this.studentId.equals(other.studentId))
+        else if (!studentId.equals(other.studentId))
             return false;
-        if (this.gradeId == null) {
+        if (gradeId == null) {
             if (other.gradeId != null)
                 return false;
         }
-        else if (!this.gradeId.equals(other.gradeId))
+        else if (!gradeId.equals(other.gradeId))
             return false;
-        if (this.professorNumber == null) {
+        if (professorNumber == null) {
             if (other.professorNumber != null)
                 return false;
         }
-        else if (!this.professorNumber.equals(other.professorNumber))
+        else if (!professorNumber.equals(other.professorNumber))
             return false;
-        if (this.professorName == null) {
+        if (professorName == null) {
             if (other.professorName != null)
                 return false;
         }
-        else if (!this.professorName.equals(other.professorName))
+        else if (!professorName.equals(other.professorName))
             return false;
-        if (this.gender == null) {
+        if (gender == null) {
             if (other.gender != null)
                 return false;
         }
-        else if (!this.gender.equals(other.gender))
+        else if (!gender.equals(other.gender))
             return false;
-        if (this.status == null) {
+        if (status == null) {
             if (other.status != null)
                 return false;
         }
-        else if (!this.status.equals(other.status))
+        else if (!status.equals(other.status))
             return false;
-        if (this.birthdate == null) {
+        if (birthdate == null) {
             if (other.birthdate != null)
                 return false;
         }
-        else if (!this.birthdate.equals(other.birthdate))
+        else if (!birthdate.equals(other.birthdate))
             return false;
-        if (this.password == null) {
+        if (password == null) {
             if (other.password != null)
                 return false;
         }
-        else if (!this.password.equals(other.password))
+        else if (!password.equals(other.password))
             return false;
-        if (this.activeDeactive == null) {
+        if (activeDeactive == null) {
             if (other.activeDeactive != null)
                 return false;
         }
-        else if (!this.activeDeactive.equals(other.activeDeactive))
+        else if (!activeDeactive.equals(other.activeDeactive))
             return false;
-        if (this.type == null) {
+        if (type == null) {
             if (other.type != null)
                 return false;
         }
-        else if (!this.type.equals(other.type))
+        else if (!type.equals(other.type))
             return false;
         return true;
     }

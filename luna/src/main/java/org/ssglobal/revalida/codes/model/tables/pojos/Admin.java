@@ -13,14 +13,14 @@ import java.io.Serializable;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Admin implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -1926428884;
 
     private Integer adminId;
-    private String username;
-    private String password;
-    private String firstname;
-    private String lastname;
-    private String type;
+    private String  username;
+    private String  password;
+    private String  firstname;
+    private String  lastname;
+    private String  type;
     private Integer studentId;
     private Integer parentId;
     private Integer professorId;
@@ -41,11 +41,11 @@ public class Admin implements Serializable {
 
     public Admin(
         Integer adminId,
-        String username,
-        String password,
-        String firstname,
-        String lastname,
-        String type,
+        String  username,
+        String  password,
+        String  firstname,
+        String  lastname,
+        String  type,
         Integer studentId,
         Integer parentId,
         Integer professorId
@@ -61,136 +61,82 @@ public class Admin implements Serializable {
         this.professorId = professorId;
     }
 
-    /**
-     * Getter for <code>public.admin.admin_id</code>.
-     */
     public Integer getAdminId() {
         return this.adminId;
     }
 
-    /**
-     * Setter for <code>public.admin.admin_id</code>.
-     */
     public Admin setAdminId(Integer adminId) {
         this.adminId = adminId;
         return this;
     }
 
-    /**
-     * Getter for <code>public.admin.username</code>.
-     */
     public String getUsername() {
         return this.username;
     }
 
-    /**
-     * Setter for <code>public.admin.username</code>.
-     */
     public Admin setUsername(String username) {
         this.username = username;
         return this;
     }
 
-    /**
-     * Getter for <code>public.admin.password</code>.
-     */
     public String getPassword() {
         return this.password;
     }
 
-    /**
-     * Setter for <code>public.admin.password</code>.
-     */
     public Admin setPassword(String password) {
         this.password = password;
         return this;
     }
 
-    /**
-     * Getter for <code>public.admin.firstname</code>.
-     */
     public String getFirstname() {
         return this.firstname;
     }
 
-    /**
-     * Setter for <code>public.admin.firstname</code>.
-     */
     public Admin setFirstname(String firstname) {
         this.firstname = firstname;
         return this;
     }
 
-    /**
-     * Getter for <code>public.admin.lastname</code>.
-     */
     public String getLastname() {
         return this.lastname;
     }
 
-    /**
-     * Setter for <code>public.admin.lastname</code>.
-     */
     public Admin setLastname(String lastname) {
         this.lastname = lastname;
         return this;
     }
 
-    /**
-     * Getter for <code>public.admin.type</code>.
-     */
     public String getType() {
         return this.type;
     }
 
-    /**
-     * Setter for <code>public.admin.type</code>.
-     */
     public Admin setType(String type) {
         this.type = type;
         return this;
     }
 
-    /**
-     * Getter for <code>public.admin.student_id</code>.
-     */
     public Integer getStudentId() {
         return this.studentId;
     }
 
-    /**
-     * Setter for <code>public.admin.student_id</code>.
-     */
     public Admin setStudentId(Integer studentId) {
         this.studentId = studentId;
         return this;
     }
 
-    /**
-     * Getter for <code>public.admin.parent_id</code>.
-     */
     public Integer getParentId() {
         return this.parentId;
     }
 
-    /**
-     * Setter for <code>public.admin.parent_id</code>.
-     */
     public Admin setParentId(Integer parentId) {
         this.parentId = parentId;
         return this;
     }
 
-    /**
-     * Getter for <code>public.admin.professor_id</code>.
-     */
     public Integer getProfessorId() {
         return this.professorId;
     }
 
-    /**
-     * Setter for <code>public.admin.professor_id</code>.
-     */
     public Admin setProfessorId(Integer professorId) {
         this.professorId = professorId;
         return this;
@@ -205,59 +151,59 @@ public class Admin implements Serializable {
         if (getClass() != obj.getClass())
             return false;
         final Admin other = (Admin) obj;
-        if (this.adminId == null) {
+        if (adminId == null) {
             if (other.adminId != null)
                 return false;
         }
-        else if (!this.adminId.equals(other.adminId))
+        else if (!adminId.equals(other.adminId))
             return false;
-        if (this.username == null) {
+        if (username == null) {
             if (other.username != null)
                 return false;
         }
-        else if (!this.username.equals(other.username))
+        else if (!username.equals(other.username))
             return false;
-        if (this.password == null) {
+        if (password == null) {
             if (other.password != null)
                 return false;
         }
-        else if (!this.password.equals(other.password))
+        else if (!password.equals(other.password))
             return false;
-        if (this.firstname == null) {
+        if (firstname == null) {
             if (other.firstname != null)
                 return false;
         }
-        else if (!this.firstname.equals(other.firstname))
+        else if (!firstname.equals(other.firstname))
             return false;
-        if (this.lastname == null) {
+        if (lastname == null) {
             if (other.lastname != null)
                 return false;
         }
-        else if (!this.lastname.equals(other.lastname))
+        else if (!lastname.equals(other.lastname))
             return false;
-        if (this.type == null) {
+        if (type == null) {
             if (other.type != null)
                 return false;
         }
-        else if (!this.type.equals(other.type))
+        else if (!type.equals(other.type))
             return false;
-        if (this.studentId == null) {
+        if (studentId == null) {
             if (other.studentId != null)
                 return false;
         }
-        else if (!this.studentId.equals(other.studentId))
+        else if (!studentId.equals(other.studentId))
             return false;
-        if (this.parentId == null) {
+        if (parentId == null) {
             if (other.parentId != null)
                 return false;
         }
-        else if (!this.parentId.equals(other.parentId))
+        else if (!parentId.equals(other.parentId))
             return false;
-        if (this.professorId == null) {
+        if (professorId == null) {
             if (other.professorId != null)
                 return false;
         }
-        else if (!this.professorId.equals(other.professorId))
+        else if (!professorId.equals(other.professorId))
             return false;
         return true;
     }

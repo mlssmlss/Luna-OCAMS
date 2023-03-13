@@ -26,7 +26,7 @@ import org.ssglobal.revalida.codes.model.tables.Subject;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Public extends SchemaImpl {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 514698499;
 
     /**
      * The reference instance of <code>public</code>
@@ -88,7 +88,7 @@ public class Public extends SchemaImpl {
 
     @Override
     public final List<Table<?>> getTables() {
-        return Arrays.asList(
+        return Arrays.<Table<?>>asList(
             Admin.ADMIN,
             Grades.GRADES,
             Parent.PARENT,
@@ -96,7 +96,6 @@ public class Public extends SchemaImpl {
             ProfessorLoad.PROFESSOR_LOAD,
             Program.PROGRAM,
             Student.STUDENT,
-            Subject.SUBJECT
-        );
+            Subject.SUBJECT);
     }
 }

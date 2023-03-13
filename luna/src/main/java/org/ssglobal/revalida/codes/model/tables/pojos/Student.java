@@ -14,25 +14,26 @@ import java.time.LocalDate;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Student implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 663394096;
 
-    private Integer studentId;
-    private Integer programId;
-    private Integer subjectId;
-    private Integer gradeId;
-    private String password;
-    private String firstname;
-    private String middlename;
-    private String lastname;
+    private Integer   studentId;
+    private Integer   programId;
+    private Integer   subjectId;
+    private Integer   gradeId;
+    private String    password;
+    private String    firstname;
+    private String    middlename;
+    private String    lastname;
     private LocalDate birthdate;
-    private String semester;
-    private Integer yearLevel;
-    private String academicYear;
-    private String status;
-    private Boolean activeDeactive;
-    private String course;
-    private String type;
-    private String studentNumber;
+    private String    semester;
+    private Integer   yearLevel;
+    private String    academicYear;
+    private String    status;
+    private Boolean   activeDeactive;
+    private String    course;
+    private String    type;
+    private String    studentNumber;
+    private String    gender;
 
     public Student() {}
 
@@ -54,26 +55,28 @@ public class Student implements Serializable {
         this.course = value.course;
         this.type = value.type;
         this.studentNumber = value.studentNumber;
+        this.gender = value.gender;
     }
 
     public Student(
-        Integer studentId,
-        Integer programId,
-        Integer subjectId,
-        Integer gradeId,
-        String password,
-        String firstname,
-        String middlename,
-        String lastname,
+        Integer   studentId,
+        Integer   programId,
+        Integer   subjectId,
+        Integer   gradeId,
+        String    password,
+        String    firstname,
+        String    middlename,
+        String    lastname,
         LocalDate birthdate,
-        String semester,
-        Integer yearLevel,
-        String academicYear,
-        String status,
-        Boolean activeDeactive,
-        String course,
-        String type,
-        String studentNumber
+        String    semester,
+        Integer   yearLevel,
+        String    academicYear,
+        String    status,
+        Boolean   activeDeactive,
+        String    course,
+        String    type,
+        String    studentNumber,
+        String    gender
     ) {
         this.studentId = studentId;
         this.programId = programId;
@@ -92,260 +95,168 @@ public class Student implements Serializable {
         this.course = course;
         this.type = type;
         this.studentNumber = studentNumber;
+        this.gender = gender;
     }
 
-    /**
-     * Getter for <code>public.student.student_id</code>.
-     */
     public Integer getStudentId() {
         return this.studentId;
     }
 
-    /**
-     * Setter for <code>public.student.student_id</code>.
-     */
     public Student setStudentId(Integer studentId) {
         this.studentId = studentId;
         return this;
     }
 
-    /**
-     * Getter for <code>public.student.program_id</code>.
-     */
     public Integer getProgramId() {
         return this.programId;
     }
 
-    /**
-     * Setter for <code>public.student.program_id</code>.
-     */
     public Student setProgramId(Integer programId) {
         this.programId = programId;
         return this;
     }
 
-    /**
-     * Getter for <code>public.student.subject_id</code>.
-     */
     public Integer getSubjectId() {
         return this.subjectId;
     }
 
-    /**
-     * Setter for <code>public.student.subject_id</code>.
-     */
     public Student setSubjectId(Integer subjectId) {
         this.subjectId = subjectId;
         return this;
     }
 
-    /**
-     * Getter for <code>public.student.grade_id</code>.
-     */
     public Integer getGradeId() {
         return this.gradeId;
     }
 
-    /**
-     * Setter for <code>public.student.grade_id</code>.
-     */
     public Student setGradeId(Integer gradeId) {
         this.gradeId = gradeId;
         return this;
     }
 
-    /**
-     * Getter for <code>public.student.password</code>.
-     */
     public String getPassword() {
         return this.password;
     }
 
-    /**
-     * Setter for <code>public.student.password</code>.
-     */
     public Student setPassword(String password) {
         this.password = password;
         return this;
     }
 
-    /**
-     * Getter for <code>public.student.firstname</code>.
-     */
     public String getFirstname() {
         return this.firstname;
     }
 
-    /**
-     * Setter for <code>public.student.firstname</code>.
-     */
     public Student setFirstname(String firstname) {
         this.firstname = firstname;
         return this;
     }
 
-    /**
-     * Getter for <code>public.student.middlename</code>.
-     */
     public String getMiddlename() {
         return this.middlename;
     }
 
-    /**
-     * Setter for <code>public.student.middlename</code>.
-     */
     public Student setMiddlename(String middlename) {
         this.middlename = middlename;
         return this;
     }
 
-    /**
-     * Getter for <code>public.student.lastname</code>.
-     */
     public String getLastname() {
         return this.lastname;
     }
 
-    /**
-     * Setter for <code>public.student.lastname</code>.
-     */
     public Student setLastname(String lastname) {
         this.lastname = lastname;
         return this;
     }
 
-    /**
-     * Getter for <code>public.student.birthdate</code>.
-     */
     public LocalDate getBirthdate() {
         return this.birthdate;
     }
 
-    /**
-     * Setter for <code>public.student.birthdate</code>.
-     */
     public Student setBirthdate(LocalDate birthdate) {
         this.birthdate = birthdate;
         return this;
     }
 
-    /**
-     * Getter for <code>public.student.semester</code>.
-     */
     public String getSemester() {
         return this.semester;
     }
 
-    /**
-     * Setter for <code>public.student.semester</code>.
-     */
     public Student setSemester(String semester) {
         this.semester = semester;
         return this;
     }
 
-    /**
-     * Getter for <code>public.student.year_level</code>.
-     */
     public Integer getYearLevel() {
         return this.yearLevel;
     }
 
-    /**
-     * Setter for <code>public.student.year_level</code>.
-     */
     public Student setYearLevel(Integer yearLevel) {
         this.yearLevel = yearLevel;
         return this;
     }
 
-    /**
-     * Getter for <code>public.student.academic_year</code>.
-     */
     public String getAcademicYear() {
         return this.academicYear;
     }
 
-    /**
-     * Setter for <code>public.student.academic_year</code>.
-     */
     public Student setAcademicYear(String academicYear) {
         this.academicYear = academicYear;
         return this;
     }
 
-    /**
-     * Getter for <code>public.student.status</code>.
-     */
     public String getStatus() {
         return this.status;
     }
 
-    /**
-     * Setter for <code>public.student.status</code>.
-     */
     public Student setStatus(String status) {
         this.status = status;
         return this;
     }
 
-    /**
-     * Getter for <code>public.student.active_deactive</code>.
-     */
     public Boolean getActiveDeactive() {
         return this.activeDeactive;
     }
 
-    /**
-     * Setter for <code>public.student.active_deactive</code>.
-     */
     public Student setActiveDeactive(Boolean activeDeactive) {
         this.activeDeactive = activeDeactive;
         return this;
     }
 
-    /**
-     * Getter for <code>public.student.course</code>.
-     */
     public String getCourse() {
         return this.course;
     }
 
-    /**
-     * Setter for <code>public.student.course</code>.
-     */
     public Student setCourse(String course) {
         this.course = course;
         return this;
     }
 
-    /**
-     * Getter for <code>public.student.type</code>.
-     */
     public String getType() {
         return this.type;
     }
 
-    /**
-     * Setter for <code>public.student.type</code>.
-     */
     public Student setType(String type) {
         this.type = type;
         return this;
     }
 
-    /**
-     * Getter for <code>public.student.student_number</code>.
-     */
     public String getStudentNumber() {
         return this.studentNumber;
     }
 
-    /**
-     * Setter for <code>public.student.student_number</code>.
-     */
     public Student setStudentNumber(String studentNumber) {
         this.studentNumber = studentNumber;
+        return this;
+    }
+
+    public String getGender() {
+        return this.gender;
+    }
+
+    public Student setGender(String gender) {
+        this.gender = gender;
         return this;
     }
 
@@ -358,107 +269,113 @@ public class Student implements Serializable {
         if (getClass() != obj.getClass())
             return false;
         final Student other = (Student) obj;
-        if (this.studentId == null) {
+        if (studentId == null) {
             if (other.studentId != null)
                 return false;
         }
-        else if (!this.studentId.equals(other.studentId))
+        else if (!studentId.equals(other.studentId))
             return false;
-        if (this.programId == null) {
+        if (programId == null) {
             if (other.programId != null)
                 return false;
         }
-        else if (!this.programId.equals(other.programId))
+        else if (!programId.equals(other.programId))
             return false;
-        if (this.subjectId == null) {
+        if (subjectId == null) {
             if (other.subjectId != null)
                 return false;
         }
-        else if (!this.subjectId.equals(other.subjectId))
+        else if (!subjectId.equals(other.subjectId))
             return false;
-        if (this.gradeId == null) {
+        if (gradeId == null) {
             if (other.gradeId != null)
                 return false;
         }
-        else if (!this.gradeId.equals(other.gradeId))
+        else if (!gradeId.equals(other.gradeId))
             return false;
-        if (this.password == null) {
+        if (password == null) {
             if (other.password != null)
                 return false;
         }
-        else if (!this.password.equals(other.password))
+        else if (!password.equals(other.password))
             return false;
-        if (this.firstname == null) {
+        if (firstname == null) {
             if (other.firstname != null)
                 return false;
         }
-        else if (!this.firstname.equals(other.firstname))
+        else if (!firstname.equals(other.firstname))
             return false;
-        if (this.middlename == null) {
+        if (middlename == null) {
             if (other.middlename != null)
                 return false;
         }
-        else if (!this.middlename.equals(other.middlename))
+        else if (!middlename.equals(other.middlename))
             return false;
-        if (this.lastname == null) {
+        if (lastname == null) {
             if (other.lastname != null)
                 return false;
         }
-        else if (!this.lastname.equals(other.lastname))
+        else if (!lastname.equals(other.lastname))
             return false;
-        if (this.birthdate == null) {
+        if (birthdate == null) {
             if (other.birthdate != null)
                 return false;
         }
-        else if (!this.birthdate.equals(other.birthdate))
+        else if (!birthdate.equals(other.birthdate))
             return false;
-        if (this.semester == null) {
+        if (semester == null) {
             if (other.semester != null)
                 return false;
         }
-        else if (!this.semester.equals(other.semester))
+        else if (!semester.equals(other.semester))
             return false;
-        if (this.yearLevel == null) {
+        if (yearLevel == null) {
             if (other.yearLevel != null)
                 return false;
         }
-        else if (!this.yearLevel.equals(other.yearLevel))
+        else if (!yearLevel.equals(other.yearLevel))
             return false;
-        if (this.academicYear == null) {
+        if (academicYear == null) {
             if (other.academicYear != null)
                 return false;
         }
-        else if (!this.academicYear.equals(other.academicYear))
+        else if (!academicYear.equals(other.academicYear))
             return false;
-        if (this.status == null) {
+        if (status == null) {
             if (other.status != null)
                 return false;
         }
-        else if (!this.status.equals(other.status))
+        else if (!status.equals(other.status))
             return false;
-        if (this.activeDeactive == null) {
+        if (activeDeactive == null) {
             if (other.activeDeactive != null)
                 return false;
         }
-        else if (!this.activeDeactive.equals(other.activeDeactive))
+        else if (!activeDeactive.equals(other.activeDeactive))
             return false;
-        if (this.course == null) {
+        if (course == null) {
             if (other.course != null)
                 return false;
         }
-        else if (!this.course.equals(other.course))
+        else if (!course.equals(other.course))
             return false;
-        if (this.type == null) {
+        if (type == null) {
             if (other.type != null)
                 return false;
         }
-        else if (!this.type.equals(other.type))
+        else if (!type.equals(other.type))
             return false;
-        if (this.studentNumber == null) {
+        if (studentNumber == null) {
             if (other.studentNumber != null)
                 return false;
         }
-        else if (!this.studentNumber.equals(other.studentNumber))
+        else if (!studentNumber.equals(other.studentNumber))
+            return false;
+        if (gender == null) {
+            if (other.gender != null)
+                return false;
+        }
+        else if (!gender.equals(other.gender))
             return false;
         return true;
     }
@@ -484,6 +401,7 @@ public class Student implements Serializable {
         result = prime * result + ((this.course == null) ? 0 : this.course.hashCode());
         result = prime * result + ((this.type == null) ? 0 : this.type.hashCode());
         result = prime * result + ((this.studentNumber == null) ? 0 : this.studentNumber.hashCode());
+        result = prime * result + ((this.gender == null) ? 0 : this.gender.hashCode());
         return result;
     }
 
@@ -508,6 +426,7 @@ public class Student implements Serializable {
         sb.append(", ").append(course);
         sb.append(", ").append(type);
         sb.append(", ").append(studentNumber);
+        sb.append(", ").append(gender);
 
         sb.append(")");
         return sb.toString();

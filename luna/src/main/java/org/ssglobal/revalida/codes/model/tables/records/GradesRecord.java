@@ -20,7 +20,7 @@ import org.ssglobal.revalida.codes.model.tables.Grades;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class GradesRecord extends UpdatableRecordImpl<GradesRecord> implements Record6<Integer, Integer, String, LocalDate, String, String> {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1803414974;
 
     /**
      * Setter for <code>public.grades.grade_id</code>.
@@ -289,27 +289,11 @@ public class GradesRecord extends UpdatableRecordImpl<GradesRecord> implements R
     public GradesRecord(Integer gradeId, Integer grade, String comment, LocalDate dateModified, String remarks, String status) {
         super(Grades.GRADES);
 
-        setGradeId(gradeId);
-        setGrade(grade);
-        setComment(comment);
-        setDateModified(dateModified);
-        setRemarks(remarks);
-        setStatus(status);
-    }
-
-    /**
-     * Create a detached, initialised GradesRecord
-     */
-    public GradesRecord(org.ssglobal.revalida.codes.model.tables.pojos.Grades value) {
-        super(Grades.GRADES);
-
-        if (value != null) {
-            setGradeId(value.getGradeId());
-            setGrade(value.getGrade());
-            setComment(value.getComment());
-            setDateModified(value.getDateModified());
-            setRemarks(value.getRemarks());
-            setStatus(value.getStatus());
-        }
+        set(0, gradeId);
+        set(1, grade);
+        set(2, comment);
+        set(3, dateModified);
+        set(4, remarks);
+        set(5, status);
     }
 }

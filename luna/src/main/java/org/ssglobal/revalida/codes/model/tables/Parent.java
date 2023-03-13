@@ -6,23 +6,18 @@ package org.ssglobal.revalida.codes.model.tables;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import org.jooq.Field;
 import org.jooq.ForeignKey;
-import org.jooq.Function7;
 import org.jooq.Name;
 import org.jooq.Record;
-import org.jooq.Records;
 import org.jooq.Row7;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
 import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
-import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 import org.ssglobal.revalida.codes.model.Keys;
 import org.ssglobal.revalida.codes.model.Public;
@@ -35,7 +30,7 @@ import org.ssglobal.revalida.codes.model.tables.records.ParentRecord;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Parent extends TableImpl<ParentRecord> {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1570837917;
 
     /**
      * The reference instance of <code>public.parent</code>
@@ -53,44 +48,43 @@ public class Parent extends TableImpl<ParentRecord> {
     /**
      * The column <code>public.parent.parent_id</code>.
      */
-    public final TableField<ParentRecord, Integer> PARENT_ID = createField(DSL.name("parent_id"), SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<ParentRecord, Integer> PARENT_ID = createField(DSL.name("parent_id"), org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
      * The column <code>public.parent.student_id</code>.
      */
-    public final TableField<ParentRecord, Integer> STUDENT_ID = createField(DSL.name("student_id"), SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<ParentRecord, Integer> STUDENT_ID = createField(DSL.name("student_id"), org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
      * The column <code>public.parent.username</code>.
      */
-    public final TableField<ParentRecord, String> USERNAME = createField(DSL.name("username"), SQLDataType.VARCHAR(20).nullable(false), this, "");
+    public final TableField<ParentRecord, String> USERNAME = createField(DSL.name("username"), org.jooq.impl.SQLDataType.VARCHAR(20).nullable(false), this, "");
 
     /**
      * The column <code>public.parent.password</code>.
      */
-    public final TableField<ParentRecord, String> PASSWORD = createField(DSL.name("password"), SQLDataType.VARCHAR(20).nullable(false), this, "");
+    public final TableField<ParentRecord, String> PASSWORD = createField(DSL.name("password"), org.jooq.impl.SQLDataType.VARCHAR(20).nullable(false), this, "");
 
     /**
      * The column <code>public.parent.firstname</code>.
      */
-    public final TableField<ParentRecord, String> FIRSTNAME = createField(DSL.name("firstname"), SQLDataType.VARCHAR(20).nullable(false), this, "");
+    public final TableField<ParentRecord, String> FIRSTNAME = createField(DSL.name("firstname"), org.jooq.impl.SQLDataType.VARCHAR(20).nullable(false), this, "");
 
     /**
      * The column <code>public.parent.lastname</code>.
      */
-    public final TableField<ParentRecord, String> LASTNAME = createField(DSL.name("lastname"), SQLDataType.VARCHAR(20).nullable(false), this, "");
+    public final TableField<ParentRecord, String> LASTNAME = createField(DSL.name("lastname"), org.jooq.impl.SQLDataType.VARCHAR(20).nullable(false), this, "");
 
     /**
      * The column <code>public.parent.type</code>.
      */
-    public final TableField<ParentRecord, String> TYPE = createField(DSL.name("type"), SQLDataType.VARCHAR(20).nullable(false), this, "");
+    public final TableField<ParentRecord, String> TYPE = createField(DSL.name("type"), org.jooq.impl.SQLDataType.VARCHAR(20).nullable(false), this, "");
 
-    private Parent(Name alias, Table<ParentRecord> aliased) {
-        this(alias, aliased, null);
-    }
-
-    private Parent(Name alias, Table<ParentRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
+    /**
+     * Create a <code>public.parent</code> table reference
+     */
+    public Parent() {
+        this(DSL.name("parent"), null);
     }
 
     /**
@@ -107,11 +101,12 @@ public class Parent extends TableImpl<ParentRecord> {
         this(alias, PARENT);
     }
 
-    /**
-     * Create a <code>public.parent</code> table reference
-     */
-    public Parent() {
-        this(DSL.name("parent"), null);
+    private Parent(Name alias, Table<ParentRecord> aliased) {
+        this(alias, aliased, null);
+    }
+
+    private Parent(Name alias, Table<ParentRecord> aliased, Field<?>[] parameters) {
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
     public <O extends Record> Parent(Table<O> child, ForeignKey<O, ParentRecord> key) {
@@ -120,7 +115,7 @@ public class Parent extends TableImpl<ParentRecord> {
 
     @Override
     public Schema getSchema() {
-        return aliased() ? null : Public.PUBLIC;
+        return Public.PUBLIC;
     }
 
     @Override
@@ -129,20 +124,17 @@ public class Parent extends TableImpl<ParentRecord> {
     }
 
     @Override
-    public List<ForeignKey<ParentRecord, ?>> getReferences() {
-        return Arrays.asList(Keys.PARENT__PARENT_STUDENT_ID_FKEY);
+    public List<UniqueKey<ParentRecord>> getKeys() {
+        return Arrays.<UniqueKey<ParentRecord>>asList(Keys.PARENT_PKEY);
     }
 
-    private transient Student _student;
+    @Override
+    public List<ForeignKey<ParentRecord, ?>> getReferences() {
+        return Arrays.<ForeignKey<ParentRecord, ?>>asList(Keys.PARENT__PARENT_STUDENT_ID_FKEY);
+    }
 
-    /**
-     * Get the implicit join path to the <code>public.student</code> table.
-     */
     public Student student() {
-        if (_student == null)
-            _student = new Student(this, Keys.PARENT__PARENT_STUDENT_ID_FKEY);
-
-        return _student;
+        return new Student(this, Keys.PARENT__PARENT_STUDENT_ID_FKEY);
     }
 
     @Override
@@ -153,11 +145,6 @@ public class Parent extends TableImpl<ParentRecord> {
     @Override
     public Parent as(Name alias) {
         return new Parent(alias, this);
-    }
-
-    @Override
-    public Parent as(Table<?> alias) {
-        return new Parent(alias.getQualifiedName(), this);
     }
 
     /**
@@ -176,14 +163,6 @@ public class Parent extends TableImpl<ParentRecord> {
         return new Parent(name, null);
     }
 
-    /**
-     * Rename this table
-     */
-    @Override
-    public Parent rename(Table<?> name) {
-        return new Parent(name.getQualifiedName(), null);
-    }
-
     // -------------------------------------------------------------------------
     // Row7 type methods
     // -------------------------------------------------------------------------
@@ -191,20 +170,5 @@ public class Parent extends TableImpl<ParentRecord> {
     @Override
     public Row7<Integer, Integer, String, String, String, String, String> fieldsRow() {
         return (Row7) super.fieldsRow();
-    }
-
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
-    public <U> SelectField<U> mapping(Function7<? super Integer, ? super Integer, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
-    public <U> SelectField<U> mapping(Class<U> toType, Function7<? super Integer, ? super Integer, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

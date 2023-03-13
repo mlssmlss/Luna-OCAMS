@@ -4,23 +4,20 @@
 package org.ssglobal.revalida.codes.model.tables;
 
 
-import java.util.function.Function;
+import java.util.Arrays;
+import java.util.List;
 
 import org.jooq.Field;
 import org.jooq.ForeignKey;
-import org.jooq.Function4;
 import org.jooq.Name;
 import org.jooq.Record;
-import org.jooq.Records;
 import org.jooq.Row4;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
 import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
-import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 import org.ssglobal.revalida.codes.model.Keys;
 import org.ssglobal.revalida.codes.model.Public;
@@ -33,7 +30,7 @@ import org.ssglobal.revalida.codes.model.tables.records.ProgramRecord;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Program extends TableImpl<ProgramRecord> {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -153727966;
 
     /**
      * The reference instance of <code>public.program</code>
@@ -51,29 +48,28 @@ public class Program extends TableImpl<ProgramRecord> {
     /**
      * The column <code>public.program.program_id</code>.
      */
-    public final TableField<ProgramRecord, Integer> PROGRAM_ID = createField(DSL.name("program_id"), SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<ProgramRecord, Integer> PROGRAM_ID = createField(DSL.name("program_id"), org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
      * The column <code>public.program.program_code</code>.
      */
-    public final TableField<ProgramRecord, Integer> PROGRAM_CODE = createField(DSL.name("program_code"), SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<ProgramRecord, Integer> PROGRAM_CODE = createField(DSL.name("program_code"), org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
      * The column <code>public.program.program_title</code>.
      */
-    public final TableField<ProgramRecord, String> PROGRAM_TITLE = createField(DSL.name("program_title"), SQLDataType.VARCHAR(20), this, "");
+    public final TableField<ProgramRecord, String> PROGRAM_TITLE = createField(DSL.name("program_title"), org.jooq.impl.SQLDataType.VARCHAR(20), this, "");
 
     /**
      * The column <code>public.program.major</code>.
      */
-    public final TableField<ProgramRecord, String> MAJOR = createField(DSL.name("major"), SQLDataType.VARCHAR(50), this, "");
+    public final TableField<ProgramRecord, String> MAJOR = createField(DSL.name("major"), org.jooq.impl.SQLDataType.VARCHAR(50), this, "");
 
-    private Program(Name alias, Table<ProgramRecord> aliased) {
-        this(alias, aliased, null);
-    }
-
-    private Program(Name alias, Table<ProgramRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
+    /**
+     * Create a <code>public.program</code> table reference
+     */
+    public Program() {
+        this(DSL.name("program"), null);
     }
 
     /**
@@ -90,11 +86,12 @@ public class Program extends TableImpl<ProgramRecord> {
         this(alias, PROGRAM);
     }
 
-    /**
-     * Create a <code>public.program</code> table reference
-     */
-    public Program() {
-        this(DSL.name("program"), null);
+    private Program(Name alias, Table<ProgramRecord> aliased) {
+        this(alias, aliased, null);
+    }
+
+    private Program(Name alias, Table<ProgramRecord> aliased, Field<?>[] parameters) {
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
     public <O extends Record> Program(Table<O> child, ForeignKey<O, ProgramRecord> key) {
@@ -103,12 +100,17 @@ public class Program extends TableImpl<ProgramRecord> {
 
     @Override
     public Schema getSchema() {
-        return aliased() ? null : Public.PUBLIC;
+        return Public.PUBLIC;
     }
 
     @Override
     public UniqueKey<ProgramRecord> getPrimaryKey() {
         return Keys.PROGRAM_PKEY;
+    }
+
+    @Override
+    public List<UniqueKey<ProgramRecord>> getKeys() {
+        return Arrays.<UniqueKey<ProgramRecord>>asList(Keys.PROGRAM_PKEY);
     }
 
     @Override
@@ -119,11 +121,6 @@ public class Program extends TableImpl<ProgramRecord> {
     @Override
     public Program as(Name alias) {
         return new Program(alias, this);
-    }
-
-    @Override
-    public Program as(Table<?> alias) {
-        return new Program(alias.getQualifiedName(), this);
     }
 
     /**
@@ -142,14 +139,6 @@ public class Program extends TableImpl<ProgramRecord> {
         return new Program(name, null);
     }
 
-    /**
-     * Rename this table
-     */
-    @Override
-    public Program rename(Table<?> name) {
-        return new Program(name.getQualifiedName(), null);
-    }
-
     // -------------------------------------------------------------------------
     // Row4 type methods
     // -------------------------------------------------------------------------
@@ -157,20 +146,5 @@ public class Program extends TableImpl<ProgramRecord> {
     @Override
     public Row4<Integer, Integer, String, String> fieldsRow() {
         return (Row4) super.fieldsRow();
-    }
-
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
-    public <U> SelectField<U> mapping(Function4<? super Integer, ? super Integer, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
-    public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Integer, ? super Integer, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }
