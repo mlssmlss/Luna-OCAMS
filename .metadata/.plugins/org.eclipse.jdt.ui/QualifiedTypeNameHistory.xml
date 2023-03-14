@@ -2,6 +2,7 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="org.jooq.DSLContext"/>
     <fullyQualifiedTypeName name="org.ssglobal.revalida.codes.model.tables.records.AdminRecord"/>
-    <fullyQualifiedTypeName name="org.ssglobal.revalida.codes.model.tables.Admin"/>
     <fullyQualifiedTypeName name="org.ssglobal.revalida.codes.repository.AdminRepository"/>
+    <fullyQualifiedTypeName name="org.ssglobal.revalida.codes.model.tables.Admin"/>
+    <fullyQualifiedTypeName name="org.ssglobal.revalida.codes.model.tables.pojos.Admin"/>
 </qualifiedTypeNameHistroy>

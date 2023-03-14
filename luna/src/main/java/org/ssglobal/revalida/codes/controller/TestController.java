@@ -10,6 +10,7 @@ import org.ssglobal.revalida.codes.model.Tables;
 import org.ssglobal.revalida.codes.model.tables.pojos.Admin;
 import org.ssglobal.revalida.codes.model.tables.records.AdminRecord;
 
+
 @RestController
 @RequestMapping(value = "/api", produces = MediaType.APPLICATION_JSON_VALUE)
 public class TestController {

@@ -11,7 +11,7 @@ import org.jooq.Field;
 import org.jooq.ForeignKey;
 import org.jooq.Name;
 import org.jooq.Record;
-import org.jooq.Row9;
+import org.jooq.Row6;
 import org.jooq.Schema;
 import org.jooq.Table;
 import org.jooq.TableField;
@@ -30,7 +30,7 @@ import org.ssglobal.revalida.codes.model.tables.records.AdminRecord;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Admin extends TableImpl<AdminRecord> {
 
-    private static final long serialVersionUID = 663955252;
+    private static final long serialVersionUID = 760572070;
 
     /**
      * The reference instance of <code>public.admin</code>
@@ -74,21 +74,6 @@ public class Admin extends TableImpl<AdminRecord> {
      * The column <code>public.admin.type</code>.
      */
     public final TableField<AdminRecord, String> TYPE = createField(DSL.name("type"), org.jooq.impl.SQLDataType.VARCHAR(20).nullable(false), this, "");
-
-    /**
-     * The column <code>public.admin.student_id</code>.
-     */
-    public final TableField<AdminRecord, Integer> STUDENT_ID = createField(DSL.name("student_id"), org.jooq.impl.SQLDataType.INTEGER, this, "");
-
-    /**
-     * The column <code>public.admin.parent_id</code>.
-     */
-    public final TableField<AdminRecord, Integer> PARENT_ID = createField(DSL.name("parent_id"), org.jooq.impl.SQLDataType.INTEGER, this, "");
-
-    /**
-     * The column <code>public.admin.professor_id</code>.
-     */
-    public final TableField<AdminRecord, Integer> PROFESSOR_ID = createField(DSL.name("professor_id"), org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
      * Create a <code>public.admin</code> table reference
@@ -139,23 +124,6 @@ public class Admin extends TableImpl<AdminRecord> {
     }
 
     @Override
-    public List<ForeignKey<AdminRecord, ?>> getReferences() {
-        return Arrays.<ForeignKey<AdminRecord, ?>>asList(Keys.ADMIN__ADMIN_STUDENT_ID_FKEY, Keys.ADMIN__ADMIN_PARENT_ID_FKEY, Keys.ADMIN__ADMIN_PROFESSOR_ID_FKEY);
-    }
-
-    public Student student() {
-        return new Student(this, Keys.ADMIN__ADMIN_STUDENT_ID_FKEY);
-    }
-
-    public Parent parent() {
-        return new Parent(this, Keys.ADMIN__ADMIN_PARENT_ID_FKEY);
-    }
-
-    public Professor professor() {
-        return new Professor(this, Keys.ADMIN__ADMIN_PROFESSOR_ID_FKEY);
-    }
-
-    @Override
     public Admin as(String alias) {
         return new Admin(DSL.name(alias), this);
     }
@@ -182,11 +150,11 @@ public class Admin extends TableImpl<AdminRecord> {
     }
 
     // -------------------------------------------------------------------------
-    // Row9 type methods
+    // Row6 type methods
     // -------------------------------------------------------------------------
 
     @Override
-    public Row9<Integer, String, String, String, String, String, Integer, Integer, Integer> fieldsRow() {
-        return (Row9) super.fieldsRow();
+    public Row6<Integer, String, String, String, String, String> fieldsRow() {
+        return (Row6) super.fieldsRow();
     }
 }
