@@ -1,0 +1,48 @@
+.reg-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 50%;
+    z-index: -1;
+  }
+  
+.hero-reg {
+    /* background: url("/public/images/img-home.jpg") center center/cover no-repeat; */
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+  }
+
+.dashboard {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+
+.sidebar {
+    width: 300px;
+    height: 100%;
+    margin-left: -900px;
+    text-align: left;
+}
+ 
+.faculty-profile {
+    margin-top: 20px;
+}
+
+.assign-courses {
+    margin-top: 20px;
+}
+
+.create-evaluation {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

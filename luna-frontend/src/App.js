@@ -10,6 +10,9 @@ import Parent from "./Pages/parentalModule/Parent";
 import Course from "./Pages/courseModule/Course";
 import Faculty from "./Pages/facultyModule/Faculty";
 import Admin from "./Pages/admin/Admin";
+import FacultyProfile from "./Pages/facultyProfile/FacultyProfile";
+import FacultyEditName from "./Pages/facultyProfile/FacultyEditName";
+import FacultyPassword from "./Pages/facultyProfile/FacultyPassword";
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
           <Route path="/parent" element={<Parent />} />
           <Route path="/courses" element={<Course />} />
           <Route path="/faculty" element={<Faculty />} />
+          <Route path="/facultyProfile" element={<FacultyProfile />} />
+          <Route path="/facultyEditName" element={<FacultyEditName />} />
+          <Route path="/facultyPassword" element={<FacultyPassword />} />
         </Routes>
       </Router>
     </Fragment>

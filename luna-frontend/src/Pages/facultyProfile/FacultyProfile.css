@@ -1,0 +1,102 @@
+.reg-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 50%;
+    z-index: -1;
+  }
+  
+.hero-reg {
+    /* background: url("/public/images/img-home.jpg") center center/cover no-repeat; */
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+  }
+
+.profile {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+
+.sidebar {
+    width: 300px;
+    height: 100%;
+    margin-top: 20px;
+    margin-left: -900px;
+    text-align: left;
+}
+ 
+.edit-name {
+    margin-top: 20px;
+}
+
+.edit-password {
+    margin-bottom: 20px;
+}
+
+.new-name {
+    padding: 30px;
+    background-color: white;
+  }
+  
+  .input-name {
+    width: 100%; /* change this value to adjust the width of the div */
+    margin: auto; /* set the left and right margins to auto */
+    border: 1px solid black;
+    border-radius: 0.5em;
+    padding: 10px;
+  }
+  
+  .faculty-input {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .new-password {
+    padding: 30px;
+    background-color: white;
+  }
+
+  .input-password {
+    width: 100%; /* change this value to adjust the width of the div */
+    margin: auto; /* set the left and right margins to auto */
+    border: 1px solid black;
+    border-radius: 0.5em;
+    padding: 10px;
+  }
+
+  .current-password {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .new-password {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .confirm-password {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
