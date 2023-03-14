@@ -1,55 +1,64 @@
+.login-video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.hero-login {
+  /* background: url("/public/images/img-home.jpg") center center/cover no-repeat; */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+}
+
 form {
   max-width: 500px;
   margin: 0 auto;
   padding: 40px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  background-color: #f7f7f7;
+  background-color: transparent;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.form-label {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #333;
-  text-shadow: 1px 1px #fff;
+.login h1 {
+  color: #ccc;
+}
+.login-input {
+  padding: 20px;
 }
 
-.form-control {
-  font-size: 1.5rem;
-  border-radius: 0;
-  border: none;
-  border-bottom: 2px solid #ddd;
-  background-color: transparent;
-  margin-bottom: 20px;
-  box-shadow: none !important;
+.forgot-pass {
+  margin-bottom: 30px;
 }
 
-.form-text {
-  font-size: 1.2rem;
-  font-style: italic;
-  color: #999;
-  margin-top: 10px;
-}
-
-.form-check-label {
-  margin-left: 10px;
-  font-size: 1.2rem;
-  color: #333;
+a {
+  color: #ccc;
+  text-decoration: none;
 }
 
 .btn-primary {
-  background-color: #007bff;
-  border: none;
-  padding: 15px 30px;
-  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  width: auto;
+  color: #ccc;
+  padding: 1% 40px;
+  border-radius: 50px;
   font-size: 1.5rem;
-  font-weight: bold;
-  margin-top: 30px;
+  font-weight: 50;
+  display: block;
+  margin: auto;
   box-shadow: none !important;
 }
 
 .btn-primary:hover {
-  background-color: #0062cc;
+  background-color: #3e60c1;
   cursor: pointer;
 }

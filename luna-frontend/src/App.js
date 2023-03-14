@@ -9,6 +9,7 @@ import Student from "./Pages/studentModule/Student";
 import Parent from "./Pages/parentalModule/Parent";
 import Course from "./Pages/courseModule/Course";
 import Faculty from "./Pages/facultyModule/Faculty";
+import Admin from "./Pages/admin/Admin";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/admin" element={<Admin />} />
           <Route path="/student" element={<Student />} />
           <Route path="/parent" element={<Parent />} />
           <Route path="/courses" element={<Course />} />

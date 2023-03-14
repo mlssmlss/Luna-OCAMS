@@ -1,42 +1,73 @@
+import { TextField, InputBase, makeStyles } from "@mui/material";
 import React from "react";
+import Footer from "../../Components/Footer/Footer";
 import "./Login.css";
 
 export const Login = () => {
   return (
-    <form>
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">
-          Email address
-        </label>
-        <input
-          type="email"
-          class="form-control"
-          id="exampleInputEmail1"
-          aria-describedby="emailHelp"
+    <div className="loginContainer">
+      <div className="hero-login">
+        <video
+          className="login-video"
+          src="/videos/video-1.mp4"
+          autoPlay
+          loop
+          muted
         />
-        <div id="emailHelp" class="form-text">
-          We'll never share your email with anyone else.
-        </div>
+
+        <form>
+          <div className="login">
+            <h1>WELCOME!</h1>
+            <div className="login-input">
+              <InputBase
+                className="userName"
+                name="username"
+                type="text"
+                placeholder="Enter username"
+                size="small"
+                variant="outlined"
+                fullWidth
+                sx={{
+                  color: "white",
+                  height: "6vh",
+                  padding: "15px",
+                  border: "1px solid white",
+                  borderRadius: "0.5em",
+                  mb: 2,
+                }}
+                required
+              />
+
+              <InputBase
+                className="pWord"
+                name="password"
+                type="password"
+                placeholder="Enter Password"
+                size="small"
+                variant="outlined"
+                color="success"
+                fullWidth
+                sx={{
+                  color: "white",
+                  height: "6vh",
+                  padding: "15px",
+                  border: "1px solid white",
+                  borderRadius: "0.5em",
+                  mb: 2,
+                }}
+                required
+              />
+              <div className="forgot-pass">
+                <a href="#">Forgot Password?</a>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                SIGN IN
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">
-          Password
-        </label>
-        <input
-          type="password"
-          class="form-control"
-          id="exampleInputPassword1"
-        />
-      </div>
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-        <label class="form-check-label" for="exampleCheck1">
-          Check me out
-        </label>
-      </div>
-      <button type="submit" class="btn btn-primary">
-        Submit
-      </button>
-    </form>
+      <Footer />
+    </div>
   );
 };

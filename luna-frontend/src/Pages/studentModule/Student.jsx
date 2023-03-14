@@ -9,7 +9,7 @@ const Student = () => {
       <div className="hero-reg">
         <video
           className="reg-video"
-          src="/videos/video-1.mp4"
+          src="/videos/video-3.mp4"
           autoPlay
           loop
           muted
